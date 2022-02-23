@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+			integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+			integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="styles.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="container">
+			<!-- navbar section -->
+			<section class="nav-section">
+				<div class="nav-div">
+					<ul class="navbar">
+						<li class="logo">Schmotel.com</li>
+						<li class="item">account</li>
+						<li class="item">about</li>
+						<li class="item">login</li>
+					</ul>
+				</div>
+			</section>
+			<!--  -->
+			<!-- hero image -->
+			<section>
+				<div class="hero-image">
+					<h3>Image placeholder</h3>
+				</div>
+			</section>
+			<!-- title section -->
+			<div class="row">
+				<div class="main-title-div">
+					<h3>Search for hotels</h3>
+				</div>
+			</div>
+			<!--  -->
+			<!-- flight search section -->
+			<section class="search-section">
+				<div class="form-wrapper">
+					<!-- departing/arrival location input section -->
+					<form class="hotel-search-form">
+						<div class="row">
+							<div class="four columns">
+								<label for="search-city-input"> City </label>
+								<input
+									type="text"
+									id="search-city-input"
+									class="u-full-width search-city-input"
+								/>
+							</div>
+
+							<!-- departing/arrival date calendar input section-->
+							<div class="four columns">
+								<div class="six columns">
+									<label for="check-in date">check-in</label>
+									<input
+										type="date"
+										id="check-in-date"
+										class="u-full-width check-in-date"
+									/>
+								</div>
+								<div class="six columns">
+									<label for="num-passengers">check-out</label>
+									<input
+										type="date"
+										id="check-out-date"
+										class="u-full-width check-out-date"
+									/>
+								</div>
+							</div>
+							<!--  -->
+							<!-- number of guests input section -->
+							<div class="four columns guest-qty-input">
+								<div class="one column left-button">
+									<i class="fa-solid fa-angle-left"></i>
+								</div>
+								<div class="three columns">
+									<label for="num-guests">
+										<input type="number" id="num-guests" class="num-guests" />
+									</label>
+								</div>
+								<div class="one column right-button">
+									<i class="fa-solid fa-angle-right"></i>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</section>
+			<!-- flight search section -->
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
