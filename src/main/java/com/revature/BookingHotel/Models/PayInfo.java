@@ -1,12 +1,30 @@
 package com.revature.BookingHotel.Models;
 
+import javax.persistence.*;
+
+
+@Entity
+@Table(name = "pay_info")
 public class PayInfo {
 
+    @Id
+    @Column(name="payment_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int paymentId;
+
+    @OneToOne(mappedBy = "booking", cascade = CascadeType.ALL)
     private Booking booking;
+
+    @Column(name = "first_name", nullable = false)
     private String firstName;
+
+    @Column(name = "last_name", nullable = false)
     private String lastName;
+
+    @Column(name = "card_number", nullable = false)
     private int cardNumber;
+
+    @Column(name = "payment_type", nullable = false)
     private PaymentType type;
 
     public PayInfo() {
