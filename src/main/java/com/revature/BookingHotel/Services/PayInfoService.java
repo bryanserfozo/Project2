@@ -1,9 +1,9 @@
 package com.revature.BookingHotel.Services;
 
 import com.revature.BookingHotel.Daos.PayInfoDao;
-import com.revature.BookingHotel.Models.Booking;
 import com.revature.BookingHotel.Models.PayInfo;
 import com.revature.BookingHotel.Models.PaymentType;
+import com.revature.BookingHotel.Models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -24,8 +24,8 @@ public class PayInfoService {
     }
 
     //Create payment info
-    public PayInfo createPayInfo(int paymentId, Booking booking, String firstName, String lastName, int cardNumber, PaymentType type) {
-        PayInfo pi = new PayInfo(paymentId, booking, firstName, lastName, cardNumber, type);
+    public PayInfo createPayInfo(int paymentId, User user, String firstName, String lastName, int cardNumber, PaymentType type) {
+        PayInfo pi = new PayInfo(paymentId, user, firstName, lastName, cardNumber, type);
         return pid.save(pi);
     }
 

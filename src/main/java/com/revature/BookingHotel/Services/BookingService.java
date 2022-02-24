@@ -25,7 +25,7 @@ public class BookingService {
     }
 
     //Create booking
-    public Booking createBooking(int bookingId, User user, Hotel hotel, Date bookingDate, Date checkInDate, Date checkOutDate, int numNights) {
+    public Booking createBooking(int bookingId, User user, int hotel, Date bookingDate, Date checkInDate, Date checkOutDate, int numNights) {
         Booking bk = new Booking(bookingId, user, hotel, bookingDate, checkInDate, checkOutDate, numNights);
         return bd.save(bk);
     }

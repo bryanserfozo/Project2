@@ -13,10 +13,11 @@ public class Booking {
     private int bookingId;
 
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
     private User user;
 
-    @OneToOne(mappedBy = "hotel", cascade = CascadeType.ALL)
-    private Hotel hotel;
+    @Column(name ="hotel_id", nullable = false)
+    private int hotel;
 
     @Column(name="booking_date", nullable = false)
     private Date bookingDate;
@@ -33,7 +34,7 @@ public class Booking {
     public Booking() {
     }
 
-    public Booking(int bookingId, User user, Hotel hotel, Date bookingDate, Date checkInDate, Date checkOutDate, int numNights) {
+    public Booking(int bookingId, User user, int hotel, Date bookingDate, Date checkInDate, Date checkOutDate, int numNights) {
         this.bookingId = bookingId;
         this.user = user;
         this.hotel = hotel;
@@ -59,11 +60,11 @@ public class Booking {
         this.user = user;
     }
 
-    public Hotel getHotel() {
+    public int getHotel() {
         return hotel;
     }
 
-    public void setHotel(Hotel hotel) {
+    public void setHotel(int hotel) {
         this.hotel = hotel;
     }
 

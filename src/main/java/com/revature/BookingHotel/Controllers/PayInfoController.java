@@ -25,7 +25,7 @@ public class PayInfoController {
     @PostMapping("/")
     @ResponseBody
     public PayInfo createPayInfo(@RequestBody PayInfo pi) {
-        return pis.createPayInfo(pi.getPaymentId(), pi.getBooking(), pi.getFirstName(), pi.getLastName(), pi.getCardNumber(), pi.getType());
+        return pis.createPayInfo(pi.getPaymentId(), pi.getUser(), pi.getFirstName(), pi.getLastName(), pi.getCardNumber(), pi.getType());
     }
 
     @GetMapping("/")
