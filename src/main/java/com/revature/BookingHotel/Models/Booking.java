@@ -1,15 +1,33 @@
 package com.revature.BookingHotel.Models;
 
+import javax.persistence.*;
 import java.sql.Date;
 
+@Entity
+@Table(name = "booking")
 public class Booking {
 
+    @Id
+    @Column(name="booking_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int bookingId;
+
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private User user;
+
+    @OneToOne(mappedBy = "hotel", cascade = CascadeType.ALL)
     private Hotel hotel;
+
+    @Column(name="booking_date", nullable = false)
     private Date bookingDate;
+
+    @Column(name="check_in_date", nullable = false)
     private Date checkInDate;
+
+    @Column(name="check_out_date", nullable = false)
     private Date checkOutDate;
+
+    @Column(name="num_nights", nullable = false)
     private int numNights;
 
     public Booking() {
