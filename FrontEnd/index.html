@@ -37,16 +37,18 @@
 			<!--  -->
 			<!-- hero image -->
 			<section>
-				<div class="hero-image">
+				<div class="hero-image-section">
 					<h3>Image placeholder</h3>
 				</div>
 			</section>
 			<!-- title section -->
-			<div class="row">
-				<div class="main-title-div">
-					<h3>Search for hotels</h3>
+			<section class="title-section">
+				<div class="row">
+					<div class="main-title-div">
+						<h3>Search for hotels</h3>
+					</div>
 				</div>
-			</div>
+			</section>
 			<!--  -->
 			<!-- flight search section -->
 			<section class="search-section">
@@ -55,16 +57,17 @@
 					<form class="hotel-search-form">
 						<div class="row">
 							<div class="four columns">
-								<label for="search-city-input"> City </label>
+								<label for="search-city-input"> Where to?</label>
 								<input
 									type="text"
+									placeholder="e.g. North Korea"
 									id="search-city-input"
 									class="u-full-width search-city-input"
 								/>
 							</div>
 
 							<!-- departing/arrival date calendar input section-->
-							<div class="four columns">
+							<div class="five columns">
 								<div class="six columns">
 									<label for="check-in date">check-in</label>
 									<input
@@ -84,7 +87,8 @@
 							</div>
 							<!--  -->
 							<!-- number of guests input section -->
-							<div class="four columns guest-qty-input">
+							<div class="three columns u-full-width guest-qty-input">
+								<i class="fa-solid fa-user-group"></i>
 								<div class="one column left-button">
 									<i class="fa-solid fa-angle-left"></i>
 								</div>
@@ -99,9 +103,103 @@
 							</div>
 						</div>
 					</form>
+					<div class="search-btn-div">
+						<button
+							class="button-primary search-btn"
+							id="seatch-btn"
+							type="submit"
+						>
+							search
+						</button>
+					</div>
 				</div>
 			</section>
-			<!-- flight search section -->
+			<!-- flight results section -->
+			<section class="flight-results-section">
+				<div class="search-results-wrapper" id="search-reulsts-wrapper">
+					<!-- search results will dynamically be inserted here -->
+					<div class="return-result-div">
+						<div class="top">
+							<div class="img-thumbnail">
+								<img class="hotel-thumbnail" src="#" alt="img placeholder" />
+							</div>
+							<div class="return-result-name">
+								<h5>hotel name</h5>
+							</div>
+							<div class="return-result-rating">
+								<h5>rating</h5>
+							</div>
+							<div class="toggle">
+								<button class="toggle" id="toggle">
+									<i class="fa-solid fa-bars"></i>
+								</button>
+							</div>
+						</div>
+						<div class="bottom" id="bottom">
+							<div class="room-description">
+								<table>
+									<thead>
+										<tr>
+											<th>Rooms</th>
+											<th><i class="fa-solid fa-bed"></i> Bed</th>
+											<th>Rooms</th>
+											<th>Rooms</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td></td>
+											<td></td>
+											<td></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="return-result-div">
+						<div class="top">
+							<div class="img-thumbnail">
+								<img class="hotel-thumbnail" src="#" alt="img placeholder" />
+							</div>
+							<div class="return-result-name">
+								<h5>hotel name</h5>
+							</div>
+							<div class="return-result-rating">
+								<h5>rating</h5>
+							</div>
+							<div class="toggle">
+								<button class="toggle" id="toggle">
+									<i class="fa-solid fa-bars"></i>
+								</button>
+							</div>
+						</div>
+						<div class="bottom" id="bottom">
+							<div class="room-description">
+								<table>
+									<thead>
+										<tr>
+											<th>Rooms</th>
+											<th><i class="fa-solid fa-bed"></i> Bed</th>
+											<th>Rooms</th>
+											<th>Rooms</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td></td>
+											<td></td>
+											<td></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 		</div>
 		<script src="script.js"></script>
 	</body>
