@@ -1,0 +1,19 @@
+Functionality:
+Front:
+-Register
+-Login
+-Logout
+-Search form (API)
+-View Account Info
+-View Booking Info
+-Checkout with Booking
+-Email Confirmation
+
+Back:
+-Create Accounts
+-Update Accounts 
+-Create Booking
+-Update Bookings
+-Get all bookings by person
+-Create transaction
+-Get transaction by id
