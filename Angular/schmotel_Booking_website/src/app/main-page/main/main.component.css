@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+}
+.hide {
+  display: none;
+}
+
+.nav-div {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  background-color: rgb(129, 190, 247);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 80vw;
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  padding: 2px 5px 10px 5px;
+  margin: 0;
+  top: 2px;
+  right: 0;
+  list-style: none;
+}
+
+.navbar li {
+  padding: 10px;
+}
+.hero-image-section {
+  height: 30vh;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  background-color: rgb(253, 253, 253);
+  padding: 20px;
+}
+
+.main-title-div h3 {
+  margin: 30px 02px 0px 2px;
+}
+
+.search-section {
+  border: gray solid 1px;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.check-in-date,
+.check-out-date {
+  padding: 8px 10px;
+  border: 1px lightgray solid;
+  border-radius: 5px;
+}
+.num-guests {
+  width: 30px;
+}
+
+.guest-qty-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin-bottom: 0;
+}
+.guest-qty-input input {
+  padding: 1px;
+  margin-top: 23px;
+}
+.left-button,
+.right-button {
+  padding: 0;
+}
+
+.guest-qty-input {
+  margin-top: 0px;
+}
+.guest-qty-input input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-left: 0px;
+  height: 40px;
+  padding: 8px 20px;
+}
+
+.search-btn-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.search-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  padding: 5px 20px;
+  border-radius: 20px;
+  right: 0;
+}
+
+.return-result-div {
+  border: gray 1px solid;
+  border-radius: 20px;
+  padding: 10px;
+  position: relative;
+}
+
+/* top */
+.top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100px;
+}
+.img-thumbnail {
+  border: lightgray 1px solid;
+  border-radius: 50px;
+  height: 100px;
+  width: 100px;
+  background-color: rgb(162, 243, 243);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 10px;
+}
+.return-result-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 500px;
+}
+.return-result-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 400px;
+}
+
+.return-result-description h5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.toggle {
+  border: none;
+  position: absolute;
+  top: 5px;
+  right: 0;
+}
+
+.fa-bars {
+  font-size: 20px;
+}
+.bottom {
+}
+.room-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
