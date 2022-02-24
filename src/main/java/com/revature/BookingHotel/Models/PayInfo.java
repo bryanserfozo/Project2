@@ -2,7 +2,6 @@ package com.revature.BookingHotel.Models;
 
 import javax.persistence.*;
 
-
 @Entity
 @Table(name = "pay_info")
 public class PayInfo {
@@ -24,8 +23,7 @@ public class PayInfo {
 
     @Column(name = "card_number", nullable = false)
     private int cardNumber;
-
-    @Enumerated(EnumType.STRING)
+    
     @Column(name = "payment_type", nullable = false)
     private PaymentType type;
 

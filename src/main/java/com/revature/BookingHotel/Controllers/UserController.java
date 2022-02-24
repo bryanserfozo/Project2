@@ -41,7 +41,23 @@ public class UserController {
 
     @PutMapping("/")
     @ResponseBody
-    public void updateUser(@RequestBody User u) {
+
+    /*User updateUser(
+            @PathVariable("id") long id,
+            @RequestBody User user) {
+       us.updateUser(user);
+    }*/
+
+    public void updateUser(@RequestBody User user) {
+        User u = getUserById(user.getId());
+
+        u.setEmail(user.getEmail().trim().toLowerCase());
+        u.setFirstName(user.getFirstName().trim().toLowerCase());
+        u.setLastName(user.getLastName().trim().toLowerCase());
+        u.setUsername(user.getUsername().trim());
+        u.setPassword(user.getPassword());
+        u.setPhoneNumber(user.getPhoneNumber().trim());
+
         us.updateUser(u);
     }
 
