@@ -1,0 +1,23 @@
+.nav-div {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    background-color: rgb(129, 190, 247);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    padding: 2px 5px 10px 5px;
+    margin: 0;
+    top: 2px;
+    right: 0;
+    list-style: none;
+  }
+  .navbar li {
+    padding: 10px;
+  }
