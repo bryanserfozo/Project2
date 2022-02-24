@@ -1,7 +1,5 @@
 package com.revature.BookingHotel.Models;
-
 import javax.persistence.*;
-
 
 @Entity
 @Table(name = "pay_info")
@@ -15,8 +13,10 @@ public class PayInfo {
     @OneToOne(mappedBy = "booking", cascade = CascadeType.ALL)
     private Booking booking;
 
+
     @Column(name = "first_name", nullable = false)
     private String firstName;
+
 
     @Column(name = "last_name", nullable = false)
     private String lastName;
