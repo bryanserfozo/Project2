@@ -1,0 +1,32 @@
+.search-section {
+  border: gray solid 1px;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.check-in-date,
+.check-out-date {
+  padding: 8px 10px;
+  border: 1px lightgray solid;
+  border-radius: 5px;
+}
+.num-guests {
+  width: 30px;
+}
+
+.guest-qty-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+
+  margin-bottom: 0;
+}
+.guest-qty-input input {
+  padding: 1px;
+  margin-top: 23px;
+}
+.left-button,
+.right-button {
+  padding: 0;
+}
