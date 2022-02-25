@@ -2,10 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 import { MainComponent } from './main-page/main/main.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavComponent } from './components/nav/nav.component';
@@ -20,26 +18,26 @@ import { SearchFilterComponent } from './components/search-filter/search-filter.
 @NgModule({
   declarations: [
     AppComponent,
-
+    LoginComponent,
     MainComponent,
-
-         RegisterComponent,
-    
+    SearchComponent,
+    RegisterComponent,
+    SearchFilterComponent,
+    NavComponent,
+    ResultsComponent    
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
-
-    LoginComponent,
-    NavComponent,
-    SearchComponent,
-    ResultsComponent,
-    SearchFilterComponent,
+    HttpClientModule,
+    // NavComponent,
+    // SearchComponent,
+    // ResultsComponent,
+    // SearchFilterComponent,
 
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule],
+
   providers: [],
   bootstrap: [AppComponent],
 })
