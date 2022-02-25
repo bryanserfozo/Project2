@@ -1,175 +1,19 @@
-<div class="container">
-  <!-- navbar section -->
-  <!-- <section class="nav-section">
-    <div class="nav-div">
-      <ul class="navbar">
-        <li class="logo">Schmotel.com</li>
-        <li class="item">account</li>
-        <li class="item">about</li>
-        <li class="item">login</li>
-      </ul>
+<section>
+  <div class="hero-image-section">
+    <h3>Image placeholder</h3>
+  </div>
+</section>
+<!-- title section -->
+<section class="title-section">
+  <div class="row">
+    <div class="main-title-div">
+      <h3>Search for hotels</h3>
     </div>
-  </section> -->
-  <!--  -->
-  <!-- hero image -->
-  <section>
-    <div class="hero-image-section">
-      <h3>Image placeholder</h3>
-    </div>
-  </section>
-  <!-- title section -->
-  <section class="title-section">
-    <div class="row">
-      <div class="main-title-div">
-        <h3>Search for hotels</h3>
-      </div>
-    </div>
-  </section>
-  <!--  -->
-  <!-- flight search section -->
-  <section class="search-section">
-    <div class="form-wrapper">
-      <!-- departing/arrival location input section -->
-      <form class="hotel-search-form">
-        <div class="row">
-          <div class="four columns">
-            <label for="search-city-input"> Where to?</label>
-            <input
-              type="text"
-              placeholder="e.g. North Korea"
-              id="search-city-input"
-              class="u-full-width search-city-input"
-            />
-          </div>
+  </div>
+</section>
 
-          <!-- departing/arrival date calendar input section-->
-          <div class="five columns">
-            <div class="six columns">
-              <label for="check-in date">check-in</label>
-              <input
-                type="date"
-                id="check-in-date"
-                class="u-full-width check-in-date"
-              />
-            </div>
-            <div class="six columns">
-              <label for="num-passengers">check-out</label>
-              <input
-                type="date"
-                id="check-out-date"
-                class="u-full-width check-out-date"
-              />
-            </div>
-          </div>
-          <!--  -->
-          <!-- number of guests input section -->
-          <div class="three columns u-full-width guest-qty-input">
-            <i class="fa-solid fa-user-group"></i>
-            <div class="one column left-button">
-              <i class="fa-solid fa-angle-left"></i>
-            </div>
-            <div class="three columns">
-              <label for="num-guests">
-                <input type="number" id="num-guests" class="num-guests" />
-              </label>
-            </div>
-            <div class="one column right-button">
-              <i class="fa-solid fa-angle-right"></i>
-            </div>
-          </div>
-        </div>
-      </form>
-      <div class="search-btn-div">
-        <button class="button-primary search-btn" id="seatch-btn" type="submit">
-          search
-        </button>
-      </div>
-    </div>
-  </section>
-  <!-- flight results section -->
-  <section class="flight-results-section">
-    <div class="search-results-wrapper" id="search-reulsts-wrapper">
-      <!-- search results will dynamically be inserted here -->
-      <div class="return-result-div">
-        <div class="top">
-          <div class="img-thumbnail">
-            <img class="hotel-thumbnail" src="#" alt="img placeholder" />
-          </div>
-          <div class="return-result-name">
-            <h5>hotel name</h5>
-          </div>
-          <div class="return-result-rating">
-            <h5>rating</h5>
-          </div>
-          <div class="toggle">
-            <button class="toggle" id="toggle">
-              <i class="fa-solid fa-bars"></i>
-            </button>
-          </div>
-        </div>
-        <div class="bottom" id="bottom">
-          <div class="room-description">
-            <table>
-              <thead>
-                <tr>
-                  <th>Rooms</th>
-                  <th><i class="fa-solid fa-bed"></i> Bed</th>
-                  <th>Rooms</th>
-                  <th>Rooms</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-      <div class="return-result-div">
-        <div class="top">
-          <div class="img-thumbnail">
-            <img class="hotel-thumbnail" src="#" alt="img placeholder" />
-          </div>
-          <div class="return-result-name">
-            <h5>hotel name</h5>
-          </div>
-          <div class="return-result-rating">
-            <h5>rating</h5>
-          </div>
-          <div class="toggle">
-            <button class="toggle" id="toggle">
-              <i class="fa-solid fa-bars"></i>
-            </button>
-          </div>
-        </div>
-        <div class="bottom" id="bottom">
-          <div class="room-description">
-            <table>
-              <thead>
-                <tr>
-                  <th>Rooms</th>
-                  <th><i class="fa-solid fa-bed"></i> Bed</th>
-                  <th>Rooms</th>
-                  <th>Rooms</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
+<!-- flight search section -->
+<app-search></app-search>
+<!-- flight results section -->
+<app-search-filter></app-search-filter>
+<app-results></app-results>
