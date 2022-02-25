@@ -1,0 +1,18 @@
+.filter-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: gray solid 1px;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.filter-div button {
+  padding: 0 20px;
+  margin: 0 10px;
+}
+.filter-div select {
+  background-color: transparent;
+  padding: 0 20px;
+  margin: 0 10px;
+}
