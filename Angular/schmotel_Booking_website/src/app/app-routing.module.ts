@@ -8,13 +8,15 @@ import { NavComponent } from './components/nav/nav.component';
 
 
 import { RouterModule, Routes } from '@angular/router';
+import { RegisterComponent } from './components/register/register.component';
 
 
 const routes: Routes =
  [
    {path:'',redirectTo:'/home',pathMatch:'full'},
    {path:'home', component: MainComponent},
-   {path:'login',component:LoginComponent}
+   {path:'login',component:LoginComponent},
+   {path:'register',component:RegisterComponent}
 
  ]
 
