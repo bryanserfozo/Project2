@@ -8,33 +8,33 @@ import java.sql.Date;
 public class Booking {
 
     @Id
-    @Column(name="booking_id")
+    @Column(name = "booking_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int bookingId;
 
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @ManyToOne(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id")
     private User user;
 
-    @Column(name ="hotel_id", nullable = false)
+    @Column(name = "hotel_id", nullable = false)
     private int hotel;
 
-    @Column(name="booking_date", nullable = false)
+    @Column(name = "booking_date", nullable = false)
     private Date bookingDate;
 
-    @Column(name="check_in_date", nullable = false)
+    @Column(name = "check_in_date", nullable = false)
     private Date checkInDate;
 
-    @Column(name="check_out_date", nullable = false)
+    @Column(name = "check_out_date", nullable = false)
     private Date checkOutDate;
 
-    @Column(name="num_nights", nullable = false)
-    private int numNights;
+    @Column(name = "num_nights", nullable = false)
+    private long numNights;
 
     public Booking() {
     }
 
-    public Booking(int bookingId, User user, int hotel, Date bookingDate, Date checkInDate, Date checkOutDate, int numNights) {
+    public Booking(int bookingId, User user, int hotel, Date bookingDate, Date checkInDate, Date checkOutDate, long numNights) {
         this.bookingId = bookingId;
         this.user = user;
         this.hotel = hotel;
@@ -92,11 +92,11 @@ public class Booking {
         this.checkOutDate = checkOutDate;
     }
 
-    public int getNumNights() {
+    public long getNumNights() {
         return numNights;
     }
 
-    public void setNumNights(int numNights) {
+    public void setNumNights(long numNights) {
         this.numNights = numNights;
     }
 
