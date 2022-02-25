@@ -1,83 +1,32 @@
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-.hero-image {
-	height: 30vh;
-	border: 1px solid gray;
+body {
+  background-color: rgb(247, 245, 243);
+}
 
-	background-color: lightgray;
-	padding: 20px;
+.hide {
+  display: none;
+}
+.hero-image {
+  height: 30vh;
+  border: 1px solid gray;
+
+  background-color: lightgray;
+  padding: 20px;
 }
 
 .main-title-div h3 {
-	margin: 30px 02px 0px 2px;
+  margin: 30px 02px 0px 2px;
 }
 
-.search-section {
-	border: gray solid 1px;
-	border-radius: 20px;
-	padding: 20px;
+.logo {
+  width: auto;
+  height: auto;
+  margin-top: -20px;
 }
 
-.check-in-date,
-.check-out-date {
-	padding: 8px 10px;
-	border: 1px lightgray solid;
-	border-radius: 5px;
+.forgotPass {
+  font-size: 0.8em;
 }
-.num-guests {
-	width: 30px;
-}
-
-.guest-qty-input {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 0px;
-
-	margin-bottom: 0;
-}
-.guest-qty-input input {
-	padding: 1px;
-
-	margin-top: 23px;
-}
-.left-button,
-.right-button {
-	padding: 0;
-}
-
-.logo{
-	width: auto;
-    height: auto;
-	margin-top: -20px;
-    
-} 
-
-.forgotPass{
-	font-size: 0.80em;
-}
-.nav-div {
-    border: 1px solid lightgray;
-    border-radius: 10px;
-    background-color: rgb(129, 190, 247);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-  }
-  .navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    padding: 2px 5px 10px 5px;
-    margin: 0;
-    top: 2px;
-    right: 0;
-    list-style: none;
-  }
-  .navbar li {
-    padding: 10px;
-  }
