@@ -9,6 +9,7 @@ import { MainComponent } from './main-page/main/main.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavComponent } from './components/nav/nav.component';
 import { SearchComponent } from './components/search/search.component';
+import { ResultsComponent } from './components/results/results.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { SearchComponent } from './components/search/search.component';
          LoginComponent,
          NavComponent,
          SearchComponent,
+         ResultsComponent,
     
   ],
   imports: [

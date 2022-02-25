@@ -1,0 +1,64 @@
+.return-result-div {
+  border: gray 1px solid;
+  border-radius: 20px;
+  padding: 10px;
+  position: relative;
+}
+
+/* top */
+.top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100px;
+}
+.img-thumbnail {
+  border: lightgray 1px solid;
+  border-radius: 50px;
+  height: 100px;
+  width: 100px;
+  background-color: rgb(162, 243, 243);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 10px;
+}
+.return-result-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 500px;
+}
+.return-result-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 400px;
+}
+
+.return-result-description h5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.toggle {
+  border: none;
+  position: absolute;
+  top: 5px;
+  right: 0;
+}
+
+.fa-bars {
+  font-size: 20px;
+}
+.bottom {
+}
+.room-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
