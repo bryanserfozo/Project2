@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Search } from 'src/app/Interfaces/search';
+import { SearchresultService } from 'src/app/services/searchresult.service';
+import { Destination } from 'src/app/Interfaces/destination';
 
 @Component({
   selector: 'app-search',
@@ -72,18 +75,50 @@ import { Router } from '@angular/router';
   `,
   styleUrls: ['./search.component.css'],
 })
+
+
+
 export class SearchComponent implements OnInit {
   constructor(private router: Router) {}
 
-  public location = '';
-  public checkIn = '';
-  public checkOut = '';
-  public numGuests = '';
 
-  searchFilter = false;
-  ngOnInit(): void {}
 
-  onSubmit() {
-    alert(this.location);
+  lstdestinations: Destination[] = [];
+
+
+  constructor(private searchresultService: SearchresultService) {
+
   }
-}
+
+    // searchreaultData = null;
+
+
+  ngOnInit(): void {
+  //   this.searchresultService.getsearchresult().subscribe((data)=>{
+
+  //     console.log(data);
+  //     this.searchreaultData = data;
+  //   });
+  }
+
+  public callApi() {
+      console.log("the api has been called");
+      this.searchresultService.callApi().subscribe((data)=>{
+       console.log(data);
+        });
+  }
+
+  }
+
+//   public location = '';
+//   public checkIn = '';
+//   public checkOut = '';
+//   public numGuests = '';
+
+//   searchFilter = false;
+//   ngOnInit(): void {}
+
+//   onSubmit() {
+//     alert(this.location);
+//   }
+// }
