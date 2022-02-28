@@ -24,11 +24,22 @@ import { SearchService } from './services/search.service';
     RegisterComponent,
     SearchFilterComponent,
     NavComponent,
-    ResultsComponent,
+
+    ResultsComponent    
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,
+    HttpClientModule,
+
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
 
-  providers: [SearchService],
+
+  providers: [SearchresultService,SearchService],
+
+
   bootstrap: [AppComponent],
 })
 export class AppModule {}
