@@ -86,7 +86,7 @@ export class SearchComponent implements OnInit {
   lstdestinations: Destination[] = [];
 
 
-  constructor(private searchresultService: SearchresultService) {
+  constructor(private SearchresultService: SearchresultService) {
 
   }
 
@@ -103,7 +103,7 @@ export class SearchComponent implements OnInit {
 
   public callApi() {
       console.log("the api has been called");
-      this.searchresultService.callApi().subscribe((data)=>{
+      this.SearchresultService.callApi().subscribe((data)=>{
        console.log(data);
         });
   }
