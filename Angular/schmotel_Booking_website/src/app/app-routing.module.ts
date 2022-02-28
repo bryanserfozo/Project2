@@ -6,7 +6,6 @@ import { MainComponent} from './main-page/main/main.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavComponent } from './components/nav/nav.component';
 
-
 import { RouterModule, Routes } from '@angular/router';
 import { RegisterComponent } from './components/register/register.component';
 

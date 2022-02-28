@@ -1,19 +1,23 @@
-<section class="search-section">
+<!-- <section class="search-section">
   <div class="form-wrapper">
-    <!-- departing/arrival location input section -->
+
     <form class="hotel-search-form">
       <div class="row">
         <div class="four columns">
           <label for="search-city-input"> Where to?</label>
-          <input
+          <!-- <input
             type="text"
             placeholder="e.g. North Korea"
             id="search-city-input"
             class="u-full-width search-city-input"
-          />
+          /> -->
+          <select placeholder="e.g. North Korea"
+          id="search-city-input"
+          class="u-full-width search-city-input">
+            <option  *ngFor="let destination of lstdestinations" [ngValue]="destination.destinationId">{{destination.name}}</option>
+          </select>
         </div>
 
-        <!-- departing/arrival date calendar input section-->
         <div class="five columns">
           <div class="six columns">
             <label for="check-in date">check-in</label>
@@ -32,15 +36,14 @@
             />
           </div>
         </div>
-        <!--  -->
-        <!-- number of guests input section -->
+
         <div class="three columns u-full-width guest-qty-input">
-          <i class="fa-solid fa-user-group"></i>
           <div class="one column left-button">
             <i class="fa-solid fa-angle-left"></i>
           </div>
           <div class="three columns">
             <label for="num-guests">
+              <i class="fa-solid fa-user-group"></i>
               <input type="number" id="num-guests" class="num-guests" />
             </label>
           </div>
@@ -50,10 +53,13 @@
         </div>
       </div>
     </form>
+    <button class="button-primary search-btn" type="button" (click)="callApi()">
+      sample test
+    </button>
     <div class="search-btn-div">
-      <button class="button-primary search-btn" id="seatch-btn" type="submit">
+      <button class="button-primary search-btn" id="search-btn" type="submit">
         search
       </button>
     </div>
   </div>
-</section>
+</section> -->
