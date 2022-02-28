@@ -22,22 +22,23 @@ export class SearchComponent implements OnInit {
 
   }
 
-    // searchreaultData = null;
+   
 
 
   ngOnInit(): void {
-  //   this.searchresultService.getsearchresult().subscribe((data)=>{
-
-  //     console.log(data);
-  //     this.searchreaultData = data;
-  //   });
+ 
   }
 
   public callApi() {
       console.log("the api has been called");
       this.searchresultService.callApi().subscribe((data)=>{
        console.log(data);
+       if (data.suggestions){
+         
+       }
         });
   }
+
+  
 
   }

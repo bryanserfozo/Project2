@@ -16,12 +16,6 @@ export class SearchresultService {
   constructor(private httpclient: HttpClient) { }
 
 
-//   getsearchresult(): Observable<any> {
-//        console.log("request is send");
-//          return this.httpclient.get("https://hotels4.p.rapidapi.com/properties/list");
-//   }
-
-
  callApi(): Observable<any> {
 
   const headers = new HttpHeaders()

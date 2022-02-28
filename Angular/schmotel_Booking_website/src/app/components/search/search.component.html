@@ -11,11 +11,13 @@
             id="search-city-input"
             class="u-full-width search-city-input"
           /> -->
+          <!-----------------test list destination-------------------------------------->
           <select placeholder="e.g. North Korea"
           id="search-city-input"
           class="u-full-width search-city-input">
             <option  *ngFor="let destination of lstdestinations" [ngValue]="destination.destinationId">{{destination.name}}</option>
           </select>
+          <!--------------------------------------------------------------------------->
         </div>
 
         <!-- departing/arrival date calendar input section-->
@@ -55,9 +57,11 @@
         </div>
       </div>
     </form>
+    <!--------------------sample button to test api call---------------------------------->
     <button class="button-primary search-btn" type="button" (click)="callApi()">
       sample test
     </button>
+    <!------------------------------------------------------------------------------------>
     <div class="search-btn-div">
       <button class="button-primary search-btn" id="search-btn" type="submit">
         search
