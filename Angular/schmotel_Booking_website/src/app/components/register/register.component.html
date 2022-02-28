@@ -1,0 +1,59 @@
+<div class="container">
+    <!-----nameofwebsiteandlogoimage----->
+    <!-- <section>
+        <div class="logo">
+            <img src="images/logo.jpg">
+        </div>
+        <hr>
+    </section> -->
+    <!-------------registerform-------------->
+    <section>
+        <div class="row">
+            <div class="main-title-div">
+                <h3>Create an account</h3>
+                <form (ngSubmit)="onSubmit()">
+                    <div class="row">
+                        <div class="six columns" >
+                          <label for="exampleEmailInput"></label>
+                          <input class="u-full-width" type="email" placeholder="Email Address" name = "email" id="exampleEmailInput" required [(ngModel)] = "email">
+
+                        <div class="row" >
+                            <label for="exampleEmailInput"></label>
+                            <input class="u-full-width" type="email" placeholder="First name" id="firstnameInput" name = "firstName" required [(ngModel)] = "firstName">
+
+                        <div class="row" >
+                                <label for="exampleEmailInput"></label>
+                                <input class="u-full-width" type="email" placeholder="Last name" id="lastnameInput" name = "lastName" required [(ngModel)] = "lastName">
+
+                        <div class="row" >
+                                <label for="exampleRecipientInput"></label>
+                                <input class="u-full-width" type="tel" placeholder="Phone Number (999)999-9999" id="phoneNumber" name = "phoneNu" required [(ngModel)] = "phoneNumber">
+                        </div> 
+
+                        <div class="row" >
+                            <label for="exampleUsernameInput"></label>
+                            <input class="u-full-width" type="text" placeholder="Username" id="usernameInput" name = "username" required [(ngModel)] = "username">
+
+                        <div class="row" >
+                            <label for="exampleRecipientInput"></label>
+                            <input class="u-full-width" type="password" placeholder="Password" id="password" name = "password" required [(ngModel)] = "password">
+                    </div> 
+                        </div>
+                        </div>
+                         </div>
+                    </div>
+                    </div>
+                      <input class="button-primary" type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </section>
+    <!--------------------ForgotPassword---------------------->
+    <section>
+        <div class="forgotPass">
+           Already have an account? <a routerLink="login" (click)="navigateLogin()">Sign In</a>
+        </div>
+    </section> 
+</div>  
+<!-------------------------------------------------------------------------------------------------------------------------->
+    <script src="script.js"></script>
