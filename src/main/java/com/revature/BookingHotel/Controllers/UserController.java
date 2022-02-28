@@ -28,7 +28,7 @@ public class UserController {
     @PostMapping("/")
     @ResponseBody
     public User registerUser(@RequestBody User u) {
-//        es.sendRegistrationEmail(u);
+        es.sendRegistrationEmail(u);
         return us.registerUser(u.getId(), u.getFirstName(), u.getLastName(), u.getUsername(), u.getPassword(), u.getEmail(), u.getPhoneNumber());
     }
 

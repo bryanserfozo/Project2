@@ -4,4 +4,6 @@ public enum PaymentType {
     CASH,
     CREDIT,
     DEBIT
+
 }
+
