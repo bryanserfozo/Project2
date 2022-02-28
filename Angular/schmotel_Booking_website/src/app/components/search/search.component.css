@@ -2,6 +2,7 @@
   border: gray solid 1px;
   border-radius: 20px;
   padding: 20px;
+  position: relative;
 }
 
 .check-in-date,
@@ -24,9 +25,20 @@
 }
 .guest-qty-input input {
   padding: 1px;
-  margin-top: 23px;
+  margin-top: 5px;
+  height: 40px;
 }
 .left-button,
 .right-button {
-  padding: 0;
+  padding: 20px;
+  margin: 0;
+}
+
+.search-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 20px;
+  top: 100px;
 }

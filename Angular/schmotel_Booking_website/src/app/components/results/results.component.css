@@ -3,62 +3,70 @@
   border-radius: 20px;
   padding: 10px;
   position: relative;
+  height: 300px;
 }
 
 /* top */
-.top {
+/* .top {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   height: 100px;
-}
+} */
 .img-thumbnail {
   border: lightgray 1px solid;
   border-radius: 50px;
-  height: 100px;
-  width: 100px;
+  height: 250px;
+  width: 300px;
   background-color: rgb(162, 243, 243);
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  left: 10px;
+  top: 20px;
+  left: 20px;
 }
 .return-result-name {
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  right: 500px;
+  top: 20px;
+  right: 400px;
 }
 .return-result-rating {
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  right: 400px;
+  top: 20px;
+  right: 230px;
 }
 
-.return-result-description h5 {
+.return-result-price h5 {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.toggle {
-  border: none;
   position: absolute;
-  top: 5px;
-  right: 0;
+  top: 20px;
+  right: 50px;
 }
 
-.fa-bars {
-  font-size: 20px;
-}
-.bottom {
-}
-.room-description {
+.room-details-table {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 100px;
+  right: 50px;
+}
+
+.book-btn-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 10px;
+  right: 50px;
 }
