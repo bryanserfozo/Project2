@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+.hero-image-section {
+  height: 30vh;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  background-color: rgb(253, 253, 253);
+  padding: 20px;
+}
+
+.main-title-div h3 {
+  margin: 30px 02px 0px 2px;
+}
