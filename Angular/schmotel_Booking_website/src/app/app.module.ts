@@ -26,7 +26,7 @@ import { SearchresultService } from './services/searchresult.service';
     SearchFilterComponent,
     NavComponent,
 
-    ResultsComponent    
+    ResultsComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +35,7 @@ import { SearchresultService } from './services/searchresult.service';
     HttpClientModule,
 
   ],
-  
+
 
 
   providers: [SearchresultService],
