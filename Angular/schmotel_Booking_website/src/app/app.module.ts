@@ -17,22 +17,20 @@ import { ResultsComponent } from './components/results/results.component';
 import { SearchFilterComponent } from './components/search-filter/search-filter.component';
 
 
-@NgModule({
+@NgModule ({
   declarations: [
     AppComponent,
 
     MainComponent,
 
-         RegisterComponent,
+    RegisterComponent,
     
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
-
-    LoginComponent,
+    HttpClientModule,
     NavComponent,
     SearchComponent,
     ResultsComponent,
@@ -42,5 +40,5 @@ import { SearchFilterComponent } from './components/search-filter/search-filter.
   imports: [BrowserModule, FormsModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
-})
+});
 export class AppModule {}
