@@ -15,7 +15,7 @@ import { Destination } from 'src/app/Interfaces/destination';
             <div class="four columns">
               <label for="search-city-input"> Where to?</label>
               <input
-                [(ngModel)]="location"
+                
                 type="text"
                 placeholder="e.g. North Korea"
                 id="search-city-input"
@@ -62,7 +62,7 @@ import { Destination } from 'src/app/Interfaces/destination';
         </form>
         <div class="search-btn-div">
           <button
-            (click)="onSubmit()"
+            
             class="button-primary search-btn"
             id="seatch-btn"
             type="submit"
@@ -79,7 +79,7 @@ import { Destination } from 'src/app/Interfaces/destination';
 
 
 export class SearchComponent implements OnInit {
-  constructor(private router: Router) {}
+  // constructor(private router: Router) {}
 
 
 
@@ -108,17 +108,14 @@ export class SearchComponent implements OnInit {
         });
   }
 
+ // searchFilter = false;
+
+
   }
 
-//   public location = '';
-//   public checkIn = '';
-//   public checkOut = '';
-//   public numGuests = '';
+  
 
-//   searchFilter = false;
-//   ngOnInit(): void {}
+ 
+  
 
-//   onSubmit() {
-//     alert(this.location);
-//   }
-// }
+  
