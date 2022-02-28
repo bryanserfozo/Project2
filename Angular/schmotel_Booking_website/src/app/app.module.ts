@@ -13,7 +13,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { SearchComponent } from './components/search/search.component';
 import { ResultsComponent } from './components/results/results.component';
 import { SearchFilterComponent } from './components/search-filter/search-filter.component';
-
+import { SearchService } from './services/search.service';
 
 @NgModule({
   declarations: [
@@ -24,21 +24,11 @@ import { SearchFilterComponent } from './components/search-filter/search-filter.
     RegisterComponent,
     SearchFilterComponent,
     NavComponent,
-    ResultsComponent    
+    ResultsComponent,
   ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    AppRoutingModule,
-    HttpClientModule,
-    // NavComponent,
-    // SearchComponent,
-    // ResultsComponent,
-    // SearchFilterComponent,
+  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
 
-  ],
-
-  providers: [],
+  providers: [SearchService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
