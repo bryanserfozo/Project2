@@ -1,6 +1,7 @@
 package com.revature.BookingHotel.Controllers;
 
 import com.revature.BookingHotel.Models.User;
+import com.revature.BookingHotel.Services.EmailService;
 import com.revature.BookingHotel.Services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,6 +14,9 @@ public class UserController {
 
     private UserService us;
 
+    @Autowired
+    private EmailService es;
+
     public UserController() {
     }
 
@@ -24,6 +28,7 @@ public class UserController {
     @PostMapping("/")
     @ResponseBody
     public User registerUser(@RequestBody User u) {
+//        es.sendRegistrationEmail(u);
         return us.registerUser(u.getId(), u.getFirstName(), u.getLastName(), u.getUsername(), u.getPassword(), u.getEmail(), u.getPhoneNumber());
     }
 
@@ -41,7 +46,23 @@ public class UserController {
 
     @PutMapping("/")
     @ResponseBody
-    public void updateUser(@RequestBody User u) {
+
+    /*User updateUser(
+            @PathVariable("id") long id,
+            @RequestBody User user) {
+       us.updateUser(user);
+    }*/
+
+    public void updateUser(@RequestBody User user) {
+        User u = getUserById(user.getId());
+
+        u.setEmail(user.getEmail().trim().toLowerCase());
+        u.setFirstName(user.getFirstName().trim().toLowerCase());
+        u.setLastName(user.getLastName().trim().toLowerCase());
+        u.setUsername(user.getUsername().trim());
+        u.setPassword(user.getPassword());
+        u.setPhoneNumber(user.getPhoneNumber().trim());
+
         us.updateUser(u);
     }
 
