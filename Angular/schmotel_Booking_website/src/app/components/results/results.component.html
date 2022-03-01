@@ -1,18 +1,18 @@
 <section class="hotel-results-section">
   <div class="search-results-wrapper" id="search-reulsts-wrapper">
-    <!-- search results will dynamically be inserted here -->
-    <div class="return-result-div">
+    <!-- search results will dynamically be inserted here using ngFor-->
+    <div *ngFor="let result of results" class="return-result-div">
       <div class="img-thumbnail">
         <img class="hotel-thumbnail" src="#" alt="img placeholder" />
       </div>
       <div class="return-result-name">
-        <h5>hotel name</h5>
+        <h5>{{ result.hotelName }}</h5>
       </div>
       <div class="return-result-rating">
-        <h5>rating</h5>
+        <h5>{{ result.rating }}</h5>
       </div>
       <div class="return-result-price">
-        <h5>price</h5>
+        <h5>${{ result.price }} per night</h5>
       </div>
 
       <div class="room-details-table">
@@ -35,20 +35,6 @@
           </tbody>
         </table>
       </div>
-      <div class="book-btn-div">
-        <button class="button-primary book-btn">book now</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- test div for api -->
-<section class="hotel-results-section">
-  <div class="search-results-wrapper" id="search-reulsts-wrapper">
-    <!-- search results will dynamically be inserted here -->
-    <div class="return-result-div">
-      <h3>This is a test DIV for Api calls</h3>
-
       <div class="book-btn-div">
         <button class="button-primary book-btn">book now</button>
       </div>
