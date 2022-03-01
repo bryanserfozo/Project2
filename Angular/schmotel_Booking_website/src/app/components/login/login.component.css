@@ -1,0 +1,19 @@
+.img {
+  background-image: url("../images/suitcase.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-title-div {
+  height: 500px;
+  margin-top: 100px;
+}
+
+.sign-in {
+}
