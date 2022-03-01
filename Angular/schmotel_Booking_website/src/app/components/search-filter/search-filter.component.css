@@ -2,14 +2,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: gray solid 1px;
-  border-radius: 20px;
+  border-bottom: gray solid 1px;
   padding: 20px;
+  transition-duration: 1s;
 }
 
 .filter-div button {
   padding: 0 20px;
   margin: 0 10px;
+  transition-duration: 1s;
+}
+.filter-rating:hover {
+  color: whitesmoke;
+  background-color: rgb(118, 124, 126);
+}
+.filter-price:hover {
+  color: whitesmoke;
+  background-color: rgb(118, 124, 126);
 }
 .filter-div select {
   background-color: transparent;

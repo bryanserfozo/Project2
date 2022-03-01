@@ -1,9 +1,15 @@
 .return-result-div {
-  border: gray 1px solid;
-  border-radius: 20px;
+  border-bottom: gray 1px solid;
+
   padding: 10px;
   position: relative;
   height: 300px;
+  transition-duration: 1.2s;
+}
+
+.return-result-div:hover {
+  color: whitesmoke;
+  background-color: rgb(118, 124, 126);
 }
 
 /* top */

@@ -76,5 +76,3 @@ public class BookingController {
         bs.deleteBooking(bk);
     }
 }
-
-

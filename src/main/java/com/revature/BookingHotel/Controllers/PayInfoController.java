@@ -46,4 +46,3 @@ public class PayInfoController {
         pis.deletePayInfo(pi);
     }
 }
-

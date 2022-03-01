@@ -1,8 +1,10 @@
 .search-section {
-  border: gray solid 1px;
-  border-radius: 20px;
+  border-bottom: gray solid 1px;
   padding: 20px;
   position: relative;
+}
+
+.search-city-input {
 }
 
 .check-in-date,
@@ -19,19 +21,37 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0px;
-
-  margin-bottom: 0;
 }
 .guest-qty-input input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 1px;
   margin-top: 5px;
   height: 40px;
 }
 .left-button,
 .right-button {
-  padding: 20px;
-  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.fa-user-group {
+  margin-bottom: 0;
+}
+.fa-angle-left,
+.fa-angle-right {
+  font-size: 25px;
+  padding: 5px 10px;
+}
+
+.fa-angle-left:hover,
+.fa-angle-right:hover {
+  color: white;
+  border-radius: 50px;
+  background-color: black;
+  opacity: 0.5;
 }
 
 .search-btn {
@@ -40,5 +60,19 @@
   align-items: center;
   position: absolute;
   right: 20px;
-  top: 100px;
+  top: 120px;
+}
+
+.numGuests {
+  background-color: rgb(255, 255, 255);
+  border: 1px lightgray solid;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px light gray solid;
+  padding: 0px 20px;
+  height: 40px;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
