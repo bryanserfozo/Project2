@@ -1,6 +1,6 @@
 .nav-section {
   height: 10vh;
-  border: 1px black solid;
+
   padding: 5px;
   margin: 0;
   font-size: 16px;
@@ -15,5 +15,5 @@
 }
 
 .navbar li {
-  margin-left: 20px;
+  margin-left: 40px;
 }

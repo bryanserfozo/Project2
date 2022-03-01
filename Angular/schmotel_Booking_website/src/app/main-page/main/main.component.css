@@ -9,6 +9,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 30vh;
+  width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,6 +17,7 @@
   border-radius: 10px;
   background-color: rgb(253, 253, 253);
   padding: 20px;
+  margin-top: 5px;
 }
 
 .main-title-div h3 {
