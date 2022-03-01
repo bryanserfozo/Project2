@@ -51,6 +51,26 @@ export class SearchComponent implements OnInit {
     console.log(this.searchService.hotels);
     this.notify.emit(this.hotels);
   }
+
+  ngOnInit(): void {
+ 
+  }
+
+//celiacodetestapicall
+
+//   public callApi() {
+//       console.log("the api has been called");
+//       this.searchresultService.callApi().subscribe((data)=>{
+//        console.log(data);
+//        if (data.suggestions){
+         
+//        }
+//         });
+//   }
+
+
+ // searchFilter = false;
+
   // plus/minus number of guests
   public setNumGuest(type: string): void {
     console.log('clicked ');
@@ -65,6 +85,7 @@ export class SearchComponent implements OnInit {
   ) {}
   // searchreaultData = null;
 
+
   ngOnInit(): void {
     //   this.searchresultService.getsearchresult().subscribe((data)=>{
     //     console.log(data);
@@ -72,13 +93,4 @@ export class SearchComponent implements OnInit {
     //   });
   }
 
-  //   public callApi() {
-
-  //     console.log('the api has been called');
-  //     // this.searchresultService.callApi().subscribe((data)=>{
-  //     //  console.log(data);
-  //     //   });
-
-  //   // searchFilter = false;
-  // }
-}
+  
