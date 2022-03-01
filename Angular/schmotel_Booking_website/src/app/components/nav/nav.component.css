@@ -1,12 +1,13 @@
 .nav-section {
   height: 10vh;
-
   padding: 5px;
   margin: 0;
   font-size: 16px;
 }
 .nav-section a {
+  font-size: 20px;
   text-decoration: none;
+  color: rgb(118, 124, 126);
 }
 
 .navbar {
