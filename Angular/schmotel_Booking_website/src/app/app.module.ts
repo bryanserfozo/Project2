@@ -27,20 +27,11 @@ import { UserServiceService } from './services/user-service.service';
     SearchFilterComponent,
     NavComponent,
 
-    ResultsComponent    
+    ResultsComponent,
   ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    AppRoutingModule,
-    HttpClientModule,
-
-  ],
-  
-
+  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
 
   providers: [SearchresultService, UserServiceService],
-
 
   bootstrap: [AppComponent],
 })
