@@ -1,6 +1,8 @@
 package com.revature.BookingHotel.Models;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "users")
@@ -28,6 +30,10 @@ public class User {
 
     @Column(name="phone_number", nullable = false)
     private String phoneNumber;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private List<Booking> booking = new ArrayList<>();
+
 
     public User() {
     }

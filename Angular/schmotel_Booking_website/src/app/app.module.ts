@@ -15,6 +15,7 @@ import { ResultsComponent } from './components/results/results.component';
 import { SearchFilterComponent } from './components/search-filter/search-filter.component';
 
 import { SearchresultService } from './services/searchresult.service';
+import { UserServiceService } from './services/user-service.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,7 @@ import { SearchresultService } from './services/searchresult.service';
   
 
 
-  providers: [SearchresultService],
+  providers: [SearchresultService, UserServiceService],
 
 
   bootstrap: [AppComponent],

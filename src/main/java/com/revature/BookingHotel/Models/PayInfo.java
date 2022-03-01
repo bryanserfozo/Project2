@@ -2,7 +2,6 @@ package com.revature.BookingHotel.Models;
 
 import javax.persistence.*;
 
-
 @Entity
 @Table(name = "pay_info")
 public class PayInfo {
@@ -12,8 +11,9 @@ public class PayInfo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int paymentId;
 
-    @OneToOne(mappedBy = "booking", cascade = CascadeType.ALL)
-    private Booking booking;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_id", referencedColumnName = "user_id", unique = true)
+    private User paymentUser;
 
     @Column(name = "first_name", nullable = false)
     private String firstName;
@@ -23,16 +23,16 @@ public class PayInfo {
 
     @Column(name = "card_number", nullable = false)
     private int cardNumber;
-
+    
     @Column(name = "payment_type", nullable = false)
     private PaymentType type;
 
     public PayInfo() {
     }
 
-    public PayInfo(int paymentId, Booking booking, String firstName, String lastName, int cardNumber, PaymentType type) {
+    public PayInfo(int paymentId, User paymentUser, String firstName, String lastName, int cardNumber, PaymentType type) {
         this.paymentId = paymentId;
-        this.booking = booking;
+        this.paymentUser = paymentUser;
         this.firstName = firstName;
         this.lastName = lastName;
         this.cardNumber = cardNumber;
@@ -47,12 +47,12 @@ public class PayInfo {
         this.paymentId = paymentId;
     }
 
-    public Booking getBooking() {
-        return booking;
+    public User getUser() {
+        return paymentUser;
     }
 
-    public void setBooking(Booking booking) {
-        this.booking = booking;
+    public void setUser(User user) {
+        this.paymentUser = user;
     }
 
     public String getFirstName() {
@@ -91,7 +91,7 @@ public class PayInfo {
     public String toString() {
         return "PayInfo{" +
                 "paymentId=" + paymentId +
-                ", booking=" + booking +
+                ", user=" + paymentUser +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", cardNumber=" + cardNumber +

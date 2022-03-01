@@ -12,6 +12,7 @@ import { Destination } from 'src/app/Interfaces/destination';
 })
 export class SearchComponent implements OnInit {
   constructor(private http: HttpClient) {}
+    // constructor(private searchresultService: SearchresultService) {}
 
   destination = '';
   checkInDate = '';
@@ -31,9 +32,16 @@ export class SearchComponent implements OnInit {
 
   lstdestinations: Destination[] = [];
 
-  // constructor(private searchresultService: SearchresultService) {}
+
+
 
   // searchreaultData = null;
+
+
+  }
+
+
+
 
   ngOnInit(): void {
     //   this.searchresultService.getsearchresult().subscribe((data)=>{
@@ -43,11 +51,14 @@ export class SearchComponent implements OnInit {
   }
 
   public callApi() {
+
     console.log('the api has been called');
     // this.searchresultService.callApi().subscribe((data)=>{
     //  console.log(data);
     //   });
-  }
+
+
+
 
   // searchFilter = false;
 }
