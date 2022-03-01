@@ -15,6 +15,7 @@ import { ResultsComponent } from './components/results/results.component';
 import { SearchFilterComponent } from './components/search-filter/search-filter.component';
 
 import { SearchresultService } from './services/searchresult.service';
+import { UserServiceService } from './services/user-service.service';
 
 @NgModule({
   declarations: [
@@ -26,20 +27,11 @@ import { SearchresultService } from './services/searchresult.service';
     SearchFilterComponent,
     NavComponent,
 
-    ResultsComponent    
+    ResultsComponent,
   ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    AppRoutingModule,
-    HttpClientModule,
+  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
 
-  ],
-  
-
-
-  providers: [SearchresultService],
-
+  providers: [SearchresultService, UserServiceService],
 
   bootstrap: [AppComponent],
 })

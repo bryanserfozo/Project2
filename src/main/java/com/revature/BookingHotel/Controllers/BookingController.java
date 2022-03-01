@@ -3,12 +3,17 @@ package com.revature.BookingHotel.Controllers;
 import com.revature.BookingHotel.Models.Booking;
 import com.revature.BookingHotel.Models.User;
 import com.revature.BookingHotel.Services.BookingService;
+import com.revature.BookingHotel.Services.EmailService;
 import com.revature.BookingHotel.Services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.sql.Date;
+import java.time.LocalDate;
 import java.util.List;
+
+import static java.time.temporal.ChronoUnit.DAYS;
 
 @Controller
 @RequestMapping(value = "/booking")
@@ -18,6 +23,9 @@ public class BookingController {
 
     private BookingService bs;
     private UserService us;
+
+    @Autowired
+    private EmailService es;
 
     public BookingController() {
     }
@@ -31,7 +39,16 @@ public class BookingController {
     @PostMapping("/")
     @ResponseBody
     public Booking createBooking(@RequestBody Booking bk) {
-        return bs.createBooking(bk.getBookingId(), bk.getUser(), bk.getHotel(), bk.getBookingDate(), bk.getCheckInDate(), bk.getCheckOutDate(), bk.getNumNights());
+        String checkInDate = String.valueOf(bk.getCheckInDate());
+        String checkOutDate = String.valueOf(bk.getCheckOutDate());
+
+        LocalDate checkIn = LocalDate.parse(checkInDate);
+        LocalDate checkOut = LocalDate.parse(checkOutDate);
+        long numNights = DAYS.between(checkIn, checkOut);
+
+        bk.setNumNights(numNights);
+        es.sendBookingEmail(bk);
+        return bs.createBooking(bk);
     }
 
     @GetMapping("/all/")
@@ -59,5 +76,3 @@ public class BookingController {
         bs.deleteBooking(bk);
     }
 }
-
-
