@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit, Input } from '@angular/core';
+import { IHotel } from 'src/app/Interfaces/IHotel';
 
 @Component({
   selector: 'app-results',
@@ -8,7 +8,15 @@ import { Router } from '@angular/router';
 })
 export class ResultsComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  @Input() result:IHotel = {
+    id:0,
+    hotelName : "",
+    rating:"",
+    price:"",
+    thumbnailUrl:""
+  };
+
+  constructor() { }
 
   ngOnInit(): void {
   }

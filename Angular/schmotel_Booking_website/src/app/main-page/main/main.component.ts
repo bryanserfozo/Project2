@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { SearchComponent } from 'src/app/components/search/search.component';
+import { IHotel } from 'src/app/Interfaces/IHotel';
+import { SearchServiceService } from 'src/app/services/search-service.service';
 
 @Component({
   selector: 'app-main',
@@ -7,7 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  hotels:IHotel[] =[]
+
+  onNotifyClicked(list:any){
+    this.hotels = list;
+  }
+
+  constructor(private searchService:SearchServiceService) { }
 
   ngOnInit(): void {
   }
