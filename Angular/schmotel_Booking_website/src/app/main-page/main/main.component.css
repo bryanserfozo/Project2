@@ -3,7 +3,15 @@
 }
 
 .hero-image-section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url("../main/beach.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 1px solid lightgray;
   border-radius: 10px;
   background-color: rgb(253, 253, 253);
@@ -11,5 +19,7 @@
 }
 
 .main-title-div h3 {
+  font-size: 50px;
+  color: white;
   margin: 30px 02px 0px 2px;
 }

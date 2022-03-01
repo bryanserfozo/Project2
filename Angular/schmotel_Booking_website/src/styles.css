@@ -3,22 +3,11 @@
 }
 
 body {
-  background-color: rgb(247, 245, 243);
+  background-color: #fcfaf8;
 }
 
 .hide {
   display: none;
-}
-.hero-image {
-  height: 30vh;
-  border: 1px solid gray;
-
-  background-color: lightgray;
-  padding: 20px;
-}
-
-.main-title-div h3 {
-  margin: 30px 02px 0px 2px;
 }
 
 .logo {

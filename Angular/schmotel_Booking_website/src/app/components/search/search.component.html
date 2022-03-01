@@ -1,21 +1,34 @@
-<!-- <section class="search-section">
+<section class="search-section">
   <div class="form-wrapper">
-
-    <form class="hotel-search-form">
+    <form
+      (ngSubmit)="onSubmit(searchForm.value)"
+      #searchForm="ngForm"
+      class="hotel-search-form"
+    >
       <div class="row">
         <div class="four columns">
           <label for="search-city-input"> Where to?</label>
-          <!-- <input
+
+          <input
             type="text"
             placeholder="e.g. North Korea"
             id="search-city-input"
             class="u-full-width search-city-input"
-          /> -->
-          <select placeholder="e.g. North Korea"
-          id="search-city-input"
-          class="u-full-width search-city-input">
-            <option  *ngFor="let destination of lstdestinations" [ngValue]="destination.destinationId">{{destination.name}}</option>
-          </select>
+            name="destination"
+            ngModel
+          />
+          <!-- <select
+            placeholder="e.g. North Korea"
+            id="search-city-input"
+            class="u-full-width search-city-input"
+          >
+            <option
+              *ngFor="let destination of lstdestinations"
+              [ngValue]="destination.destinationId"
+            >
+              {{ destination.name }}
+            </option>
+          </select> -->
         </div>
 
         <div class="five columns">
@@ -25,6 +38,8 @@
               type="date"
               id="check-in-date"
               class="u-full-width check-in-date"
+              name="checkInDate"
+              ngModel
             />
           </div>
           <div class="six columns">
@@ -33,33 +48,54 @@
               type="date"
               id="check-out-date"
               class="u-full-width check-out-date"
+              name="checkOutDate"
+              ngModel
             />
           </div>
         </div>
 
-        <div class="three columns u-full-width guest-qty-input">
-          <div class="one column left-button">
-            <i class="fa-solid fa-angle-left"></i>
+        <div class="three columns guest-qty-input">
+          <div class="four columns left-button">
+            <i
+              (click)="setNumGuest('minus')"
+              class="fa-solid fa-angle-left"
+            ></i>
           </div>
-          <div class="three columns">
+          <div class="four columns">
             <label for="num-guests">
               <i class="fa-solid fa-user-group"></i>
-              <input type="number" id="num-guests" class="num-guests" />
+              <div class="numGuests">{{ numGuests }}</div>
+              <!-- <input
+                type="number"
+                id="num-guests"
+                class="num-guests"
+                name="numGuests"
+                value="2"
+                min="1"
+                max="100"
+                step="1"
+                ngModel
+              /> -->
             </label>
           </div>
-          <div class="one column right-button">
-            <i class="fa-solid fa-angle-right"></i>
+          <div class="four columns right-button">
+            <i
+              (click)="setNumGuest('plus')"
+              class="fa-solid fa-angle-right"
+            ></i>
           </div>
         </div>
       </div>
+      <div class="search-btn-div">
+        <button class="button-primary search-btn" id="search-btn" type="submit">
+          search
+        </button>
+      </div>
     </form>
-    <button class="button-primary search-btn" type="button" (click)="callApi()">
+    <!-- <button class="button-primary search-btn" type="button" (click)="callApi()">
       sample test
-    </button>
-    <div class="search-btn-div">
-      <button class="button-primary search-btn" id="search-btn" type="submit">
-        search
-      </button>
-    </div>
+    </button> -->
+
+    <div class="test-div">{{ searchForm.value | json }}</div>
   </div>
-</section> -->
+</section>
