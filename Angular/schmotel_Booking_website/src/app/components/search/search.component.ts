@@ -1,9 +1,11 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 import { Search } from 'src/app/Interfaces/search';
 import { SearchresultService } from 'src/app/services/searchresult.service';
 import { Destination } from 'src/app/Interfaces/destination';
+import { SearchServiceService } from 'src/app/services/search-service.service';
+import { IHotel } from 'src/app/Interfaces/IHotel';
+import { MainComponent } from 'src/app/main-page/main/main.component';
 
 @Component({
   selector: 'app-search',
@@ -11,27 +13,56 @@ import { Destination } from 'src/app/Interfaces/destination';
   styleUrls: ['./search.component.css'],
 })
 export class SearchComponent implements OnInit {
-  constructor(private http: HttpClient) {}
-  // constructor(private searchresultService: SearchresultService) {}
+  @Output() notify = new EventEmitter<IHotel[]>();
 
-  destination = '';
-  checkInDate = '';
-  checkOutDate = '';
-  numGuests = 2;
+  hotels: IHotel[] = [];
+
+  hotel: IHotel = {
+    id: 0,
+    hotelName: '',
+    rating: '',
+    price: '',
+    thumbnailUrl: '',
+  };
+
+  location: string = '';
+  checkInDate: string = '';
+  checkOutDate: string = '';
+  numAdults: number = 0;
+
+  error: boolean = false;
 
   //submit the form and get values
-  onSubmit(data: any) {
-    console.log(data);
-    this.http.post('', data);
+  async onSubmit(): Promise<void> {
+    this.hotels = [];
+    console.log(
+      this.location,
+      this.checkInDate,
+      this.checkOutDate,
+      this.numAdults
+    );
+    await this.searchService.getHotels(
+      this.location,
+      this.checkInDate,
+      this.checkOutDate,
+      this.numAdults
+    );
+    this.hotels = this.searchService.hotels;
+    console.log(this.searchService.hotels);
+    this.notify.emit(this.hotels);
   }
   // plus/minus number of guests
   public setNumGuest(type: string): void {
     console.log('clicked ');
-    type === 'plus' ? this.numGuests++ : this.numGuests--;
+    type === 'plus' ? this.numAdults++ : this.numAdults--;
   }
 
-  lstdestinations: Destination[] = [];
+  // lstdestinations: Destination[] = [];
 
+  constructor(
+    private searchService: SearchServiceService,
+    private router: Router
+  ) {}
   // searchreaultData = null;
 
   ngOnInit(): void {

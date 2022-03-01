@@ -10,6 +10,17 @@
   color: rgb(118, 124, 126);
 }
 
+.logo:hover {
+  border-bottom: 2px #1eaedb solid;
+}
+
+.about:hover {
+  border-bottom: 2px #1eaedb solid;
+}
+.my-account:hover {
+  border-bottom: 2px #1eaedb solid;
+}
+
 .navbar {
   display: flex;
   list-style: none;

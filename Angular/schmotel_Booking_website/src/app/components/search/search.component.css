@@ -2,9 +2,7 @@
   border-bottom: gray solid 1px;
   padding: 20px;
   position: relative;
-}
-
-.search-city-input {
+  height: 200px;
 }
 
 .check-in-date,
@@ -63,7 +61,7 @@
   top: 120px;
 }
 
-.numGuests {
+.num-guests {
   background-color: rgb(255, 255, 255);
   border: 1px lightgray solid;
   border-radius: 5px;
@@ -71,8 +69,21 @@
   justify-content: center;
   align-items: center;
   border: 1px light gray solid;
-  padding: 0px 20px;
+
   height: 40px;
+  width: 30px;
   margin-top: 5px;
   margin-bottom: 10px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }
