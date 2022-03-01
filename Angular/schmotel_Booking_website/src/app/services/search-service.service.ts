@@ -18,6 +18,7 @@ export class SearchServiceService {
   }
 
   async getHotels(location:string, checkInDate:string, checkOutDate:string,numAdults:number ){
+    this.hotels = [];
     let headers = new HttpHeaders().set('Content-Type', 'application/json')
     .set('x-rapidapi-host', 'hotels4.p.rapidapi.com')
     .set('x-rapidapi-key', '13b1eeb183msh58e9387b74bbd30p13f30ejsnf3d12efe8960');

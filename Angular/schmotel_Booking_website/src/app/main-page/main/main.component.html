@@ -16,5 +16,4 @@
 <app-search (notify) = "onNotifyClicked($event)"></app-search>
 <!-- flight results section -->
 <app-search-filter></app-search-filter>
-<app-results 
- *ngFor="let hotel of hotels" [result]="hotel"></app-results>
+<app-results *ngFor="let hotel of hotels" [result]="hotel"></app-results>

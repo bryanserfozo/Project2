@@ -13,6 +13,7 @@ export class MainComponent implements OnInit {
   hotels:IHotel[] =[]
 
   onNotifyClicked(list:any){
+    this.hotels = [];
     this.hotels = list;
   }
 
