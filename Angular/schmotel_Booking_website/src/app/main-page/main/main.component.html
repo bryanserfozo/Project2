@@ -11,11 +11,11 @@
     </div>
   </section>
 
-  <!-- title section -->
-  <!-- hotel search section -->
-  <app-search></app-search>
 
-  <!-- hotel results section -->
+  <!-- hotel search section -->
+  <app-search (notify)="onNotifyClicked($event)"></app-search>
+  <!-- flight results section -->
   <app-search-filter></app-search-filter>
-  <app-results></app-results>
+  <app-results *ngFor="let hotel of hotels" [result]="hotel"></app-results>
 </div>
+

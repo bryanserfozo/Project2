@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { IHotel } from 'src/app/Interfaces/IHotel';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-results',
@@ -7,42 +9,20 @@ import { Router } from '@angular/router';
   styleUrls: ['./results.component.css'],
 })
 export class ResultsComponent implements OnInit {
-  public results = [
-    {
-      hotelName: 'New York Hotel',
-      checkInDate: '2022-03-01',
-      checkOutDate: '2022-03-15',
-      rating: 3.5,
-      numGuests: 2,
-      price: 150,
-    },
-    {
-      hotelName: 'Seattle Hotel',
-      checkInDate: '2022-03-15',
-      checkOutDate: '2022-03-20',
-      rating: 2,
-      numGuests: 4,
-      price: 75,
-    },
-    {
-      hotelName: 'Land O Lakes Hotel',
-      checkInDate: '2022-03-01',
-      checkOutDate: '2022-03-15',
-      rating: 5,
-      numGuests: 3,
-      price: 88,
-    },
-    {
-      hotelName: 'Columbus Hotel',
-      checkInDate: '2022-03-20',
-      checkOutDate: '2022-04-15',
-      rating: 4.5,
-      numGuests: 1,
-      price: 100,
-    },
-  ];
+  @Input() result: IHotel = {
+    id: 0,
+    hotelName: '',
+    rating: '',
+    price: '',
+    thumbnailUrl: '',
+  };
 
-  constructor(private router: Router) {}
+  sendHotel(newHotel:IHotel){
+    this.data.changeHotel(newHotel)
+    this.router.navigate(['booking']);
+  }
+
+  constructor(private data:DataService, private router:Router) {}
 
   ngOnInit(): void {}
 }

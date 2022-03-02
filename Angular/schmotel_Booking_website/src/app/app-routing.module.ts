@@ -2,31 +2,26 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 
-import { MainComponent} from './main-page/main/main.component';
+import { MainComponent } from './main-page/main/main.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavComponent } from './components/nav/nav.component';
+import { BookingInfoComponent } from './components/booking-info/booking-info.component';
 
 import { RouterModule, Routes } from '@angular/router';
 import { RegisterComponent } from './components/register/register.component';
 
-
-const routes: Routes =
- [
-   {path:'',redirectTo:'/home',pathMatch:'full'},
-   {path:'home', component: MainComponent},
-   {path:'login',component:LoginComponent},
-   {path:'register',component:RegisterComponent}
-
- ]
+const routes: Routes = [
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: MainComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'booking', component: BookingInfoComponent }
+];
 
 @NgModule({
-  declarations:[],
-  
-  imports: [
-    CommonModule,
-    RouterModule.forRoot(routes)
-  
-  ],
+  declarations: [],
+
+  imports: [CommonModule, RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
