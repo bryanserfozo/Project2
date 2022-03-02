@@ -9,13 +9,16 @@ import { BookingInfoComponent } from './components/booking-info/booking-info.com
 
 import { RouterModule, Routes } from '@angular/router';
 import { RegisterComponent } from './components/register/register.component';
+import { BookingHistoryComponent } from './components/booking-history/booking-history.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: MainComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'booking', component: BookingInfoComponent }
+  { path: 'booking', component: BookingInfoComponent },
+  { path: 'booking-history', component: BookingHistoryComponent }
+  
 ];
 
 @NgModule({
