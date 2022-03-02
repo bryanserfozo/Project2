@@ -18,8 +18,13 @@ import { SearchFilterComponent } from './components/search-filter/search-filter.
 import { UserServiceService } from './services/user-service.service';
 import { BookingInfoComponent } from './components/booking-info/booking-info.component';
 import { BookingHistoryComponent } from './components/booking-history/booking-history.component';
+import { BookingTableComponent } from './components/booking-table/booking-table.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
+
   declarations: [
     AppComponent,
     LoginComponent,
@@ -28,12 +33,13 @@ import { BookingHistoryComponent } from './components/booking-history/booking-hi
     RegisterComponent,
     SearchFilterComponent,
     NavComponent,
-
     ResultsComponent,
-      BookingInfoComponent,
-      BookingHistoryComponent,
+    BookingInfoComponent,
+    BookingHistoryComponent,
+    BookingTableComponent
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
+
+  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule, MatTableModule, MatPaginatorModule, MatSortModule],
 
   providers: [ UserServiceService],
 

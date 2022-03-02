@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BookingTableComponent } from '../booking-table/booking-table.component';
 
 @Component({
   selector: 'booking-history',

@@ -4,5 +4,5 @@ export interface IBooking {
     hotel?: IHotel,
     checkIn: string,
     checkOut: string,
-    numAdults: number
+    numAdults: number,
   }
