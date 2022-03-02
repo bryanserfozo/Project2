@@ -3,37 +3,40 @@
 </head>
     <h3>Account Information</h3>
     <div class = "container">
-        <form id="updateInfo">
+        <form id="updateInfo" (ngSubmit) = "updateUser()">
 
             <label for="first">First Name: {{user.firstName}}</label><br>
+<<<<<<< HEAD
             <input class ="u-full-width" type="text" id="accinfo" name="updateFirstName" required [(ngModel)] = "updateFirstName"><br>
+=======
+            <input class ="u-full-width" type="text" id="accinfo" name="firstname" placeholder= {{user.firstName}} [hidden]="!hideform" [(ngModel)] = "updateFirstName"><br>
+>>>>>>> b0d98b2e78b391a26f520cb4238554ee3798d081
 
             <label for="last">Last Name: {{user.lastName}}</label><br>
-            <input class ="u-full-width" type="text" id="accinfo" name="lastname"><br>
+            <input class ="u-full-width" type="text" id="accinfo" name="lastname" placeholder= {{user.lastName}} [hidden]="!hideform" [(ngModel)] = "updateLastName"><br>
 
             <label for="email">Email: {{user.email}}</label><br>
-            <input class ="u-full-width" type="text" id="accinfo" name="email"><br>
+            <input class ="u-full-width" type="text" id="accinfo" name="email" placeholder= {{user.email}} [hidden]="!hideform" [(ngModel)] = "updateEmail"><br>
 
             <label for="username">Username: {{user.username}}</label><br>
-            <input class ="u-full-width" type="text" id="accinfo" name="username"><br>
+            <input class ="u-full-width" type="text" id="accinfo" name="username" placeholder= {{user.username}} [hidden]="!hideform" [(ngModel)] = "updateUsername"><br>
 
             <label for="password">Password: {{user.password}}</label><br>
-            <input class ="u-full-width" type="text" id="accinfo" name="password">
+            <input class ="u-full-width" type="text" id="accinfo" name="password" placeholder= {{user.password}} [hidden]="!hideform" [(ngModel)] = "updatePassword">
 
             <label for="phonenumber">Phone Number: {{user.phoneNumber}}</label><br>
-            <input class ="u-full-width" type="text" id="accinfo" name="phonenumber">
+            <input class ="u-full-width" type="text" id="accinfo" name="phonenumber" placeholder= {{user.phoneNumber}} [hidden]="!hideform" [(ngModel)] = "updatePhoneNumber">
 
+            <button class="button" id="update" (click) = "show()">Update</button> &ensp; <button class="button" type = "submit" id = "save">Save Changes</button>
         </form><br>
 
-        <button class="button" id="update">Update</button> &ensp; <button class="button" id = "submit">Save Changes</button>
     </div>
     <div>
-        <button [hidden]="!hide" (click)="showHidePaycardForm()">Add a Payment Card</button>
+        <button (click)="showHidePaycardForm()">Add a Payment Card</button>
         <form id="paycard">
            
             <label for="cardnum">Card Number</label>
-            <input class = "u-full-width" type="text" id="cardnum" name="cardnum">
+            <input class = "u-full-width" type="text" id="cardnum" name="cardnum" [hidden]="!hide">
 
         </form>
-        <!--<a routerLink="my-account" (click)="navigateUser-Page()">My Account</a>-->
     </div>
