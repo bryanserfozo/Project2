@@ -24,6 +24,7 @@ import { BookingInfoComponent } from './components/booking-info/booking-info.com
     RegisterComponent,
     SearchFilterComponent,
     NavComponent,
+    UserPageComponent,
 
     ResultsComponent,
       BookingInfoComponent,

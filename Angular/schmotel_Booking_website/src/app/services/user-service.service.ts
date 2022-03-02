@@ -81,17 +81,27 @@ async login(username:string)
   
 }
 
+updateUser(
+  user:IUser
+): Observable<IUser> {
+  return this.http
+    .put<IUser>(
+      'http://localhost:7000/user/',
+      JSON.stringify({
+        user
+      }),
+      { headers: { 'Content-Type': 'application/json' } }
+    )
+    .pipe(
+      catchError((e) => {
+        return throwError(e);
+      })
+    );
+}
 
 
 
-  // login(email:string,password:string):Observable<IUser>{
-  //   return this.http.post<IUser>("http//localhost:7000/login",JSON.stringify({email,password}),
-  //  {headers:{'Content-Type': 'application/json'}} 
-  //  )
-  //   .pipe (catchError((e)=>{
-  //     return throwError(e);
-  //   }));
-  // }
+  
   constructor(private http: HttpClient) {}
 
 
