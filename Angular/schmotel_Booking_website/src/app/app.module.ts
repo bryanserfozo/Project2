@@ -14,8 +14,9 @@ import { SearchComponent } from './components/search/search.component';
 import { ResultsComponent } from './components/results/results.component';
 import { SearchFilterComponent } from './components/search-filter/search-filter.component';
 
-import { SearchresultService } from './services/searchresult.service';
+// import { SearchresultService } from './services/searchresult.service';
 import { UserServiceService } from './services/user-service.service';
+import { BookingInfoComponent } from './components/booking-info/booking-info.component';
 
 @NgModule({
   declarations: [
@@ -28,10 +29,11 @@ import { UserServiceService } from './services/user-service.service';
     NavComponent,
 
     ResultsComponent,
+      BookingInfoComponent,
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
 
-  providers: [SearchresultService, UserServiceService],
+  providers: [ UserServiceService],
 
   bootstrap: [AppComponent],
 })

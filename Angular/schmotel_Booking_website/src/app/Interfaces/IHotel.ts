@@ -4,4 +4,7 @@ export interface IHotel {
   rating?: string;
   price: string;
   thumbnailUrl?: string;
+  address?: string;
+  description?: string
 }
+

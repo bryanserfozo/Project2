@@ -6,11 +6,14 @@
         <div class="four columns">
           <label for="search-city-input"> Where to?</label>
           <input
+            
             type="text"
             placeholder="e.g. North Korea"
             id="search-city-input"
             class="u-full-width search-city-input"
-
+            name = "location"
+            required [(ngModel)] = "location"
+          />
         </div>
 
         <!-- departing/arrival date calendar input section-->
@@ -70,13 +73,17 @@
           </div>
         </div>
       </div>
-      <div class="search-btn-div">
-        <button class="button-primary search-btn" id="search-btn" type="submit">
-          search
-        </button>
-      </div>
-    </form>
-
-
+    
+    <div class="search-btn-div">
+      <button
+        
+        class="button-primary search-btn"
+        id="seatch-btn"
+        type="submit"
+      >
+        search
+      </button>
+    </div>
+  </form>
   </div>
 </section>
