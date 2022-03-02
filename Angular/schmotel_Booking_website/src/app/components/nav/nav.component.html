@@ -1,18 +1,27 @@
 <div class="container">
   <div class="row">
     <section class="nav-section">
-      <div class="u-pull-left"><a class="logo" href="#">SCHMOTELS.COM</a></div>
+      <div class="u-pull-left"><a class="logo" (click) = "navigateHome()">SCHMOTELS.COM</a></div>
       <ul class="navbar u-pull-right">
-        <li class="item"><a class="about" routerLink="home">about</a></li>
-        <li class="item"><a class="my-account" routerLink="home">my account</a></li>
-        <li class="item"><a class="booking-history" routerLink="booking-history">test booking history</a></li>
+        <li class="item"><a class="about" href="#">about</a></li>
+        <li class="item"><a class="my-account" routerLink="#">my account</a></li>
+        <li class="item"><a class="my-account" routerLink="#">test booking history</a></li>
         <li class="item">
           <button
+            *ngIf="!signedIn"
             class="button-primary"
             id="login-button"
             (click)="navigateLogin()"
           >
             Login
+          </button>
+          <button
+            *ngIf="signedIn"
+            class="button-primary"
+            id="login-button"
+            (click)="navigateLogin()"
+          >
+            Logout
           </button>
         </li>
       </ul>

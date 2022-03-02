@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { IUser } from 'src/app/Interfaces/IUser';
+import { DataService } from 'src/app/services/data.service';
 
 
 @Component({
@@ -9,14 +11,33 @@ import { Router } from '@angular/router';
 })
 export class NavComponent implements OnInit {
 
-  constructor(private router:Router){}
+  signedIn: boolean = false;
 
-  navigateLogin():void{
-
-    this.router.navigate(['login']);
+  navigateHome():void{
+    this.router.navigate(['home']);
   }
 
-  ngOnInit(): void {
+  
+  
+  navigateLogin():void{
+      this.dataService.changeUser({
+        id: 0,
+      email: '',
+      username: '',
+      firstName: '',
+      lastName: '',
+      password: '',
+      phoneNumber: '1234567891',
+      })
+      this.router.navigate(['login']);
+    }
+  constructor(private router:Router, private dataService:DataService){}
+
+
+  async ngOnInit(): Promise<void> {
+    console.log("Initialized")
+    this.dataService.currentSignedIn.subscribe(value=>this.signedIn = value)
+    
   }
 
 }
