@@ -1,21 +1,40 @@
 package com.revature.BookingHotel.Models;
 
+import javax.persistence.*;
 import java.sql.Date;
 
+@Entity
+@Table(name = "booking")
 public class Booking {
 
+    @Id
+    @Column(name = "booking_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int bookingId;
+
+    @ManyToOne(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
+    @JoinColumn(name = "user_id")
     private User user;
-    private Hotel hotel;
+
+    @Column(name = "hotel_id", nullable = false)
+    private int hotel;
+
+    @Column(name = "booking_date", nullable = false)
     private Date bookingDate;
+
+    @Column(name = "check_in_date", nullable = false)
     private Date checkInDate;
+
+    @Column(name = "check_out_date", nullable = false)
     private Date checkOutDate;
-    private int numNights;
+
+    @Column(name = "num_nights", nullable = false)
+    private long numNights;
 
     public Booking() {
     }
 
-    public Booking(int bookingId, User user, Hotel hotel, Date bookingDate, Date checkInDate, Date checkOutDate, int numNights) {
+    public Booking(int bookingId, User user, int hotel, Date bookingDate, Date checkInDate, Date checkOutDate, long numNights) {
         this.bookingId = bookingId;
         this.user = user;
         this.hotel = hotel;
@@ -41,11 +60,11 @@ public class Booking {
         this.user = user;
     }
 
-    public Hotel getHotel() {
+    public int getHotel() {
         return hotel;
     }
 
-    public void setHotel(Hotel hotel) {
+    public void setHotel(int hotel) {
         this.hotel = hotel;
     }
 
@@ -73,11 +92,11 @@ public class Booking {
         this.checkOutDate = checkOutDate;
     }
 
-    public int getNumNights() {
+    public long getNumNights() {
         return numNights;
     }
 
-    public void setNumNights(int numNights) {
+    public void setNumNights(long numNights) {
         this.numNights = numNights;
     }
 

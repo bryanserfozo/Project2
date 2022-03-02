@@ -1,27 +1,31 @@
-.nav-div {
-  border: 1px solid lightgray;
-  border-radius: 10px;
-  background-color: rgb(129, 190, 247);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  position: relative;
-  height: 50px;
+.nav-section {
+  height: 10vh;
+  padding: 5px;
+  margin: 0;
+  font-size: 16px;
 }
+.nav-section a {
+  font-size: 20px;
+  text-decoration: none;
+  color: rgb(118, 124, 126);
+}
+
+.logo:hover {
+  border-bottom: 2px #1eaedb solid;
+}
+
+.about:hover {
+  border-bottom: 2px #1eaedb solid;
+}
+.my-account:hover {
+  border-bottom: 2px #1eaedb solid;
+}
+
 .navbar {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  padding: 2px 5px 10px 5px;
-  margin: 0;
-  top: 20px;
-  right: 100px;
   list-style: none;
-
-  height: 25px;
 }
+
 .navbar li {
-  padding: 10px;
+  margin-left: 40px;
 }

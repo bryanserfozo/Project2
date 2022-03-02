@@ -7,15 +7,13 @@ import { AppComponent } from './app.component';
 import { MainComponent } from './main-page/main/main.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavComponent } from './components/nav/nav.component';
-
 import { RegisterComponent } from './components/register/register.component';
-
 import { SearchComponent } from './components/search/search.component';
 import { ResultsComponent } from './components/results/results.component';
 import { SearchFilterComponent } from './components/search-filter/search-filter.component';
-
-import { SearchresultService } from './services/searchresult.service';
 import { UserPageComponent } from './components/user-page/user-page.component';
+import { UserServiceService } from './services/user-service.service';
+import { BookingInfoComponent } from './components/booking-info/booking-info.component';
 
 @NgModule({
   declarations: [
@@ -28,20 +26,11 @@ import { UserPageComponent } from './components/user-page/user-page.component';
     NavComponent,
 
     ResultsComponent,
-     UserPageComponent
+      BookingInfoComponent,
   ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    AppRoutingModule,
-    HttpClientModule,
+  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
 
-  ],
-
-
-
-  providers: [SearchresultService],
-
+  providers: [ UserServiceService],
 
   bootstrap: [AppComponent],
 })
