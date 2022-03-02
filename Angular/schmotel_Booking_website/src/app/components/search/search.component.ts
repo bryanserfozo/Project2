@@ -10,6 +10,7 @@ import { MainComponent } from 'src/app/main-page/main/main.component';
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
+<<<<<<< HEAD
   // template: `
     // <section class="search-section">
     //   <div class="form-wrapper">
@@ -77,17 +78,28 @@ import { MainComponent } from 'src/app/main-page/main/main.component';
     //   </div>
     // </section>
   // `,
+=======
+>>>>>>> 3ffdd831c81345b612fb8c659b78cb47cb2c9c97
   styleUrls: ['./search.component.css'],
 })
-
-
-
 export class SearchComponent implements OnInit {
-  // constructor(private router: Router) {}
-
   @Output() notify = new EventEmitter<IHotel[]>();
 
+<<<<<<< HEAD
+  @Output() notify = new EventEmitter<IHotel[]>();
+=======
+  hotels: IHotel[] = [];
+>>>>>>> 3ffdd831c81345b612fb8c659b78cb47cb2c9c97
 
+  hotel: IHotel = {
+    id: 0,
+    hotelName: '',
+    rating: '',
+    price: '',
+    thumbnailUrl: '',
+  };
+
+<<<<<<< HEAD
   hotels:IHotel[] =[]
 
     hotel: IHotel = {
@@ -113,40 +125,91 @@ export class SearchComponent implements OnInit {
       console.log(this.searchService.hotels)
       this.notify.emit(this.hotels)
     }
+=======
+  location: string = '';
+  checkInDate: string = '';
+  checkOutDate: string = '';
+  numAdults: number = 0;
+>>>>>>> 3ffdd831c81345b612fb8c659b78cb47cb2c9c97
 
+  error: boolean = false;
 
+<<<<<<< HEAD
 
   // lstdestinations: Destination[] = [];
 
 
   constructor(private searchService:SearchServiceService, private router: Router) {}
-
-    // searchreaultData = null;
-
+=======
+  //submit the form and get values
+  async onSubmit(): Promise<void> {
+    this.hotels = [];
+    console.log(
+      this.location,
+      this.checkInDate,
+      this.checkOutDate,
+      this.numAdults
+    );
+    await this.searchService.getHotels(
+      this.location,
+      this.checkInDate,
+      this.checkOutDate,
+      this.numAdults
+    );
+    this.hotels = this.searchService.hotels;
+    console.log(this.searchService.hotels);
+    this.notify.emit(this.hotels);
+  }
+>>>>>>> 3ffdd831c81345b612fb8c659b78cb47cb2c9c97
 
   ngOnInit(): void {
-  //   this.searchresultService.getsearchresult().subscribe((data)=>{
-
-  //     console.log(data);
-  //     this.searchreaultData = data;
-  //   });
+ 
   }
 
+<<<<<<< HEAD
   // public callApi() {
   //     console.log("the api has been called");
   //     this.SearchresultService.callApi().subscribe((data)=>{
   //      console.log(data);
   //       });
   // }
+=======
+//celiacodetestapicall
+
+//   public callApi() {
+//       console.log("the api has been called");
+//       this.searchresultService.callApi().subscribe((data)=>{
+//        console.log(data);
+//        if (data.suggestions){
+         
+//        }
+//         });
+//   }
+
+>>>>>>> 3ffdd831c81345b612fb8c659b78cb47cb2c9c97
 
  // searchFilter = false;
 
-
+  // plus/minus number of guests
+  public setNumGuest(type: string): void {
+    console.log('clicked ');
+    type === 'plus' ? this.numAdults++ : this.numAdults--;
   }
 
-  
+  // lstdestinations: Destination[] = [];
 
- 
-  
+  constructor(
+    private searchService: SearchServiceService,
+    private router: Router
+  ) {}
+  // searchreaultData = null;
+
+
+  ngOnInit(): void {
+    //   this.searchresultService.getsearchresult().subscribe((data)=>{
+    //     console.log(data);
+    //     this.searchreaultData = data;
+    //   });
+  }
 
   

@@ -3,6 +3,7 @@
     <!-- search results will dynamically be inserted here -->
     <div class="return-result-div">
       <div class="img-thumbnail">
+<<<<<<< HEAD
         <img class="hotel-thumbnail" src={{result.thumbnailUrl}} alt="img placeholder" />
       </div>
       <div class="return-result-name">
@@ -13,28 +14,24 @@
       </div>
       <div class="return-result-price">
         <h5>Rate Per Night: {{result.price}}</h5>
+=======
+        <img
+          class="hotel-thumbnail"
+          src="{{ result.thumbnailUrl }}"
+          alt="img placeholder"
+        />
+      </div>
+      <div class="return-result-name">
+        <h5>{{ result.hotelName }}</h5>
+      </div>
+      <div class="return-result-rating">
+        <h5>Guest Rating: {{ result.rating }}/10</h5>
+      </div>
+      <div class="return-result-price">
+        <h5>Rate Per Night: {{ result.price }}</h5>
+>>>>>>> 3ffdd831c81345b612fb8c659b78cb47cb2c9c97
       </div>
 
-      <div class="room-details-table">
-        <table>
-          <thead>
-            <tr>
-              <th><i class="fa-solid fa-bed"></i> Beds</th>
-              <th>Detail 2</th>
-              <th>Detail 3</th>
-              <th>Detail 4</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>2</td>
-              <td>3</td>
-              <td>4</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
       <div class="book-btn-div">
         <button class="button-primary book-btn">book now</button>
       </div>

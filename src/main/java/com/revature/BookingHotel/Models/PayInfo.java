@@ -23,7 +23,7 @@ public class PayInfo {
 
     @Column(name = "card_number", nullable = false)
     private int cardNumber;
-
+    
     @Column(name = "payment_type", nullable = false)
     private PaymentType type;
 

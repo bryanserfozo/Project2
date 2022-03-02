@@ -1,19 +1,27 @@
-<section>
-  <div class="hero-image-section">
-    <h3>Image placeholder</h3>
-  </div>
-</section>
-<!-- title section -->
-<section class="title-section">
-  <div class="row">
-    <div class="main-title-div">
-      <h3>Search for hotels</h3>
+<div class="container">
+  <section>
+    <div class="hero-image-section">
+      <section class="title-section">
+        <div class="row">
+          <div class="main-title-div">
+            <h3>Search for hotels</h3>
+          </div>
+        </div>
+      </section>
     </div>
-  </div>
-</section>
+  </section>
 
+<<<<<<< HEAD
 <!-- flight search section -->
 <app-search (notify) = "onNotifyClicked($event)"></app-search>
 <!-- flight results section -->
 <app-search-filter></app-search-filter>
 <app-results *ngFor="let hotel of hotels" [result]="hotel"></app-results>
+=======
+  <!-- hotel search section -->
+  <app-search (notify)="onNotifyClicked($event)"></app-search>
+  <!-- flight results section -->
+  <app-search-filter></app-search-filter>
+  <app-results *ngFor="let hotel of hotels" [result]="hotel"></app-results>
+</div>
+>>>>>>> 3ffdd831c81345b612fb8c659b78cb47cb2c9c97
