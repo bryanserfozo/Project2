@@ -6,12 +6,14 @@
       </div>
       <ul class="navbar u-pull-right">
         <li class="item"><a class="about" href="#">about</a></li>
+        <!-- if user is signed-in, display my account link -->
         <li *ngIf="!signedIn" class="item hide">
-          <a class="hide" href="#">my account</a>
+          <a class="my-account" routerLink="user">my account</a>
         </li>
         <li *ngIf="signedIn" class="item">
-          <a class="my-account" href="#">my account</a>
+          <a class="my-account" routerLink="user">my account</a>
         </li>
+        <!--  -->
 
         <li class="item">
           <button

@@ -9,13 +9,15 @@ import { BookingInfoComponent } from './components/booking-info/booking-info.com
 
 import { RouterModule, Routes } from '@angular/router';
 import { RegisterComponent } from './components/register/register.component';
+import { UserPageComponent } from './components/user-page/user-page.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: MainComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'booking', component: BookingInfoComponent }
+  { path: 'booking', component: BookingInfoComponent },
+  { path: 'user', component: UserPageComponent }
 ];
 
 @NgModule({
