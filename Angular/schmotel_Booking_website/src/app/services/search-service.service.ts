@@ -16,6 +16,8 @@ export class SearchServiceService {
     rating: '',
     price: '',
     thumbnailUrl: '',
+    address: '',
+    description:''
   };
 
   async getHotels(
@@ -29,7 +31,7 @@ export class SearchServiceService {
       .set('x-rapidapi-host', 'hotels4.p.rapidapi.com')
       .set(
         'x-rapidapi-key',
-        '13b1eeb183msh58e9387b74bbd30p13f30ejsnf3d12efe8960'
+        '44b3c64519mshaa86b6304abe377p19c896jsne726492bbb98'
       );
     let destUrl =
       'https://hotels4.p.rapidapi.com/locations/v2/search?query=' +
@@ -52,6 +54,7 @@ export class SearchServiceService {
     let propertieslist = await lastValueFrom(
       this.http.get(propUrl, { headers: headers })
     ).then((response) => JSON.parse(JSON.stringify(response)));
+    console.log("Process Hotel Info")
     for (
       let i = 0;
       i < propertieslist.data.body.searchResults.results.length;
@@ -83,6 +86,42 @@ export class SearchServiceService {
         continue;
       }
     }
+  }
+
+
+  async getHotelInfo(
+    hotelId: number,
+    checkInDate: string,
+    checkOutDate: string,
+    numAdults: number
+  ){
+    let headers = new HttpHeaders()
+      .set('Content-Type', 'application/json')
+      .set('x-rapidapi-host', 'hotels4.p.rapidapi.com')
+      .set(
+        'x-rapidapi-key',
+        '44b3c64519mshaa86b6304abe377p19c896jsne726492bbb98'
+      );
+    let infoUrl = "https://hotels4.p.rapidapi.com/properties/get-details?id=" + 
+    hotelId + 
+    "&checkIn=" + 
+    checkInDate + 
+    "&checkOut=" + 
+    checkOutDate + 
+    "&adults1=" + 
+    numAdults + 
+    "&currency=USD&locale=en_US"
+
+    let hotelInfo = await lastValueFrom(
+      this.http.get(infoUrl, { headers: headers })
+    ).then((response) => JSON.parse(JSON.stringify(response)));
+    this.entry.address = hotelInfo.data.body.propertyDescription.address.fullAddress;
+    this.entry.description = "\n";
+    for ( let i = 0; i<hotelInfo.data.body.overview.overviewSections.length; i++){
+      for ( let j = 0; j<hotelInfo.data.body.overview.overviewSections[i].content.length; j++)
+      this.entry.description += hotelInfo.data.body.overview.overviewSections[i].content[j] + "\n";
+    }
+
   }
   constructor(private http: HttpClient) {}
 

@@ -11,17 +11,11 @@
     </div>
   </section>
 
-<<<<<<< HEAD
-<!-- flight search section -->
-<app-search (notify) = "onNotifyClicked($event)"></app-search>
-<!-- flight results section -->
-<app-search-filter></app-search-filter>
-<app-results *ngFor="let hotel of hotels" [result]="hotel"></app-results>
-=======
+
   <!-- hotel search section -->
   <app-search (notify)="onNotifyClicked($event)"></app-search>
   <!-- flight results section -->
   <app-search-filter></app-search-filter>
   <app-results *ngFor="let hotel of hotels" [result]="hotel"></app-results>
 </div>
->>>>>>> 3ffdd831c81345b612fb8c659b78cb47cb2c9c97
+

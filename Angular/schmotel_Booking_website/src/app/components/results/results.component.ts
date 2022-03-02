@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { IHotel } from 'src/app/Interfaces/IHotel';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-results',
@@ -15,22 +17,12 @@ export class ResultsComponent implements OnInit {
     thumbnailUrl: '',
   };
 
-<<<<<<< HEAD
-  @Input() result:IHotel = {
-    id:0,
-    hotelName : "",
-    rating:"",
-    price:"",
-    thumbnailUrl:""
-  };
-
-  constructor() { }
-
-  ngOnInit(): void {
+  sendHotel(newHotel:IHotel){
+    this.data.changeHotel(newHotel)
+    this.router.navigate(['booking']);
   }
-=======
-  constructor() {}
->>>>>>> 3ffdd831c81345b612fb8c659b78cb47cb2c9c97
+
+  constructor(private data:DataService, private router:Router) {}
 
   ngOnInit(): void {}
 }

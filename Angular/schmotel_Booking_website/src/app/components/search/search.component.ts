@@ -1,16 +1,18 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 import { Search } from 'src/app/Interfaces/search';
-import { SearchresultService } from 'src/app/services/searchresult.service';
+// import { SearchresultService } from 'src/app/services/searchresult.service';
 import { Destination } from 'src/app/Interfaces/destination';
 import { SearchServiceService } from 'src/app/services/search-service.service';
 import { IHotel } from 'src/app/Interfaces/IHotel';
 import { MainComponent } from 'src/app/main-page/main/main.component';
+import { IBooking } from 'src/app/Interfaces/IBooking';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
-<<<<<<< HEAD
+
   // template: `
     // <section class="search-section">
     //   <div class="form-wrapper">
@@ -78,18 +80,15 @@ import { MainComponent } from 'src/app/main-page/main/main.component';
     //   </div>
     // </section>
   // `,
-=======
->>>>>>> 3ffdd831c81345b612fb8c659b78cb47cb2c9c97
+
   styleUrls: ['./search.component.css'],
 })
 export class SearchComponent implements OnInit {
   @Output() notify = new EventEmitter<IHotel[]>();
 
-<<<<<<< HEAD
-  @Output() notify = new EventEmitter<IHotel[]>();
-=======
+
   hotels: IHotel[] = [];
->>>>>>> 3ffdd831c81345b612fb8c659b78cb47cb2c9c97
+
 
   hotel: IHotel = {
     id: 0,
@@ -99,48 +98,23 @@ export class SearchComponent implements OnInit {
     thumbnailUrl: '',
   };
 
-<<<<<<< HEAD
-  hotels:IHotel[] =[]
+  booking: IBooking = {
+    hotel: this.hotel,
+    checkIn: '',
+    checkOut: '',
+    numAdults: 0,
+  }
 
-    hotel: IHotel = {
-      id:0,
-      hotelName : "",
-      rating:"",
-      price:"",
-      thumbnailUrl:""
-    }
   
-    location:string = "";
-    checkInDate:string = "";
-    checkOutDate:string = "";
-    numAdults:number = 0;
-    
-    error: boolean = false;
-  
-    async onSubmit():Promise<void>{
-      this.hotels = [];
-      console.log(this.location, this.checkInDate, this.checkOutDate, this.numAdults)
-      await this.searchService.getHotels(this.location, this.checkInDate, this.checkOutDate, this.numAdults)
-      this.hotels = this.searchService.hotels;
-      console.log(this.searchService.hotels)
-      this.notify.emit(this.hotels)
-    }
-=======
+
   location: string = '';
   checkInDate: string = '';
   checkOutDate: string = '';
   numAdults: number = 0;
->>>>>>> 3ffdd831c81345b612fb8c659b78cb47cb2c9c97
+
 
   error: boolean = false;
 
-<<<<<<< HEAD
-
-  // lstdestinations: Destination[] = [];
-
-
-  constructor(private searchService:SearchServiceService, private router: Router) {}
-=======
   //submit the form and get values
   async onSubmit(): Promise<void> {
     this.hotels = [];
@@ -150,6 +124,14 @@ export class SearchComponent implements OnInit {
       this.checkOutDate,
       this.numAdults
     );
+
+    this.booking.checkIn = this.checkInDate;
+    this.booking.checkOut = this.checkOutDate;
+    this.booking.numAdults = this.numAdults;
+
+    this.dataService.changeBooking(this.booking);
+    console.log(this.dataService.currentBooking)
+
     await this.searchService.getHotels(
       this.location,
       this.checkInDate,
@@ -160,20 +142,12 @@ export class SearchComponent implements OnInit {
     console.log(this.searchService.hotels);
     this.notify.emit(this.hotels);
   }
->>>>>>> 3ffdd831c81345b612fb8c659b78cb47cb2c9c97
 
   ngOnInit(): void {
  
   }
 
-<<<<<<< HEAD
-  // public callApi() {
-  //     console.log("the api has been called");
-  //     this.SearchresultService.callApi().subscribe((data)=>{
-  //      console.log(data);
-  //       });
-  // }
-=======
+
 //celiacodetestapicall
 
 //   public callApi() {
@@ -186,7 +160,7 @@ export class SearchComponent implements OnInit {
 //         });
 //   }
 
->>>>>>> 3ffdd831c81345b612fb8c659b78cb47cb2c9c97
+
 
  // searchFilter = false;
 
@@ -200,16 +174,13 @@ export class SearchComponent implements OnInit {
 
   constructor(
     private searchService: SearchServiceService,
-    private router: Router
+    private router: Router,
+    private dataService: DataService
   ) {}
   // searchreaultData = null;
 
 
-  ngOnInit(): void {
-    //   this.searchresultService.getsearchresult().subscribe((data)=>{
-    //     console.log(data);
-    //     this.searchreaultData = data;
-    //   });
+  
   }
 
   

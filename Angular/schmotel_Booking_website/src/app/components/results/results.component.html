@@ -3,18 +3,6 @@
     <!-- search results will dynamically be inserted here -->
     <div class="return-result-div">
       <div class="img-thumbnail">
-<<<<<<< HEAD
-        <img class="hotel-thumbnail" src={{result.thumbnailUrl}} alt="img placeholder" />
-      </div>
-      <div class="return-result-name">
-        <h5>{{result.hotelName}}</h5>
-      </div>
-      <div class="return-result-rating">
-        <h5>Guest Rating: {{result.rating}}/10</h5>
-      </div>
-      <div class="return-result-price">
-        <h5>Rate Per Night: {{result.price}}</h5>
-=======
         <img
           class="hotel-thumbnail"
           src="{{ result.thumbnailUrl }}"
@@ -29,11 +17,10 @@
       </div>
       <div class="return-result-price">
         <h5>Rate Per Night: {{ result.price }}</h5>
->>>>>>> 3ffdd831c81345b612fb8c659b78cb47cb2c9c97
       </div>
 
       <div class="book-btn-div">
-        <button class="button-primary book-btn">book now</button>
+        <button class="button-primary book-btn" (click) = "sendHotel(this.result)">book now</button>
       </div>
     </div>
   </div>
