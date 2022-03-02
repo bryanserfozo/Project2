@@ -1,0 +1,26 @@
+User Page (Mimi):
+View/ Update Info
+Add Card for Payments
+If not logged in send to login
+
+Past Bookings:
+View Past Bookings
+Maybe update (if not too much of a headache)
+If not logged in send to login
+
+Booking Info Page (Bryan):
+Has additional hotel info (requires another call, maybe 2)
+Confirm button to send data to confirmation page
+
+Booking Confirmation Page:
+Has all:
+	-User info
+	-Hotel Info (id)
+	-Pay Info
+Create booking button creates booking(email)
+If not logged in send to login
+
+Login Page (Celia):
+Allows user to login, information should persist until session end
+Register option
+forgot password (maybe if time)

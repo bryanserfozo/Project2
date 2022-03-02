@@ -11,9 +11,11 @@ import { SearchServiceService } from 'src/app/services/search-service.service';
 export class MainComponent implements OnInit {
   hotels: IHotel[] = [];
 
+
   onNotifyClicked(list: any) {
     this.hotels = [];
     this.hotels = list;
+
   }
 
   constructor(private searchService: SearchServiceService) {}
