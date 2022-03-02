@@ -21,10 +21,8 @@ export class LoginComponent implements OnInit {
     if(this.password==this.userService.loginUser.password){
       console.log("correct username and password") 
       this.dataService.changeUser(this.userService.loginUser)
+      this.dataService.changeSignedIn(true)
       this.router.navigate(['home']);
-    
-      
-      
     }else{
       console.log("incorrect username or password")
     }

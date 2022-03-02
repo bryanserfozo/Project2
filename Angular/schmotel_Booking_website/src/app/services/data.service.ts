@@ -55,7 +55,11 @@ export class DataService {
       this.loggedIn.next(user)
     }
     
-
+    private signedIn = new BehaviorSubject<boolean>(false)
+    currentSignedIn = this.signedIn.asObservable();
+    changeSignedIn(value:boolean){
+      this.signedIn.next(value)
+    }
 
 
 
