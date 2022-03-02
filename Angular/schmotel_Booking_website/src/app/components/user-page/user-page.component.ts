@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable, ObservableInputTuple } from 'rxjs';
 import { IUser } from 'src/app/Interfaces/IUser';
 import { Router } from '@angular/router';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-user-page',
@@ -23,18 +24,15 @@ export class UserPageComponent implements OnInit {
     phoneNumber : ""
   }
 
-  //navigateMyAccount():void{
-    
-  //  this.router.navigate(['My Account']);
-  //}
 
   showHidePaycardForm(): void{
     this.hide=!this.hide;
   }
 
-  constructor() { }
+  constructor(private dataService:DataService) { }
 
   ngOnInit(): void {
+    this.dataService.currentUser.subscribe(user => this.user = user)
   }
 
 }

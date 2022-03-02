@@ -5,22 +5,22 @@
     <div class = "container">
         <form id="updateInfo">
 
-            <label for="first">First Name</label><br>
+            <label for="first">First Name: {{user.firstName}}</label><br>
             <input class ="u-full-width" type="text" id="accinfo" name="firstname"><br>
 
-            <label for="last">Last Name</label><br>
+            <label for="last">Last Name: {{user.lastName}}</label><br>
             <input class ="u-full-width" type="text" id="accinfo" name="lastname"><br>
 
-            <label for="email">Email</label><br>
+            <label for="email">Email: {{user.email}}</label><br>
             <input class ="u-full-width" type="text" id="accinfo" name="email"><br>
 
-            <label for="username">Username</label><br>
+            <label for="username">Username: {{user.username}}</label><br>
             <input class ="u-full-width" type="text" id="accinfo" name="username"><br>
 
-            <label for="password">Password</label><br>
+            <label for="password">Password: {{user.password}}</label><br>
             <input class ="u-full-width" type="text" id="accinfo" name="password">
 
-            <label for="phonenumber">Phone Number</label><br>
+            <label for="phonenumber">Phone Number: {{user.phoneNumber}}</label><br>
             <input class ="u-full-width" type="text" id="accinfo" name="phonenumber">
 
         </form><br>
@@ -35,5 +35,5 @@
             <input class = "u-full-width" type="text" id="cardnum" name="cardnum">
 
         </form>
-        <!--<a routerLink="myaccount" (click)="navigateUser-Page()">My Account</a>-->
+        <!--<a routerLink="my-account" (click)="navigateUser-Page()">My Account</a>-->
     </div>
