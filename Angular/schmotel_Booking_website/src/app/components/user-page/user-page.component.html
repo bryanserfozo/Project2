@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>User Profile</title>
+</head>
+    <h3>Account Information</h3>
+    <div class = "container">
+        <form id="updateInfo">
+
+            <label for="first">First Name</label><br>
+            <input class ="u-full-width" type="text" id="accinfo" name="firstname"><br>
+
+            <label for="last">Last Name</label><br>
+            <input class ="u-full-width" type="text" id="accinfo" name="lastname"><br>
+
+            <label for="email">Email</label><br>
+            <input class ="u-full-width" type="text" id="accinfo" name="email"><br>
+
+            <label for="password">Password</label><br>
+            <input class ="u-full-width" type="text" id="accinfo" name="password">
+
+            <label for="phonenumber">Phone Number</label><br>
+            <input class ="u-full-width" type="text" id="accinfo" name="phonenumber">
+
+        </form><br>
+
+        <button class="button" id="update">Update</button> &ensp; <button class="button" id = "submit">Save Changes</button>
+    </div>
+    <div>
+        <button [hidden]="!hide" (click)="showHidePaycardForm()">Add a Payment Card</button>
+        <form id="paycard">
+           
+            <label for="cardnum">Card Number</label>
+            <input class = "u-full-width" type="text" id="cardnum" name="cardnum">
+
+        </form>
+    </div>
+
+</html>
