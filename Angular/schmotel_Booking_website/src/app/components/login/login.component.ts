@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { async } from '@angular/core/testing';
 import { Router } from '@angular/router';
+import { DataService } from 'src/app/services/data.service';
+import { UserServiceService } from 'src/app/services/user-service.service';
 
 @Component({
   selector: 'app-login',
@@ -8,12 +11,29 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  navigateRegister():void{
-    
-    this.router.navigate(['register']);
+  username:string = "";
+  password:string = "";
+  
+
+  async onSubmit ():Promise<void>{
+    console.log(this.username)
+    await this.userService.login(this.username)
+    if(this.password==this.userService.loginUser.password){
+      console.log("correct username and password") 
+      this.dataService.changeUser(this.userService.loginUser)
+      this.dataService.changeSignedIn(true)
+      this.router.navigate(['home']);
+    }else{
+      console.log("incorrect username or password")
+    }
   }
 
-  constructor(private router:Router){}
+ navigateRegister():void{
+    
+  this.router.navigate(['register']);
+}
+
+  constructor(private router:Router,private userService:UserServiceService, private dataService: DataService) {}
 
   ngOnInit(): void {
   }

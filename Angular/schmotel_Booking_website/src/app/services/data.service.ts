@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { IBooking } from '../Interfaces/IBooking';
 import { IHotel } from '../Interfaces/IHotel';
+import { IUser } from '../Interfaces/IUser';
 
 @Injectable({
   providedIn: 'root'
@@ -37,6 +38,30 @@ export class DataService {
   changeBooking(newBooking:IBooking){
     this.bookingInfo.next(newBooking)
   }
+
+  private loggedIn =new BehaviorSubject<IUser>({
+    id: 0,
+    email: '',
+    username: '',
+    firstName: '',
+    lastName: '',
+    password: '',
+    phoneNumber: '1234567891',
+  })
+
+    currentUser = this.loggedIn.asObservable();
+
+    changeUser(user:IUser){
+      this.loggedIn.next(user)
+    }
+    
+    private signedIn = new BehaviorSubject<boolean>(false)
+    currentSignedIn = this.signedIn.asObservable();
+    changeSignedIn(value:boolean){
+      this.signedIn.next(value)
+    }
+
+
 
   constructor() { }
 }
