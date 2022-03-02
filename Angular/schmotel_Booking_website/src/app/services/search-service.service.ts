@@ -26,6 +26,7 @@ export class SearchServiceService {
     checkOutDate: string,
     numAdults: number
   ) {
+    this.hotels = [];
     let headers = new HttpHeaders()
       .set('Content-Type', 'application/json')
       .set('x-rapidapi-host', 'hotels4.p.rapidapi.com')
