@@ -6,7 +6,7 @@
         <form id="updateInfo">
 
             <label for="first">First Name: {{user.firstName}}</label><br>
-            <input class ="u-full-width" type="text" id="accinfo" name="firstname"><br>
+            <input class ="u-full-width" type="text" id="accinfo" name="updateFirstName" required [(ngModel)] = "updateFirstName"><br>
 
             <label for="last">Last Name: {{user.lastName}}</label><br>
             <input class ="u-full-width" type="text" id="accinfo" name="lastname"><br>

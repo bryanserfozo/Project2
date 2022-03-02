@@ -14,6 +14,7 @@ export class UserPageComponent implements OnInit {
   users:Observable<IUser[]> = new Observable<IUser[]>()
 
   hide:boolean = true;
+  hideform: boolean = true;
 
   user: IUser = {
     firstName : "",
@@ -23,6 +24,8 @@ export class UserPageComponent implements OnInit {
     password : "",
     phoneNumber : ""
   }
+
+  updateFirstName:string = "";
 
 
   showHidePaycardForm(): void{
