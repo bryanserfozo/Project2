@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { async } from '@angular/core/testing';
 import { Router } from '@angular/router';
+import { DataService } from 'src/app/services/data.service';
 import { UserServiceService } from 'src/app/services/user-service.service';
 
 @Component({
@@ -9,26 +11,31 @@ import { UserServiceService } from 'src/app/services/user-service.service';
 })
 export class LoginComponent implements OnInit {
 
-  email:string = "";
+  username:string = "";
   password:string = "";
-  error:boolean=false;
+  
 
- onSubmit():void{
-    console.log(this.email,this.password)
-    this.userService.login(this.email,this.password)
-    .subscribe((data)=>{
-      console.log(data)
-      this.router.navigateByUrl('/home')
+  async onSubmit ():Promise<void>{
+    console.log(this.username)
+    await this.userService.login(this.username)
+    if(this.password==this.userService.loginUser.password){
+      console.log("correct username and password") 
+      this.dataService.changeUser(this.userService.loginUser)
+      this.router.navigate(['home']);
     
-  })
- }
+      
+      
+    }else{
+      console.log("incorrect username or password")
+    }
+  }
 
  navigateRegister():void{
     
   this.router.navigate(['register']);
 }
 
-  constructor(private router:Router,private userService:UserServiceService) {}
+  constructor(private router:Router,private userService:UserServiceService, private dataService: DataService) {}
 
   ngOnInit(): void {
   }

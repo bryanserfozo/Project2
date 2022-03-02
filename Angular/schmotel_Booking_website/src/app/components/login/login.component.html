@@ -9,24 +9,24 @@
   <!-------------SignInform-------------->
   <section>
     <div class="row">
-      <h1 *ngIf="error">Username or password was incorrect</h1>
+      <!-- <h1 *ngIf="error">Username or password was incorrect</h1> -->
       <div class="login-image six columns">
         <div class="img"></div>
       </div>
       <div class="six columns">
         <div class="main-title-div">
-          <form id="login" (ngsubmit)="onSubmit()">
+          <form id="login" (ngSubmit)="onSubmit()">
             <div class="row">
               <div class="u-full-width">
-                <label for="exampleEmailInput">Your email</label>
-                <input  class="u-full-width"  type="email"  placeholder="Email Address" id="email"  required [(ngModel)]="email" >
+                <label for="exampleEmailInput">Your username</label>
+                <input  class="u-full-width"  type="text"  placeholder="username" id="username" name="username" required [(ngModel)]="username" >
               </div>
             </div>
 
             <div class="row">
               <div class="u-full-width">
                 <label for="exampleRecipientInput">Password</label>
-                <input class="u-full-width"   type="password" placeholder="password"   id="password"  required [(ngModel)]="password" >
+                <input class="u-full-width"   type="password" placeholder="password"   id="password"  name="password" required [(ngModel)]="password" >
               </div>
             </div>
             <div class="sign-in">
