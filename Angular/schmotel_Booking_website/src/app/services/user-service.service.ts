@@ -48,5 +48,20 @@ export class UserServiceService {
       );
   }
 
+loginUser:IUser= {
+  email:"",
+  password:"",
+};
+
+  login(email:string,password:string):Observable<IUser>{
+    return this.http.post<IUser>("http//localhost:7000/login",JSON.stringify({email,password}),
+   {headers:{'Content-Type': 'application/json'}} 
+   )
+    .pipe (catchError((e)=>{
+      return throwError(e);
+    }));
+  }
   constructor(private http: HttpClient) {}
+
+
 }
