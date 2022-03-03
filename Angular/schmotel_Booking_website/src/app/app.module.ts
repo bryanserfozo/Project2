@@ -21,6 +21,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { BookingService } from './services/booking.service';
 import { ConfirmationComponent } from './components/confirmation/confirmation.component';
+import { PageNumberComponent } from './components/page-number/page-number.component';
 
 @NgModule({
 
@@ -32,12 +33,14 @@ import { ConfirmationComponent } from './components/confirmation/confirmation.co
     RegisterComponent,
     SearchFilterComponent,
     NavComponent,
+
     ResultsComponent,
     BookingInfoComponent,
     BookingHistoryComponent,
     BookingTableComponent,
     UserPageComponent,
     ConfirmationComponent,
+
   ],
 
   imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule, MatTableModule, MatPaginatorModule, MatSortModule],

@@ -16,6 +16,7 @@ export class DataService {
     hotelName: "",
     rating: "",
     price: "",
+    address: '',
     thumbnailUrl: ""
   }
 
@@ -29,11 +30,11 @@ export class DataService {
 
   private searchInfo = new BehaviorSubject<ISearch>({
     location: 'Miami',
-    checkIn: '2022-03-10',
-    checkOut: '2022-03-12',
-      numAdults: 1,
-      pageNumber: 1,
-      searchOrder: 0
+    checkIn: '2022-03-07',
+    checkOut: '2022-03-09',
+    numAdults: 1,
+    pageNumber: 1,
+    searchOrder: 0
     }
   )
 

@@ -14,6 +14,7 @@ export class ResultsComponent implements OnInit {
     hotelName: '',
     rating: '',
     price: '',
+    address: '',
     thumbnailUrl: '',
   };
 
