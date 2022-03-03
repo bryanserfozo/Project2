@@ -1,10 +1,25 @@
-<h1>Name: {{hotel.hotelName}}</h1>>
-<h1>Rating: {{hotel.rating}}</h1>>
-<h1>Price: {{hotel.price}}</h1>>
-<img src = {{hotel.thumbnailUrl}}>
-<h1>Check In: {{searchInfo.checkIn}}</h1>
-<h1>Check Out: {{searchInfo.checkOut}}</h1>
-<h1>Number of Adults: {{searchInfo.numAdults}}</h1>
-<h1>Address : {{hotel.address}}</h1>
-<p style="white-space: pre-wrap">Description : {{hotel.description}}</p>
-<input class="button-primary" type="submit" value="Complete my Booking Now!" (click) = "navigateConfirm()"/>
+<div class="container">
+  <div class="booking-info">
+    <h1>Name: {{ hotel.hotelName }}</h1>
+    >
+    <h1>Rating: {{ hotel.rating }}</h1>
+    >
+    <h1>Price: {{ hotel.price }}</h1>
+    >
+    <img src="{{ hotel.thumbnailUrl }}" />
+    <h1>Check In: {{ searchInfo.checkIn }}</h1>
+    <h1>Check Out: {{ searchInfo.checkOut }}</h1>
+    <h1>Number of Adults: {{ searchInfo.numAdults }}</h1>
+    <h1>Address : {{ hotel.address }}</h1>
+    <div class="description-container">
+      <p style="white-space: pre-wrap">Description : {{ hotel.description }}</p>
+    </div>
+
+    <input
+      class="button-primary"
+      type="submit"
+      value="Complete my Booking Now!"
+      (click)="navigateConfirm()"
+    />
+  </div>
+</div>

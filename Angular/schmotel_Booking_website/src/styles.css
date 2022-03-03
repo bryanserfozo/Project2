@@ -9,13 +9,3 @@ body {
 .hide {
   display: none;
 }
-
-.logo {
-  width: auto;
-  height: auto;
-  margin-top: -20px;
-}
-
-.forgotPass {
-  font-size: 0.8em;
-}

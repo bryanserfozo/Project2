@@ -24,7 +24,6 @@ import { ConfirmationComponent } from './components/confirmation/confirmation.co
 import { PageNumberComponent } from './components/page-number/page-number.component';
 
 @NgModule({
-
   declarations: [
     AppComponent,
     LoginComponent,
@@ -33,19 +32,26 @@ import { PageNumberComponent } from './components/page-number/page-number.compon
     RegisterComponent,
     SearchFilterComponent,
     NavComponent,
-
+    PageNumberComponent,
     ResultsComponent,
     BookingInfoComponent,
     BookingHistoryComponent,
     BookingTableComponent,
     UserPageComponent,
     ConfirmationComponent,
-
   ],
 
-  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule, MatTableModule, MatPaginatorModule, MatSortModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,
+    HttpClientModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+  ],
 
-  providers: [ UserServiceService, BookingService],
+  providers: [UserServiceService, BookingService],
 
   bootstrap: [AppComponent],
 })

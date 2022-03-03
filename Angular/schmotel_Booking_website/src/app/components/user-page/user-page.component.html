@@ -1,6 +1,65 @@
 <head>
-    <title>User Profile</title>
+  <title>User Profile</title>
 </head>
+<<<<<<< HEAD
+<h3>Account Information</h3>
+<div class="container">
+  <form id="updateInfo">
+    <label for="first">First Name: {{ user.firstName }}</label
+    ><br />
+    <input
+      class="u-full-width"
+      type="text"
+      id="accinfo"
+      name="firstname"
+    /><br />
+
+    <label for="last">Last Name: {{ user.lastName }}</label
+    ><br />
+    <input
+      class="u-full-width"
+      type="text"
+      id="accinfo"
+      name="lastname"
+    /><br />
+
+    <label for="email">Email: {{ user.email }}</label
+    ><br />
+    <input class="u-full-width" type="text" id="accinfo" name="email" /><br />
+
+    <label for="username">Username: {{ user.username }}</label
+    ><br />
+    <input
+      class="u-full-width"
+      type="text"
+      id="accinfo"
+      name="username"
+    /><br />
+
+    <label for="password">Password: {{ user.password }}</label
+    ><br />
+    <input class="u-full-width" type="text" id="accinfo" name="password" />
+
+    <label for="phonenumber">Phone Number: {{ user.phoneNumber }}</label
+    ><br />
+    <input class="u-full-width" type="text" id="accinfo" name="phonenumber" />
+  </form>
+  <br />
+
+  <button class="button" id="update">Update</button> &ensp;
+  <button class="button" id="submit">Save Changes</button>
+</div>
+<div>
+  <button [hidden]="!hide" (click)="showHidePaycardForm()">
+    Add a Payment Card
+  </button>
+  <form id="paycard">
+    <label for="cardnum">Card Number</label>
+    <input class="u-full-width" type="text" id="cardnum" name="cardnum" />
+  </form>
+  <!--<a routerLink="my-account" (click)="navigateUser-Page()">My Account</a>-->
+</div>
+=======
     <h3>Account Information</h3>
     <div class = "container">
         <form id="updateInfo" >
@@ -42,3 +101,4 @@
             <button class="button" id="update" (click) = "showHidePaycardForm()">Update</button> &ensp; <button class="button" type = "submit" id = "save" (click) = "updateCard()">Save Card</button>
         </form><br>
     </div>
+>>>>>>> origin/main
