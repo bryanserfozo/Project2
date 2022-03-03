@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'booking', component: BookingInfoComponent },
-  { path: 'booking-history', component: BookingHistoryComponent }
+  { path: 'booking-history', component: BookingHistoryComponent },
   { path: 'user', component: UserPageComponent },
   { path: 'confirm', component: ConfirmationComponent }
 

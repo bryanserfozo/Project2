@@ -7,8 +7,9 @@ import { Injectable } from '@angular/core';
 })
 export class BookingService {
 
-  constructor(private http:HttpClient) { }
+  constructor() { }
 
+  
 }
 
 

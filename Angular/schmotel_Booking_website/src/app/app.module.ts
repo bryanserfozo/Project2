@@ -35,7 +35,7 @@ import { ConfirmationComponent } from './components/confirmation/confirmation.co
     ResultsComponent,
     BookingInfoComponent,
     BookingHistoryComponent,
-    BookingTableComponent
+    BookingTableComponent,
     UserPageComponent,
     ConfirmationComponent,
   ],
