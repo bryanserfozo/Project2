@@ -5,7 +5,8 @@ import { map } from 'rxjs/operators';
 import { Observable, of as observableOf, merge } from 'rxjs';
 
 export interface IBookHistory {
-  hotelName: string,
+  //hotelName is hotel ID for now, need to figure out how to fetch name
+  hotelName: number,
   checkIn: string,
   checkOut: string,
   dateBook: string,
@@ -13,7 +14,7 @@ export interface IBookHistory {
 
 // TODO: replace this with real data from your application
 let bookData: IBookHistory[] = [
-  {hotelName: 'test', checkIn: "test", checkOut:"test", dateBook: "test"},
+  {hotelName: 0, checkIn: "test", checkOut:"test", dateBook: "test"},
 
 ];
 

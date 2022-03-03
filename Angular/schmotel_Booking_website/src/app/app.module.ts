@@ -22,6 +22,7 @@ import { BookingTableComponent } from './components/booking-table/booking-table.
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { BookingService } from './services/booking.service';
 
 @NgModule({
 
@@ -41,7 +42,7 @@ import { MatSortModule } from '@angular/material/sort';
 
   imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule, MatTableModule, MatPaginatorModule, MatSortModule],
 
-  providers: [ UserServiceService],
+  providers: [ UserServiceService, BookingService],
 
   bootstrap: [AppComponent],
 })
