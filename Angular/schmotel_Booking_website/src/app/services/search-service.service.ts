@@ -118,7 +118,7 @@ export class SearchServiceService {
     ).then((response) => JSON.parse(JSON.stringify(response)));
     this.entry.address = hotelInfo.data.body.propertyDescription.address.fullAddress;
     this.entry.description = "\n";
-    for ( let i = 0; i<hotelInfo.data.body.overview.overviewSections.length; i++){
+    for ( let i = 0; i<hotelInfo.data.body.overview.overviewSections.length-1; i++){
       for ( let j = 0; j<hotelInfo.data.body.overview.overviewSections[i].content.length; j++)
       this.entry.description += hotelInfo.data.body.overview.overviewSections[i].content[j] + "\n";
     }

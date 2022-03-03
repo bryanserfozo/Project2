@@ -1,8 +1,10 @@
-import { IHotel } from "./IHotel";
+import { IUser } from "./IUser";
 
 export interface IBooking {
-    hotel?: IHotel,
+    bookingId:number,
+    user: IUser
+    hotel: number,
     checkIn: string,
     checkOut: string,
-    numAdults: number
+    numNights: number
   }

@@ -3,6 +3,7 @@ import { BehaviorSubject } from 'rxjs';
 import { IBooking } from '../Interfaces/IBooking';
 import { IHotel } from '../Interfaces/IHotel';
 import { IPayInfo } from '../Interfaces/IPayInfo';
+import { ISearch } from '../Interfaces/ISearch';
 import { IUser } from '../Interfaces/IUser';
 
 @Injectable({
@@ -26,18 +27,17 @@ export class DataService {
     this.bookingHotel.next(newHotel)
   }
 
-  private bookingInfo = new BehaviorSubject<IBooking>({
-      hotel: this.hotel,
+  private searchInfo = new BehaviorSubject<ISearch>({
       checkIn: '',
       checkOut: '',
       numAdults: 0,
     }
   )
 
-  currentBooking = this.bookingInfo.asObservable();
+  currentSearch = this.searchInfo.asObservable();
 
-  changeBooking(newBooking:IBooking){
-    this.bookingInfo.next(newBooking)
+  changeSearch(newSearch:ISearch){
+    this.searchInfo.next(newSearch)
   }
 
   private loggedIn =new BehaviorSubject<IUser>({
