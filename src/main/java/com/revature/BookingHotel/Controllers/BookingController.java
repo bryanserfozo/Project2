@@ -71,9 +71,4 @@ public class BookingController {
         bs.updateBooking(bk);
     }
 
-    @DeleteMapping("/")
-    @ResponseBody
-    public void deleteBooking(@RequestBody Booking bk) {
-        bs.deleteBooking(bk);
-    }
 }
