@@ -47,13 +47,15 @@ public class BookingController {
         long numNights = DAYS.between(checkIn, checkOut);
 
         bk.setNumNights(numNights);
-        es.sendBookingEmail(bk);
+//        es.sendBookingEmail(bk);
         return bs.createBooking(bk);
     }
 
     @GetMapping("/all/")
     @ResponseBody
     public List<Booking> getAllBookingByUserId(@RequestHeader int id) {
+
+
         return bs.getAllBookingByUserId(id);
     }
 
@@ -69,9 +71,4 @@ public class BookingController {
         bs.updateBooking(bk);
     }
 
-    @DeleteMapping("/")
-    @ResponseBody
-    public void deleteBooking(@RequestBody Booking bk) {
-        bs.deleteBooking(bk);
-    }
 }

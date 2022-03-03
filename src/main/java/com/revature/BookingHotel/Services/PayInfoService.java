@@ -39,12 +39,9 @@ public class PayInfoService {
     }
 
     //Update payment info
-    public void updatePayInfo(PayInfo pi) {
-        pid.save(pi);
+    public PayInfo updatePayInfo(PayInfo pi) {
+        return pid.save(pi);
     }
 
-    //Delete payment info
-    public void deletePayInfo(PayInfo pi) {
-        pid.delete(pi);
-    }
+
 }

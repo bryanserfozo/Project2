@@ -42,13 +42,10 @@ public class UserService {
     }
 
     //Update user
-    public void updateUser(User u) {
-        ud.save(u);
+    public User updateUser(User u) {
+        return ud.save(u);
     }
 
-    //Delete user
-    public void deletePerson(User u) {
-        ud.delete(u);
-    }
+
 
 }

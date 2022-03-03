@@ -66,9 +66,4 @@ public class UserController {
         us.updateUser(u);
     }
 
-    @DeleteMapping("/")
-    @ResponseBody
-    public void deleteUser(@RequestBody User u) {
-        us.deletePerson(u);
-    }
 }

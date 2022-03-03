@@ -14,6 +14,7 @@ import { SearchFilterComponent } from './components/search-filter/search-filter.
 import { UserPageComponent } from './components/user-page/user-page.component';
 import { UserServiceService } from './services/user-service.service';
 import { BookingInfoComponent } from './components/booking-info/booking-info.component';
+import { AboutComponent } from './components/about/about.component';
 import { BookingHistoryComponent } from './components/booking-history/booking-history.component';
 import { BookingService } from './services/booking.service';
 import { ConfirmationComponent } from './components/confirmation/confirmation.component';
@@ -34,9 +35,11 @@ import { PageNumberComponent } from './components/page-number/page-number.compon
     PageNumberComponent,
     ResultsComponent,
     BookingInfoComponent,
+    BookingInfoComponent,
     BookingHistoryComponent,
     UserPageComponent,
     ConfirmationComponent,
+    AboutComponent,
     BookingTableComponent,
   ],
 

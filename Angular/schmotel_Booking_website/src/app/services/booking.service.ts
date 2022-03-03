@@ -1,9 +1,12 @@
 
-import { Subject, Observable } from 'rxjs';
+import { Subject, Observable, throwError } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
-import { lastValueFrom } from 'rxjs';
+import { catchError, lastValueFrom } from 'rxjs';
+import { IUser } from '../Interfaces/IUser';
 import { IPastBooking } from '../Interfaces/IPastBooking';
+import { IBooking } from '../Interfaces/IBooking';
+import { IEmailObject } from '../Interfaces/IEmailObject';
 
 
 @Injectable({
@@ -11,7 +14,7 @@ import { IPastBooking } from '../Interfaces/IPastBooking';
 })
 export class BookingService {
   
-   constructor(private http: HttpClient) { }
+   
 
    pastBooking : IPastBooking[] = [];
 
@@ -86,7 +89,13 @@ export class BookingService {
     }*/
    
  }
-}
+
+ today = new Date();
+  dd = String(this.today.getDate()).padStart(2, '0');
+  mm = String(this.today.getMonth() + 1).padStart(2, '0'); //January is 0!
+  yyyy = this.today.getFullYear();
+
+  bookingDate:string  = this.yyyy + '-' + this.mm + '-' + this.dd;
 
 
   create(
@@ -119,9 +128,13 @@ export class BookingService {
       );
   }
 
-  message:string = ""
+  emailDraft:IEmailObject = {
+    email:'',
+    message: ''
+  }
 
-  async sendEmail(
+
+  sendEmail(
     email:string,
     hotelName: string,
     hotelAddress : string,
@@ -133,23 +146,19 @@ export class BookingService {
     totalCost : string,
     nameReservation : string,
     cardNumber: number
-  ){
-    this.message = "We'd like to thank you, " + nameReservation + " for booking your stay at the lovely " + 
+  ):Observable<IEmailObject>{
+    this.emailDraft.email = email
+
+    this.emailDraft.message = "We'd like to thank you, " + nameReservation + " for booking your stay at the lovely " + 
     hotelName + " located at " + hotelAddress + ". Your Check-In is on " + checkInDate + " for a room built to accomodate " + 
     numAdults + " adults. Your reserved Check-Out is on " + checkOutDate + ", resulting in a total of " +
     numNights + " nights. At a rate of " + price + " per night, a total of " + totalCost + " has been charged to the card with number: " +
     cardNumber + ". Thank you and have a wonderful day!"
     
-    console.log(JSON.stringify({
-      email,
-      message: this.message
-    }))
+    console.log(JSON.stringify(this.emailDraft))
     // console.log(email, this.message)
-    await this.http.post<void>('http://localhost:7000/email/',
-        JSON.stringify({
-          email,
-          message: this.message
-        }),
+    return this.http.post<IEmailObject>('http://localhost:7000/email/',
+        JSON.stringify(this.emailDraft),
         { headers: { 'Content-Type': 'application/json' } }
       )
       .pipe(
@@ -157,7 +166,6 @@ export class BookingService {
           return throwError(e);
         })
       );
-    console.log("email sent")
   }
 
   constructor(private http:HttpClient) { }
