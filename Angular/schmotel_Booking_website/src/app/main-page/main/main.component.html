@@ -17,5 +17,6 @@
   <!-- flight results section -->
   <app-search-filter (filter)="onFilterClicked($event)"></app-search-filter>
   <app-results *ngFor="let hotel of hotels" [result]="hotel"></app-results>
+  <app-page-number (changePage)="onPageChange($event)"></app-page-number>
 </div>
 

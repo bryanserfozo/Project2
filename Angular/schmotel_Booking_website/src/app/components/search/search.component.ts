@@ -93,6 +93,7 @@ export class SearchComponent implements OnInit {
 
   hotel: IHotel = {
     id: 0,
+    address:'',
     hotelName: '',
     rating: '',
     price: '',
@@ -113,7 +114,7 @@ export class SearchComponent implements OnInit {
   location: string = '';
   checkInDate: string = '';
   checkOutDate: string = '';
-  numAdults: number = 0;
+  numAdults: number = 1;
 
 
   error: boolean = false;
@@ -152,6 +153,9 @@ export class SearchComponent implements OnInit {
   }
 
   async ngOnInit(){
+
+    
+
     console.log("home initialized")
     this.dataService.currentSearch.subscribe(search=>this.search = search)
     await this.searchService.getHotels(
@@ -188,7 +192,12 @@ export class SearchComponent implements OnInit {
   // plus/minus number of guests
   public setNumGuest(type: string): void {
     console.log('clicked ');
-    type === 'plus' ? this.numAdults++ : this.numAdults--;
+    if (this.numAdults > 1){
+      type === 'plus' ? this.numAdults++ : this.numAdults--;
+    } else{
+      type === 'plus' ? this.numAdults++ : console.log("no negatives");
+    }
+    
   }
 
   // lstdestinations: Destination[] = [];

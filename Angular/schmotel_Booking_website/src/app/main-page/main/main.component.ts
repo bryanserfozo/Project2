@@ -30,7 +30,23 @@ export class MainComponent implements OnInit {
   }
 
   async onFilterClicked(search: ISearch){
+    this.hotels = [];
     console.log("caught the emit")
+    console.log(search)
+    await this.searchService.getHotels(
+      search.location,
+      search.checkIn,
+      search.checkOut,
+      search.numAdults,
+      search.pageNumber,
+      search.searchOrder
+    );
+    this.hotels = this.searchService.hotels
+  }
+
+  async onPageChange(search: ISearch){
+    this.hotels = [];
+    console.log("caught the page change")
     console.log(search)
     await this.searchService.getHotels(
       search.location,

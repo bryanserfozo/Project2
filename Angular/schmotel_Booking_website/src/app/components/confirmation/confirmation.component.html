@@ -10,4 +10,4 @@
 <h1>Phone Number: {{user.phoneNumber}} </h1>
 <h1>Card on File: {{payInfo.cardNumber}}</h1>
 <h1>Name on Card: {{payInfo.firstName}} {{payInfo.lastName}}</h1>
-<input class="button-primary" type="submit" value="Confirm Booking" />
+<input class="button-primary" type="submit" (click)="onSubmit()" value="Confirm Booking" />

@@ -35,7 +35,7 @@ export class SearchServiceService {
       .set('x-rapidapi-host', 'hotels4.p.rapidapi.com')
       .set(
         'x-rapidapi-key',
-        '44b3c64519mshaa86b6304abe377p19c896jsne726492bbb98'
+        'a132cca1e0msh97690e3e1a0ff81p1ad29cjsna8d5bb4c3b82'
       );
     let destUrl =
       'https://hotels4.p.rapidapi.com/locations/v2/search?query=' +
@@ -99,6 +99,7 @@ export class SearchServiceService {
           hotelName: '',
           rating: '',
           price: '',
+          address: '',
           thumbnailUrl: '',
         };
       } catch {
@@ -119,7 +120,7 @@ export class SearchServiceService {
       .set('x-rapidapi-host', 'hotels4.p.rapidapi.com')
       .set(
         'x-rapidapi-key',
-        '44b3c64519mshaa86b6304abe377p19c896jsne726492bbb98'
+        'a132cca1e0msh97690e3e1a0ff81p1ad29cjsna8d5bb4c3b82'
       );
     let infoUrl = "https://hotels4.p.rapidapi.com/properties/get-details?id=" + 
     hotelId + 

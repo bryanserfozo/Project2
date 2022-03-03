@@ -15,6 +15,7 @@ import { UserPageComponent } from './components/user-page/user-page.component';
 import { UserServiceService } from './services/user-service.service';
 import { BookingInfoComponent } from './components/booking-info/booking-info.component';
 import { ConfirmationComponent } from './components/confirmation/confirmation.component';
+import { PageNumberComponent } from './components/page-number/page-number.component';
 
 @NgModule({
   declarations: [
@@ -26,10 +27,10 @@ import { ConfirmationComponent } from './components/confirmation/confirmation.co
     SearchFilterComponent,
     NavComponent,
     UserPageComponent,
-
     ResultsComponent,
       BookingInfoComponent,
       ConfirmationComponent,
+      PageNumberComponent,
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
 
