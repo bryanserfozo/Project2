@@ -6,6 +6,7 @@ import { catchError, lastValueFrom } from 'rxjs';
 import { IUser } from '../Interfaces/IUser';
 import { IPastBooking } from '../Interfaces/IPastBooking';
 import { IBooking } from '../Interfaces/IBooking';
+import { IEmailObject } from '../Interfaces/IEmailObject';
 
 
 @Injectable({
@@ -127,11 +128,13 @@ export class BookingService {
       );
   }
 
-  
+  emailDraft:IEmailObject = {
+    email:'',
+    message: ''
+  }
 
-  message:string = ""
 
-  async sendEmail(
+  sendEmail(
     email:string,
     hotelName: string,
     hotelAddress : string,
@@ -143,23 +146,19 @@ export class BookingService {
     totalCost : string,
     nameReservation : string,
     cardNumber: number
-  ){
-    this.message = "We'd like to thank you, " + nameReservation + " for booking your stay at the lovely " + 
+  ):Observable<IEmailObject>{
+    this.emailDraft.email = email
+
+    this.emailDraft.message = "We'd like to thank you, " + nameReservation + " for booking your stay at the lovely " + 
     hotelName + " located at " + hotelAddress + ". Your Check-In is on " + checkInDate + " for a room built to accomodate " + 
     numAdults + " adults. Your reserved Check-Out is on " + checkOutDate + ", resulting in a total of " +
     numNights + " nights. At a rate of " + price + " per night, a total of " + totalCost + " has been charged to the card with number: " +
     cardNumber + ". Thank you and have a wonderful day!"
     
-    console.log(JSON.stringify({
-      email,
-      message: this.message
-    }))
+    console.log(JSON.stringify(this.emailDraft))
     // console.log(email, this.message)
-    await this.http.post<void>('http://localhost:7000/email/',
-        JSON.stringify({
-          email,
-          message: this.message
-        }),
+    return this.http.post<IEmailObject>('http://localhost:7000/email/',
+        JSON.stringify(this.emailDraft),
         { headers: { 'Content-Type': 'application/json' } }
       )
       .pipe(
@@ -167,7 +166,6 @@ export class BookingService {
           return throwError(e);
         })
       );
-    console.log("email sent")
   }
 
   constructor(private http:HttpClient) { }

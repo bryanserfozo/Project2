@@ -78,9 +78,10 @@ export class ConfirmationComponent implements OnInit {
     })
     console.log("ready for email")
     this.bookingService.sendEmail(this.user.email, this.hotel.hotelName, this.hotel.address, this.search.checkIn, this.search.checkOut,
-      this.search.numAdults, this.booking.numNights, this.hotel.price, this.totalCost, this.user.firstName + " " + this.user.lastName,
-      this.payInfo.cardNumber)
-      this.router.navigateByUrl('/home')
+    this.search.numAdults, this.booking.numNights, this.hotel.price, this.totalCost, this.user.firstName + " " + this.user.lastName,
+    this.payInfo.cardNumber)
+    .subscribe((data)=> console.log(data))
+    this.router.navigateByUrl('/home')
   }
 
   constructor(private dataService:DataService, private bookingService:BookingService, private router:Router) { }
