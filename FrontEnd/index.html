@@ -22,34 +22,52 @@
 		<title>Document</title>
 	</head>
 	<body>
+		<!-- navbar section -->
+		<section class="nav-section">
+			<div class="u-pull-left">
+				<a class="logo" href="#">SCHMOTELS.COM</a>
+			</div>
+			<ul class="navbar u-pull-right">
+				<li class="item"><a class="about" href="#">about</a></li>
+				<!-- if user is signed-in, display my account link -->
+				<li *ngIf="!signedIn" class="item hide">
+					<a class="my-account" routerLink="user">my account</a>
+				</li>
+				<li *ngIf="signedIn" class="item">
+					<a class="my-account" routerLink="user">my account</a>
+				</li>
+				<!--  -->
+
+				<li class="item">
+					<button
+						*ngIf="!signedIn"
+						class="button-primary"
+						id="login-button"
+						(click)="navigateLogin()"
+					>
+						Login
+					</button>
+					<button
+						*ngIf="signedIn"
+						class="button-primary"
+						id="login-button"
+						(click)="navigateLogin()"
+					>
+						Logout
+					</button>
+				</li>
+			</ul>
+		</section>
+		<!-- title section -->
+		<section class="title-section hide">
+			<div class="row">
+				<div class="main-title-div">
+					<h3>Search for hotels</h3>
+				</div>
+			</div>
+		</section>
+		<!--  -->
 		<div class="container">
-			<!-- navbar section -->
-			<section class="nav-section">
-				<div class="nav-div">
-					<ul class="navbar">
-						<li class="logo">Schmotel.com</li>
-						<li class="item">account</li>
-						<li class="item">about</li>
-						<li class="item">login</li>
-					</ul>
-				</div>
-			</section>
-			<!--  -->
-			<!-- hero image -->
-			<section>
-				<div class="hero-image-section">
-					<h3>Image placeholder</h3>
-				</div>
-			</section>
-			<!-- title section -->
-			<section class="title-section">
-				<div class="row">
-					<div class="main-title-div">
-						<h3>Search for hotels</h3>
-					</div>
-				</div>
-			</section>
-			<!--  -->
 			<!-- flight search section -->
 			<section class="search-section">
 				<div class="form-wrapper">

@@ -1,72 +1,144 @@
 <div class="container">
-    <!-----nameofwebsiteandlogoimage----->
-    <!-- <section>
-        <div class="logo">
-            <img src="images/logo.jpg">
-        </div>
-        <hr>
-    </section> -->
-    <!-------------registerform-------------->
-    <section>
-        <div class="row">
-            <div class="main-title-div">
-                <h3>Create an account</h3>
-                <form (ngSubmit)="onSubmit()">
-                    <div class="row">
-                        <div class="six columns" >
-                          <label for="exampleEmailInput"></label>
-                          <input class="u-full-width" type="email" placeholder="Email Address" name = "email" id="exampleEmailInput" required [(ngModel)] = "email">
-
-                        <div class="row" >
-                            <label for="exampleEmailInpt"></label>
-                            <input class="u-full-width" type="email" placeholder="First name" id="firstnameInput" name = "firstName" required [(ngModel)] = "firstName">
-
-                        <div class="row" >
-                                <label for="exampleInput"></label>
-                                <input class="u-full-width" type="email" placeholder="Last name" id="lastnameInput" name = "lastName" required [(ngModel)] = "lastName">
-
-                        <div class="row" >
-                                <label for="exampleRecipientInput"></label>
-                                <input class="u-full-width" type="tel" placeholder="Phone Number (999)999-9999" id="phoneNumber" name = "phoneNu" required [(ngModel)] = "phoneNumber">
-                        </div> 
-
-                        <div class="row" >
-                            <label for="exampleUsernameInput"></label>
-                            <input class="u-full-width" type="text" placeholder="Username" id="usernameInput" name = "username" required [(ngModel)] = "username">
-
-                        <div class="row" >
-                            <label for="exampleRecipientInput"></label>
-                            <input class="u-full-width" type="password" placeholder="Password" id="password" name = "password" required [(ngModel)] = "password">
-                    </div> 
-                        </div>
-                        </div>
-                         </div>
-                    </div>
-                    </div>
-                    <hr>
-                    <div class = "row">
-                        <label for="exampleCardNumInput"></label>
-                          <input class="u-full-width" type="number" placeholder="Card Number" name = "cardnum" id="exampleCardNumInput" required [(ngModel)] = "cardNumber">
-                    </div>
-                    <div class = "row">
-                        <label for="exampleCardFirstInput"></label>
-                          <input class="u-full-width" type="text" placeholder="Card First Name" name = "cardFirstName" id="exampleCardFirstInput" required [(ngModel)] = "cardFirstName">
-                    </div>
-                    <div class = "row">
-                        <label for="exampleCardLastInput"></label>
-                          <input class="u-full-width" type="text" placeholder="Card Last Name" name = "cardLastName" id="exampleCardLastInput" required [(ngModel)] = "cardLastName">
-                    </div>
-                      <input class="button-primary" type="submit" value="Submit">
-                </form>
+  <div class="row register-card">
+    <div class="six columns img-container"></div>
+    <div class="six columns">
+      <div class="main-title-div">
+        <h3>Create An Account</h3>
+        <h6>Its quick and easy.</h6>
+        <form (ngSubmit)="onSubmit()">
+          <div class="row">
+            <div class="six columns">
+              <label for="exampleEmailInput"></label>
+              <input
+                class="u-full-width"
+                type="email"
+                placeholder="First name"
+                id="firstnameInput"
+                name="firstName"
+                required
+                [(ngModel)]="firstName"
+              />
             </div>
+            <div class="six columns">
+              <label for="exampleEmailInput"></label>
+              <input
+                class="u-full-width"
+                type="email"
+                placeholder="Last name"
+                id="lastnameInput"
+                name="lastName"
+                required
+                [(ngModel)]="lastName"
+              />
+            </div>
+          </div>
+
+          <div class="row">
+            <label for="exampleEmailInput"></label>
+            <input
+              class="u-full-width"
+              type="email"
+              placeholder="Email Address"
+              name="email"
+              id="exampleEmailInput"
+              required
+              [(ngModel)]="email"
+            />
+          </div>
+
+          <div class="row">
+            <label for="exampleRecipientInput"></label>
+            <input
+              class="u-full-width"
+              type="tel"
+              placeholder="Phone Number (999)999-9999"
+              id="phoneNumber"
+              name="phoneNu"
+              required
+              [(ngModel)]="phoneNumber"
+            />
+          </div>
+
+          <div class="row">
+            <label for="exampleUsernameInput"></label>
+            <input
+              class="u-full-width"
+              type="text"
+              placeholder="Username"
+              id="usernameInput"
+              name="username"
+              required
+              [(ngModel)]="username"
+            />
+          </div>
+
+          <div class="row">
+            <label for="exampleRecipientInput"></label>
+            <input
+              class="u-full-width"
+              type="password"
+              placeholder="Password"
+              id="password"
+              name="password"
+              required
+              [(ngModel)]="password"
+            />
+          </div>
+          <hr />
+          <div class="row">
+            <label for="exampleCardNumInput"></label>
+            <input
+              class="u-full-width"
+              type="number"
+              placeholder="Card Number"
+              name="cardnum"
+              id="exampleCardNumInput"
+              required
+              [(ngModel)]="cardNumber"
+            />
+          </div>
+          <div class="row">
+            <label for="exampleCardFirstInput"></label>
+            <input
+              class="u-full-width"
+              type="text"
+              placeholder="Card First Name"
+              name="cardFirstName"
+              id="exampleCardFirstInput"
+              required
+              [(ngModel)]="cardFirstName"
+            />
+          </div>
+          <div class="row">
+            <label for="exampleCardLastInput"></label>
+            <input
+              class="u-full-width"
+              type="text"
+              placeholder="Card Last Name"
+              name="cardLastName"
+              id="exampleCardLastInput"
+              required
+              [(ngModel)]="cardLastName"
+            />
+          </div>
+        </form>
+        <div class="row">
+          <input
+            class="button-primary account-submit"
+            type="submit"
+            value="Submit"
+          />
+
+          <section>
+            <div class="forgotPass">
+              Already have an account?
+              <a routerLink="login" (click)="navigateLogin()">Log In</a>
+            </div>
+          </section>
         </div>
-    </section>
-    
-    <section>
-        <div class="forgotPass">
-           Already have an account? <a routerLink="login" (click)="navigateLogin()">Log In</a>
-        </div>
-    </section> 
-</div>  
-<!-------------------------------------------------------------------------------------------------------------------------->
-    <script src="script.js"></script>
+      </div>
+    </div>
+  </div>
+
+  <!--------------------ForgotPassword---------------------->
+</div>

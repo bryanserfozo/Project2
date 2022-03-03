@@ -1,37 +1,39 @@
 <div class="container">
-  <!-----nameofwebsiteandlogoimage----->
-  <!-- <section>
-        <div class="logo">
-            <img src="images/logo.jpg">
-        </div>
-        <hr>
-    </section> -->
-  <!-------------SignInform-------------->
-  <section>
-    <div class="row">
+  <div class="row login-card">
+    <section>
       <!-- <h1 *ngIf="error">Username or password was incorrect</h1> -->
-      <div class="login-image six columns">
-        <div class="img"></div>
-      </div>
+      <div class="six columns img-container"></div>
       <div class="six columns">
         <div class="main-title-div">
           <form id="login" (ngSubmit)="onSubmit()">
             <div class="row">
-              <div class="u-full-width">
-                <label for="exampleEmailInput">Your username</label>
-                <input  class="u-full-width"  type="text"  placeholder="username" id="username" name="username" required [(ngModel)]="username" >
-              </div>
+              <h3>Login</h3>
+
+              <input
+                type="text"
+                placeholder="Username"
+                id="username"
+                name="username"
+                required
+                [(ngModel)]="username"
+              />
             </div>
 
             <div class="row">
-              <div class="u-full-width">
-                <label for="exampleRecipientInput">Password</label>
-                <input class="u-full-width"   type="password" placeholder="password"   id="password"  name="password" required [(ngModel)]="password" >
-              </div>
+              <input
+                type="password"
+                placeholder="Password"
+                id="password"
+                name="password"
+                required
+                [(ngModel)]="password"
+              />
             </div>
-            <div class="sign-in">
-              <input class="button-primary" type="submit" value="submit" />
-            </div>
+            <input
+              class="button-primary login-submit u-full-width"
+              type="submit"
+              value="submit"
+            />
           </form>
           <!--------------------ForgotPassword---------------------->
 
@@ -45,6 +47,6 @@
           <!-------------------------------------------------------------------------------------------------------------------------->
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </div>

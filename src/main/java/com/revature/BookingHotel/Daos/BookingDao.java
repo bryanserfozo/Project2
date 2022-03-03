@@ -10,5 +10,5 @@ import java.util.List;
 @Repository
 public interface BookingDao extends JpaRepository<Booking, Integer> {
 
-    List<Booking> getAllBookingByUserId(User u);
+    List<Booking> getAllBookingByUserId(int id);
 }

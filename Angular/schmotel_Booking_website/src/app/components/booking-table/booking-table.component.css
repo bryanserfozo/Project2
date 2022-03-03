@@ -1,3 +1,96 @@
-.full-width-table {
-  width: 100%;
-}
+.return-result-div {
+    border-bottom: gray 1px solid;
+  
+    padding: 10px;
+    position: relative;
+    height: 300px;
+    transition-duration: 1.2s;
+  }
+  
+  .return-result-div:hover {
+    color: whitesmoke;
+    background-color: rgb(150, 158, 161);
+    /* background-color: rgb(160, 198, 211); */
+  }
+  
+  /* top */
+  /* .top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100px;
+  } */
+  .bookin-id h5 {
+    display: flex;
+    border-bottom: 2px #1eaedb solid;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    right: 50px;
+  }
+  .check-in h5 {
+    display: flex;
+  
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 60px;
+    right: 50px;
+  }
+  
+  .check-out h5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 100px;
+    right: 50px;
+  }
+
+  .booking-date h5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 120px;
+    right: 50px;
+  }
+
+  .number-nights h5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 140px;
+    right: 50px;
+  }
+
+  .hotel h5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 160px;
+    right: 50px;
+  }
+
+  .user h5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 180px;
+    right: 50px;
+  }
+  
+  /* .room-details-table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 100px;
+    right: 50px;
+  } */
+  

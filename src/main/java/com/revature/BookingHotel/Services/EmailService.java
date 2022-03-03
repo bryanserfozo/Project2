@@ -15,6 +15,13 @@ public class EmailService {
     @Autowired
     private JavaMailSender mailSender;
 
+    public EmailService() {
+    }
+
+    public EmailService(JavaMailSender mailSender) {
+        this.mailSender = mailSender;
+    }
+
     public void sendRegistrationEmail(User u) {
 
         SimpleMailMessage message = new SimpleMailMessage();

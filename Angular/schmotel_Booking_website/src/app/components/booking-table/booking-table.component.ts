@@ -1,30 +1,37 @@
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
-import { MatTable } from '@angular/material/table';
-import { BookingTableDataSource, IBookHistory} from './booking-table-datasource';
+import { Component, OnInit } from '@angular/core';
+import { Input } from '@angular/core';
+import { IPastBooking } from 'src/app/Interfaces/IPastBooking';
 
 @Component({
-  selector: 'booking-table',
+  selector: 'app-booking-table',
   templateUrl: './booking-table.component.html',
   styleUrls: ['./booking-table.component.css']
 })
-export class BookingTableComponent implements AfterViewInit {
-  @ViewChild(MatPaginator) paginator!: MatPaginator;
-  @ViewChild(MatSort) sort!: MatSort;
-  @ViewChild(MatTable) table!: MatTable<IBookHistory>;
-  dataSource: BookingTableDataSource;
+export class BookingTableComponent implements OnInit {
 
-  /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['hotelName', 'checkIn', 'checkOut', 'dateBook'];
+  @Input() pastBooking: IPastBooking = {
+    bookingId: 0,
+    bookingDate: "",
+    checkInDate: "",
+    checkOutDate: "",
+    hotel: 0,
+    numNights: 0,
+    user: {
+      id : 0,
+    firstName : "",
+    lastName : "",
+    username : "",
+    email : "",
+    password : "",
+    phoneNumber : ""
+    }
+}
 
-  constructor() {
-    this.dataSource = new BookingTableDataSource();
+  
+  constructor() { }
+
+  ngOnInit(): void {
+    console.log(this.pastBooking);
   }
 
-  ngAfterViewInit(): void {
-    this.dataSource.sort = this.sort;
-    this.dataSource.paginator = this.paginator;
-    this.table.dataSource = this.dataSource;
-  }
 }
