@@ -1,2 +1,3 @@
 <h1>Booking History</h1>
-<booking-table></booking-table>
+<app-booking-table *ngFor="let booking of (pastBookings | async)" [pastBooking] = "booking"></app-booking-table>
+

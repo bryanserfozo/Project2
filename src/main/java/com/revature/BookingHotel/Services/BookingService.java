@@ -30,8 +30,8 @@ public class BookingService {
     }
 
     //Get all bookings by user ID
-    public List<Booking> getAllBookingByUserId(User u) {
-        return bd.getAllBookingByUserId(u);
+    public List<Booking> getAllBookingByUserId(int id) {
+        return bd.getAllBookingByUserId(id);
     }
 
     //Get booking info by id

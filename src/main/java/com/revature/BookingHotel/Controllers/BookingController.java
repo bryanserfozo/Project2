@@ -53,9 +53,8 @@ public class BookingController {
 
     @GetMapping("/all/")
     @ResponseBody
-    public List<Booking> getAllBookingByUserId(@RequestBody int id) {
-        User u = us.getUserById(id);
-        return bs.getAllBookingByUserId(u);
+    public List<Booking> getAllBookingByUserId(@RequestHeader int id) {
+        return bs.getAllBookingByUserId(id);
     }
 
     @GetMapping("/")
