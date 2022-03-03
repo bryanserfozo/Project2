@@ -33,7 +33,7 @@ import { PageNumberComponent } from './components/page-number/page-number.compon
     RegisterComponent,
     SearchFilterComponent,
     NavComponent,
-
+    PageNumberComponent,
     ResultsComponent,
     BookingInfoComponent,
     BookingHistoryComponent,
