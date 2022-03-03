@@ -10,6 +10,7 @@ import { BookingInfoComponent } from './components/booking-info/booking-info.com
 import { RouterModule, Routes } from '@angular/router';
 import { RegisterComponent } from './components/register/register.component';
 import { UserPageComponent } from './components/user-page/user-page.component';
+import { AboutComponent } from './components/about/about.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'booking', component: BookingInfoComponent },
-  { path: 'user', component: UserPageComponent }
+  { path: 'user', component: UserPageComponent },
+  { path: 'about', component: AboutComponent}
 ];
 
 @NgModule({
