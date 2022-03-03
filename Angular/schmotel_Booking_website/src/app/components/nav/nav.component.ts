@@ -29,6 +29,7 @@ export class NavComponent implements OnInit {
       password: '',
       phoneNumber: '1234567891',
       })
+      this.dataService.changeSignedIn(false)
       this.router.navigate(['login']);
     }
   constructor(private router:Router, private dataService:DataService){}

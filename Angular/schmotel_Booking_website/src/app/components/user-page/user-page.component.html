@@ -3,7 +3,7 @@
 </head>
     <h3>Account Information</h3>
     <div class = "container">
-        <form id="updateInfo" (ngSubmit) = "updateUser()">
+        <form id="updateInfo" >
 
             <label for="first">First Name: {{user.firstName}}</label><br>
             <input class ="u-full-width" type="text" id="accinfo" name="firstname" placeholder= {{user.firstName}} [hidden]="!hideform" [(ngModel)] = "updateFirstName"><br>
@@ -18,21 +18,27 @@
             <input class ="u-full-width" type="text" id="accinfo" name="username" placeholder= {{user.username}} [hidden]="!hideform" [(ngModel)] = "updateUsername"><br>
 
             <label for="password">Password: {{user.password}}</label><br>
-            <input class ="u-full-width" type="text" id="accinfo" name="password" placeholder= {{user.password}} [hidden]="!hideform" [(ngModel)] = "updatePassword">
+            <input class ="u-full-width" type="text" id="accinfo" name="password" placeholder= {{user.password}} [hidden]="!hideform" [(ngModel)] = "updatePassword"><br>
 
             <label for="phonenumber">Phone Number: {{user.phoneNumber}}</label><br>
-            <input class ="u-full-width" type="text" id="accinfo" name="phonenumber" placeholder= {{user.phoneNumber}} [hidden]="!hideform" [(ngModel)] = "updatePhoneNumber">
+            <input class ="u-full-width" type="text" id="accinfo" name="phonenumber" placeholder= {{user.phoneNumber}} [hidden]="!hideform" [(ngModel)] = "updatePhoneNumber"><br>
 
-            <button class="button" id="update" (click) = "show()">Update</button> &ensp; <button class="button" type = "submit" id = "save">Save Changes</button>
+            <button class="button" id="update" (click) = "show()">Update</button> &ensp; <button class="button" type = "submit" id = "save" (click) = "updateUser()">Save Changes</button>
         </form><br>
 
     </div>
-    <div>
-        <button (click)="showHidePaycardForm()">Add a Payment Card</button>
-        <form id="paycard">
-           
-            <label for="cardnum">Card Number</label>
-            <input class = "u-full-width" type="text" id="cardnum" name="cardnum" [hidden]="!hide">
+    <div class = "container">
+        <form id="updateInfo" >
 
-        </form>
+            <label for="first">Card Number: {{payInfo.cardNumber}}</label><br>
+            <input class ="u-full-width" type="number" id="accinfo" name="cardnum" placeholder= "" [hidden]="!hide" [(ngModel)] = "updateCardNumber"><br>
+
+            <label for="first">Card First Name: {{payInfo.firstName}}</label><br>
+            <input class ="u-full-width" type="text" id="accinfo" name="cardfirstname" placeholder= "" [hidden]="!hide" [(ngModel)] = "updateCardFirstName"><br>
+
+            <label for="last">Card Last Name: {{payInfo.lastName}}</label><br>
+            <input class ="u-full-width" type="text" id="accinfo" name="cardlastname" placeholder= "" [hidden]="!hide" [(ngModel)] = "updateCardLastName"><br>
+
+            <button class="button" id="update" (click) = "showHidePaycardForm()">Update</button> &ensp; <button class="button" type = "submit" id = "save" (click) = "updateCard()">Save Card</button>
+        </form><br>
     </div>

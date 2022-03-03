@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface PayInfoDao extends JpaRepository<PayInfo, Integer> {
+    PayInfo getPayInfoByUserId(int id);
 }

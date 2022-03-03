@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { IBooking } from '../Interfaces/IBooking';
 import { IHotel } from '../Interfaces/IHotel';
+import { IPayInfo } from '../Interfaces/IPayInfo';
 import { IUser } from '../Interfaces/IUser';
 
 @Injectable({
@@ -46,7 +47,7 @@ export class DataService {
     firstName: '',
     lastName: '',
     password: '',
-    phoneNumber: '1234567891',
+    phoneNumber: '',
   })
 
     currentUser = this.loggedIn.asObservable();
@@ -60,6 +61,21 @@ export class DataService {
     changeSignedIn(value:boolean){
       this.signedIn.next(value)
     }
+
+    private payInfo = new BehaviorSubject<IPayInfo>({
+      paymentId : 0,
+      userId : 0,
+      firstName : "",
+      lastName: "",
+      cardNumber: 0
+    })
+
+    currentPayInfo = this.payInfo.asObservable();
+
+    changePayInfo(pi:IPayInfo){
+      this.payInfo.next(pi)
+    }
+
 
 
 
