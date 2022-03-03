@@ -1,5 +1,4 @@
 package com.revature.BookingHotel.Models;
-
 import javax.persistence.*;
 
 @Entity
@@ -11,32 +10,29 @@ public class PayInfo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int paymentId;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "user_id", referencedColumnName = "user_id", unique = true)
-    private User paymentUser;
+    @Column(name = "user_id", nullable = false, unique = true)
+    private int userId;
+
 
     @Column(name = "first_name", nullable = false)
     private String firstName;
+
 
     @Column(name = "last_name", nullable = false)
     private String lastName;
 
     @Column(name = "card_number", nullable = false)
     private int cardNumber;
-    
-    @Column(name = "payment_type", nullable = false)
-    private PaymentType type;
 
     public PayInfo() {
     }
 
-    public PayInfo(int paymentId, User paymentUser, String firstName, String lastName, int cardNumber, PaymentType type) {
+    public PayInfo(int paymentId, int userId, String firstName, String lastName, int cardNumber) {
         this.paymentId = paymentId;
-        this.paymentUser = paymentUser;
+        this.userId = userId;
         this.firstName = firstName;
         this.lastName = lastName;
         this.cardNumber = cardNumber;
-        this.type = type;
     }
 
     public int getPaymentId() {
@@ -47,12 +43,12 @@ public class PayInfo {
         this.paymentId = paymentId;
     }
 
-    public User getUser() {
-        return paymentUser;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setUser(User user) {
-        this.paymentUser = user;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
     public String getFirstName() {
@@ -79,23 +75,14 @@ public class PayInfo {
         this.cardNumber = cardNumber;
     }
 
-    public PaymentType getType() {
-        return type;
-    }
-
-    public void setType(PaymentType type) {
-        this.type = type;
-    }
-
     @Override
     public String toString() {
         return "PayInfo{" +
                 "paymentId=" + paymentId +
-                ", user=" + paymentUser +
+                ", userId=" + userId +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", cardNumber=" + cardNumber +
-                ", type=" + type +
                 '}';
     }
 }

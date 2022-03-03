@@ -2,9 +2,9 @@
 <h1>Rating: {{hotel.rating}}</h1>>
 <h1>Price: {{hotel.price}}</h1>>
 <img src = {{hotel.thumbnailUrl}}>
-<h1>Check In: {{bookingInfo.checkIn}}</h1>
-<h1>Check Out: {{bookingInfo.checkOut}}</h1>
-<h1>Number of Adults: {{bookingInfo.numAdults}}</h1>
+<h1>Check In: {{searchInfo.checkIn}}</h1>
+<h1>Check Out: {{searchInfo.checkOut}}</h1>
+<h1>Number of Adults: {{searchInfo.numAdults}}</h1>
 <h1>Address : {{hotel.address}}</h1>
 <p style="white-space: pre-wrap">Description : {{hotel.description}}</p>
-<input class="button-primary" type="submit" value="Complete my Booking Now!" />
+<input class="button-primary" type="submit" value="Complete my Booking Now!" (click) = "navigateConfirm()"/>

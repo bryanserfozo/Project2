@@ -2,25 +2,10 @@
   <div class="row">
     <i class="fa-solid fa-filter-list"></i>
     <i class="fa-solid fa-star"></i>
-    <button class="filter-rating">3 stars +</button>
-    <button class="filter-price">under $150</button>
-    <select>
-      <option value="">option 1</option>
-      <option value="">option 2</option>
-      <option value="">option 3</option>
-      <option value="">option 4</option>
-    </select>
-    <select>
-      <option value="">option 1</option>
-      <option value="">option 2</option>
-      <option value="">option 3</option>
-      <option value="">option 4</option>
-    </select>
-    <select>
-      <option value="">option 1</option>
-      <option value="">option 2</option>
-      <option value="">option 3</option>
-      <option value="">option 4</option>
-    </select>
+    <button class="filter-rating" (click) = "sortBestSellers()">Best Sellers</button>
+    <button class="filter-price" (click) = "sortPriceLowHigh()">Price Low to High</button>
+    <button class="filter-price" (click) = "sortPriceHighLow()">Price High to Low</button>
+    <button class="filter-price" (click) = "sortRating()">Guest Rating</button>
+    <i class="fa-solid fa-star"></i>
   </div>
 </div>

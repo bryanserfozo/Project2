@@ -24,14 +24,18 @@ public class PayInfoService {
     }
 
     //Create payment info
-    public PayInfo createPayInfo(int paymentId, User user, String firstName, String lastName, int cardNumber, PaymentType type) {
-        PayInfo pi = new PayInfo(paymentId, user, firstName, lastName, cardNumber, type);
+    public PayInfo createPayInfo(int paymentId, int userId, String firstName, String lastName, int cardNumber) {
+        PayInfo pi = new PayInfo(paymentId, userId, firstName, lastName, cardNumber);
         return pid.save(pi);
     }
 
     //Get payment info by id
     public PayInfo getPayInfoById(int id) {
         return pid.getById(id);
+    }
+
+    public PayInfo getPayInfoByUserId(int id) {
+        return pid.getPayInfoByUserId(id);
     }
 
     //Update payment info

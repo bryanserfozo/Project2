@@ -29,13 +29,13 @@ export class NavComponent implements OnInit {
       password: '',
       phoneNumber: '1234567891',
       })
+      this.dataService.changeSignedIn(false)
       this.router.navigate(['login']);
     }
   constructor(private router:Router, private dataService:DataService){}
 
 
   async ngOnInit(): Promise<void> {
-    console.log("Initialized")
     this.dataService.currentSignedIn.subscribe(value=>this.signedIn = value)
     
   }

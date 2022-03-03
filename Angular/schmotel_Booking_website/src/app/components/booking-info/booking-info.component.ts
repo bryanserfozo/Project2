@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { IBooking } from 'src/app/Interfaces/IBooking';
 import { IHotel } from 'src/app/Interfaces/IHotel';
+import { ISearch } from 'src/app/Interfaces/ISearch';
 import { DataService } from 'src/app/services/data.service';
 import { SearchServiceService } from 'src/app/services/search-service.service';
 
@@ -21,20 +23,27 @@ export class BookingInfoComponent implements OnInit {
     description: ' '
   };
 
-  bookingInfo:IBooking = {
-    hotel: this.hotel,
+  searchInfo:ISearch = {
+    location: '',
     checkIn: '',
     checkOut: '',
     numAdults: 0,
+    pageNumber: 1,
+    searchOrder: 0
   }
 
-  constructor(private data:DataService, private searchService:SearchServiceService) { }
+  navigateConfirm(){
+    this.router.navigate(['confirm'])
+  }
+
+  constructor(private data:DataService, private searchService:SearchServiceService, private router:Router) { }
+
 
   async ngOnInit(): Promise<void> {
     await this.data.currentHotel.subscribe(hotel => this.hotel = hotel)
-    console.log(this.data.currentBooking)
-    await this.data.currentBooking.subscribe(booking => this.bookingInfo = booking)
-    await this.searchService.getHotelInfo(this.hotel.id, this.bookingInfo.checkIn , this.bookingInfo.checkOut, this.bookingInfo.numAdults)
+    console.log(this.data.currentSearch)
+    await this.data.currentSearch.subscribe(search => this.searchInfo = search)
+    await this.searchService.getHotelInfo(this.hotel.id, this.searchInfo.checkIn , this.searchInfo.checkOut, this.searchInfo.numAdults)
     this.hotel.description = "Not Undefined"
     this.hotel.address = this.searchService.entry.address
     this.hotel.description = this.searchService.entry.description

@@ -25,18 +25,18 @@ public class PayInfoController {
     @PostMapping("/")
     @ResponseBody
     public PayInfo createPayInfo(@RequestBody PayInfo pi) {
-        return pis.createPayInfo(pi.getPaymentId(), pi.getUser(), pi.getFirstName(), pi.getLastName(), pi.getCardNumber(), pi.getType());
+        return pis.createPayInfo(pi.getPaymentId(), pi.getUserId(), pi.getFirstName(), pi.getLastName(), pi.getCardNumber());
     }
 
     @GetMapping("/")
     @ResponseBody
     public PayInfo getPayInfoById(@RequestHeader int id) {
-        return pis.getPayInfoById(id);
+        return pis.getPayInfoByUserId(id);
     }
 
     @PutMapping("/")
     @ResponseBody
-    public void updateUser(@RequestBody PayInfo pi) {
+    public void updatePayInfo(@RequestBody PayInfo pi) {
         pis.updatePayInfo(pi);
     }
 

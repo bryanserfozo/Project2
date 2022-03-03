@@ -1,11 +1,23 @@
 <div class="container">
   <div class="row">
     <section class="nav-section">
-      <div class="u-pull-left"><a class="logo" (click) = "navigateHome()">SCHMOTELS.COM</a></div>
+      <div class="u-pull-left">
+        <a class="logo" (click)="navigateHome()">SCHMOTELS.COM</a>
+      </div>
       <ul class="navbar u-pull-right">
         <li class="item"><a class="about" href="#">about</a></li>
-        <li class="item"><a class="my-account" routerLink="#">my account</a></li>
+
         <li class="item"><a class="my-account" routerLink="booking-history">test booking history</a></li>
+
+        <!-- if user is signed-in, display my account link -->
+        <li *ngIf="!signedIn" class="item hide">
+          <a class="my-account" routerLink="user">my account</a>
+        </li>
+        <li *ngIf="signedIn" class="item">
+          <a class="my-account" routerLink="user">my account</a>
+        </li>
+        <!--  -->
+
         <li class="item">
           <button
             *ngIf="!signedIn"
