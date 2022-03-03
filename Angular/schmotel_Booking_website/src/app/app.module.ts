@@ -14,6 +14,7 @@ import { SearchFilterComponent } from './components/search-filter/search-filter.
 import { UserPageComponent } from './components/user-page/user-page.component';
 import { UserServiceService } from './services/user-service.service';
 import { BookingInfoComponent } from './components/booking-info/booking-info.component';
+import { ConfirmationComponent } from './components/confirmation/confirmation.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { BookingInfoComponent } from './components/booking-info/booking-info.com
 
     ResultsComponent,
       BookingInfoComponent,
+      ConfirmationComponent,
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
 

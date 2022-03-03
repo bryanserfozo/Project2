@@ -8,6 +8,7 @@ import { IHotel } from 'src/app/Interfaces/IHotel';
 import { MainComponent } from 'src/app/main-page/main/main.component';
 import { IBooking } from 'src/app/Interfaces/IBooking';
 import { DataService } from 'src/app/services/data.service';
+import { ISearch } from 'src/app/Interfaces/ISearch';
 
 @Component({
   selector: 'app-search',
@@ -98,8 +99,7 @@ export class SearchComponent implements OnInit {
     thumbnailUrl: '',
   };
 
-  booking: IBooking = {
-    hotel: this.hotel,
+  search: ISearch = {
     checkIn: '',
     checkOut: '',
     numAdults: 0,
@@ -125,12 +125,12 @@ export class SearchComponent implements OnInit {
       this.numAdults
     );
 
-    this.booking.checkIn = this.checkInDate;
-    this.booking.checkOut = this.checkOutDate;
-    this.booking.numAdults = this.numAdults;
+    this.search.checkIn = this.checkInDate;
+    this.search.checkOut = this.checkOutDate;
+    this.search.numAdults = this.numAdults;
 
-    this.dataService.changeBooking(this.booking);
-    console.log(this.dataService.currentBooking)
+    this.dataService.changeSearch(this.search);
+    console.log(this.dataService.currentSearch)
 
     await this.searchService.getHotels(
       this.location,
