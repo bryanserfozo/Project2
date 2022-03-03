@@ -28,9 +28,12 @@ export class DataService {
   }
 
   private searchInfo = new BehaviorSubject<ISearch>({
-      checkIn: '',
-      checkOut: '',
-      numAdults: 0,
+    location: 'Miami',
+    checkIn: '2022-03-10',
+    checkOut: '2022-03-12',
+      numAdults: 1,
+      pageNumber: 1,
+      searchOrder: 0
     }
   )
 
@@ -38,6 +41,7 @@ export class DataService {
 
   changeSearch(newSearch:ISearch){
     this.searchInfo.next(newSearch)
+    // console.log(newSearch)
   }
 
   private loggedIn =new BehaviorSubject<IUser>({

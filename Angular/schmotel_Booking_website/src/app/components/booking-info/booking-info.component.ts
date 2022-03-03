@@ -24,9 +24,12 @@ export class BookingInfoComponent implements OnInit {
   };
 
   searchInfo:ISearch = {
+    location: '',
     checkIn: '',
     checkOut: '',
     numAdults: 0,
+    pageNumber: 1,
+    searchOrder: 0
   }
 
   navigateConfirm(){
@@ -34,7 +37,7 @@ export class BookingInfoComponent implements OnInit {
   }
 
   constructor(private data:DataService, private searchService:SearchServiceService, private router:Router) { }
-  
+
 
   async ngOnInit(): Promise<void> {
     await this.data.currentHotel.subscribe(hotel => this.hotel = hotel)
