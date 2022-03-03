@@ -18,11 +18,11 @@
                           <input class="u-full-width" type="email" placeholder="Email Address" name = "email" id="exampleEmailInput" required [(ngModel)] = "email">
 
                         <div class="row" >
-                            <label for="exampleEmailInput"></label>
+                            <label for="exampleEmailInpt"></label>
                             <input class="u-full-width" type="email" placeholder="First name" id="firstnameInput" name = "firstName" required [(ngModel)] = "firstName">
 
                         <div class="row" >
-                                <label for="exampleEmailInput"></label>
+                                <label for="exampleInput"></label>
                                 <input class="u-full-width" type="email" placeholder="Last name" id="lastnameInput" name = "lastName" required [(ngModel)] = "lastName">
 
                         <div class="row" >
@@ -43,12 +43,25 @@
                          </div>
                     </div>
                     </div>
+                    <hr>
+                    <div class = "row">
+                        <label for="exampleCardNumInput"></label>
+                          <input class="u-full-width" type="number" placeholder="Card Number" name = "cardnum" id="exampleCardNumInput" required [(ngModel)] = "cardNumber">
+                    </div>
+                    <div class = "row">
+                        <label for="exampleCardFirstInput"></label>
+                          <input class="u-full-width" type="text" placeholder="Card First Name" name = "cardFirstName" id="exampleCardFirstInput" required [(ngModel)] = "cardFirstName">
+                    </div>
+                    <div class = "row">
+                        <label for="exampleCardLastInput"></label>
+                          <input class="u-full-width" type="text" placeholder="Card Last Name" name = "cardLastName" id="exampleCardLastInput" required [(ngModel)] = "cardLastName">
+                    </div>
                       <input class="button-primary" type="submit" value="Submit">
                 </form>
             </div>
         </div>
     </section>
-    <!--------------------ForgotPassword---------------------->
+    
     <section>
         <div class="forgotPass">
            Already have an account? <a routerLink="login" (click)="navigateLogin()">Log In</a>
