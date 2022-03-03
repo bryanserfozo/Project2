@@ -1,0 +1,683 @@
+2022-03-03 16:31:41.778  INFO 15760 --- [main] c.r.B.BookingHotelApplication            : Starting BookingHotelApplication using Java 1.8.0_311 on LAPTOP-FF56CRCN with PID 15760 (C:\Users\warre\Desktop\Revature\Projects\Project2\build\classes\java\main started by warre in C:\Users\warre\Desktop\Revature\Projects\Project2)
+2022-03-03 16:31:41.780 DEBUG 15760 --- [main] c.r.B.BookingHotelApplication            : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-03 16:31:41.781  INFO 15760 --- [main] c.r.B.BookingHotelApplication            : No active profile set, falling back to default profiles: default
+2022-03-03 16:31:42.335  INFO 15760 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-03 16:31:42.389  INFO 15760 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 3 JPA repository interfaces.
+2022-03-03 16:31:43.024  INFO 15760 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7000 (http)
+2022-03-03 16:31:43.036  INFO 15760 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-03 16:31:43.036  INFO 15760 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-03 16:31:43.134  INFO 15760 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-03 16:31:43.134  INFO 15760 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1310 ms
+2022-03-03 16:31:43.336  INFO 15760 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-03 16:31:43.391  INFO 15760 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-03-03 16:31:43.601  INFO 15760 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-03 16:31:43.692  INFO 15760 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-03 16:31:44.448  INFO 15760 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-03 16:31:44.465  INFO 15760 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2022-03-03 16:31:45.422  INFO 15760 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-03 16:31:45.429  INFO 15760 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-03 16:31:45.916  WARN 15760 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-03 16:31:46.400  INFO 15760 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7000 (http) with context path ''
+2022-03-03 16:31:46.411  INFO 15760 --- [main] c.r.B.BookingHotelApplication            : Started BookingHotelApplication in 5.016 seconds (JVM running for 5.334)
+2022-03-03 16:31:52.274  INFO 15760 --- [http-nio-7000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-03 16:31:52.275  INFO 15760 --- [http-nio-7000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-03 16:31:52.277  INFO 15760 --- [http-nio-7000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-03-03 16:31:52.303  INFO 15760 --- [http-nio-7000-exec-1] c.r.B.Controllers.LoggingController      : Test
+2022-03-03 16:31:53.485  INFO 15760 --- [http-nio-7000-exec-2] c.r.B.Controllers.LoggingController      : Test
+2022-03-03 16:31:54.607  INFO 15760 --- [http-nio-7000-exec-3] c.r.B.Controllers.LoggingController      : Test
+2022-03-03 16:36:19.279  INFO 17172 --- [main] c.r.B.BookingHotelApplication            : Starting BookingHotelApplication using Java 1.8.0_311 on LAPTOP-FF56CRCN with PID 17172 (C:\Users\warre\Desktop\Revature\Projects\Project2\build\classes\java\main started by warre in C:\Users\warre\Desktop\Revature\Projects\Project2)
+2022-03-03 16:36:19.281 DEBUG 17172 --- [main] c.r.B.BookingHotelApplication            : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-03 16:36:19.281  INFO 17172 --- [main] c.r.B.BookingHotelApplication            : No active profile set, falling back to default profiles: default
+2022-03-03 16:36:19.872  INFO 17172 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-03 16:36:19.927  INFO 17172 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 3 JPA repository interfaces.
+2022-03-03 16:36:20.580  INFO 17172 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7000 (http)
+2022-03-03 16:36:20.590  INFO 17172 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-03 16:36:20.591  INFO 17172 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-03 16:36:20.666  INFO 17172 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-03 16:36:20.667  INFO 17172 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1344 ms
+2022-03-03 16:36:20.848  INFO 17172 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-03 16:36:20.908  INFO 17172 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-03-03 16:36:21.080  INFO 17172 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-03 16:36:21.168  INFO 17172 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-03 16:36:21.938  INFO 17172 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-03 16:36:21.954  INFO 17172 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2022-03-03 16:36:22.932  INFO 17172 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-03 16:36:22.940  INFO 17172 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-03 16:36:23.449  WARN 17172 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-03 16:36:24.002  INFO 17172 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7000 (http) with context path ''
+2022-03-03 16:36:24.013  INFO 17172 --- [main] c.r.B.BookingHotelApplication            : Started BookingHotelApplication in 5.11 seconds (JVM running for 5.454)
+2022-03-03 16:36:30.298  INFO 3416 --- [main] c.r.B.BookingHotelApplication            : Starting BookingHotelApplication using Java 1.8.0_311 on LAPTOP-FF56CRCN with PID 3416 (C:\Users\warre\Desktop\Revature\Projects\Project2\build\classes\java\main started by warre in C:\Users\warre\Desktop\Revature\Projects\Project2)
+2022-03-03 16:36:30.300 DEBUG 3416 --- [main] c.r.B.BookingHotelApplication            : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-03 16:36:30.300  INFO 3416 --- [main] c.r.B.BookingHotelApplication            : No active profile set, falling back to default profiles: default
+2022-03-03 16:36:30.862  INFO 3416 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-03 16:36:30.918  INFO 3416 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 3 JPA repository interfaces.
+2022-03-03 16:36:31.536  INFO 3416 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7000 (http)
+2022-03-03 16:36:31.548  INFO 3416 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-03 16:36:31.548  INFO 3416 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-03 16:36:31.631  INFO 3416 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-03 16:36:31.632  INFO 3416 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1286 ms
+2022-03-03 16:36:31.837  INFO 3416 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-03 16:36:31.896  INFO 3416 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-03-03 16:36:32.075  INFO 3416 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-03 16:36:32.171  INFO 3416 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-03 16:36:32.975  INFO 3416 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-03 16:36:32.991  INFO 3416 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2022-03-03 16:36:33.959  INFO 3416 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-03 16:36:33.967  INFO 3416 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-03 16:36:34.463  WARN 3416 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-03 16:36:34.942  INFO 3416 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7000 (http) with context path ''
+2022-03-03 16:36:34.952  INFO 3416 --- [main] c.r.B.BookingHotelApplication            : Started BookingHotelApplication in 5.066 seconds (JVM running for 5.437)
+2022-03-03 16:36:43.913  INFO 17328 --- [main] c.r.B.BookingHotelApplication            : Starting BookingHotelApplication using Java 1.8.0_311 on LAPTOP-FF56CRCN with PID 17328 (C:\Users\warre\Desktop\Revature\Projects\Project2\build\classes\java\main started by warre in C:\Users\warre\Desktop\Revature\Projects\Project2)
+2022-03-03 16:36:43.915 DEBUG 17328 --- [main] c.r.B.BookingHotelApplication            : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-03 16:36:43.915  INFO 17328 --- [main] c.r.B.BookingHotelApplication            : No active profile set, falling back to default profiles: default
+2022-03-03 16:36:44.480  INFO 17328 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-03 16:36:44.537  INFO 17328 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 3 JPA repository interfaces.
+2022-03-03 16:36:45.237  INFO 17328 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7000 (http)
+2022-03-03 16:36:45.248  INFO 17328 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-03 16:36:45.248  INFO 17328 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-03 16:36:45.340  INFO 17328 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-03 16:36:45.340  INFO 17328 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1383 ms
+2022-03-03 16:36:45.552  INFO 17328 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-03 16:36:45.620  INFO 17328 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-03-03 16:36:45.835  INFO 17328 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-03 16:36:45.927  INFO 17328 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-03 16:36:46.717  INFO 17328 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-03 16:36:46.737  INFO 17328 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2022-03-03 16:36:47.783  INFO 17328 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-03 16:36:47.796  INFO 17328 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-03 16:36:48.367  WARN 17328 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-03 16:36:48.868  INFO 17328 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7000 (http) with context path ''
+2022-03-03 16:36:48.878  INFO 17328 --- [main] c.r.B.BookingHotelApplication            : Started BookingHotelApplication in 5.358 seconds (JVM running for 5.689)
+2022-03-03 16:36:54.135  INFO 17328 --- [http-nio-7000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-03 16:36:54.136  INFO 17328 --- [http-nio-7000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-03 16:36:54.137  INFO 17328 --- [http-nio-7000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-03-03 16:36:54.166  INFO 17328 --- [http-nio-7000-exec-1] c.r.B.Controllers.LoggingController      : Test343453453
+2022-03-03 16:36:54.516  INFO 17328 --- [http-nio-7000-exec-2] c.r.B.Controllers.LoggingController      : Test343453453
+2022-03-03 16:51:39.385  INFO 8336 --- [main] c.r.B.BookingHotelApplication            : Starting BookingHotelApplication using Java 1.8.0_311 on LAPTOP-FF56CRCN with PID 8336 (C:\Users\warre\Desktop\Revature\Projects\Project2\build\classes\java\main started by warre in C:\Users\warre\Desktop\Revature\Projects\Project2)
+2022-03-03 16:51:39.387 DEBUG 8336 --- [main] c.r.B.BookingHotelApplication            : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-03 16:51:39.387  INFO 8336 --- [main] c.r.B.BookingHotelApplication            : No active profile set, falling back to default profiles: default
+2022-03-03 16:51:39.950  INFO 8336 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-03 16:51:40.005  INFO 8336 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 3 JPA repository interfaces.
+2022-03-03 16:51:40.631  INFO 8336 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7000 (http)
+2022-03-03 16:51:40.642  INFO 8336 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-03 16:51:40.643  INFO 8336 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-03 16:51:40.723  INFO 8336 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-03 16:51:40.723  INFO 8336 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1290 ms
+2022-03-03 16:51:40.926  INFO 8336 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-03 16:51:40.988  INFO 8336 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-03-03 16:51:41.197  INFO 8336 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-03 16:51:41.294  INFO 8336 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-03 16:51:42.047  INFO 8336 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-03 16:51:42.063  INFO 8336 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2022-03-03 16:51:43.012  INFO 8336 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-03 16:51:43.021  INFO 8336 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-03 16:51:43.539  WARN 8336 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-03 16:51:44.049  INFO 8336 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7000 (http) with context path ''
+2022-03-03 16:51:44.058  INFO 8336 --- [main] c.r.B.BookingHotelApplication            : Started BookingHotelApplication in 5.073 seconds (JVM running for 5.465)
+2022-03-03 16:51:50.961  INFO 8336 --- [http-nio-7000-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-03 16:51:50.961  INFO 8336 --- [http-nio-7000-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-03 16:51:50.962  INFO 8336 --- [http-nio-7000-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-03-03 16:56:13.157  INFO 15468 --- [main] c.r.B.BookingHotelApplication            : Starting BookingHotelApplication using Java 1.8.0_311 on LAPTOP-FF56CRCN with PID 15468 (C:\Users\warre\Desktop\Revature\Projects\Project2\build\classes\java\main started by warre in C:\Users\warre\Desktop\Revature\Projects\Project2)
+2022-03-03 16:56:13.160 DEBUG 15468 --- [main] c.r.B.BookingHotelApplication            : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-03 16:56:13.160  INFO 15468 --- [main] c.r.B.BookingHotelApplication            : No active profile set, falling back to default profiles: default
+2022-03-03 16:56:13.725  INFO 15468 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-03 16:56:13.779  INFO 15468 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 3 JPA repository interfaces.
+2022-03-03 16:56:14.417  INFO 15468 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7000 (http)
+2022-03-03 16:56:14.430  INFO 15468 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-03 16:56:14.430  INFO 15468 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-03 16:56:14.512  INFO 15468 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-03 16:56:14.512  INFO 15468 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1305 ms
+2022-03-03 16:56:14.707  INFO 15468 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-03 16:56:14.762  INFO 15468 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-03-03 16:56:14.939  INFO 15468 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-03 16:56:15.027  INFO 15468 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-03 16:56:15.782  INFO 15468 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-03 16:56:15.798  INFO 15468 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2022-03-03 16:56:16.760  INFO 15468 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-03 16:56:16.769  INFO 15468 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-03 16:56:17.308  WARN 15468 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-03 16:56:17.853  INFO 15468 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7000 (http) with context path ''
+2022-03-03 16:56:17.864  INFO 15468 --- [main] c.r.B.BookingHotelApplication            : Started BookingHotelApplication in 5.147 seconds (JVM running for 5.497)
+2022-03-03 16:56:32.523  INFO 15468 --- [http-nio-7000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-03 16:56:32.523  INFO 15468 --- [http-nio-7000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-03 16:56:32.524  INFO 15468 --- [http-nio-7000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-03-03 17:01:57.540  INFO 11712 --- [main] c.r.B.BookingHotelApplication            : Starting BookingHotelApplication using Java 1.8.0_311 on LAPTOP-FF56CRCN with PID 11712 (C:\Users\warre\Desktop\Revature\Projects\Project2\build\classes\java\main started by warre in C:\Users\warre\Desktop\Revature\Projects\Project2)
+2022-03-03 17:01:57.543 DEBUG 11712 --- [main] c.r.B.BookingHotelApplication            : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-03 17:01:57.543  INFO 11712 --- [main] c.r.B.BookingHotelApplication            : No active profile set, falling back to default profiles: default
+2022-03-03 17:01:58.105  INFO 11712 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-03 17:01:58.159  INFO 11712 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 3 JPA repository interfaces.
+2022-03-03 17:01:58.795  INFO 11712 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7000 (http)
+2022-03-03 17:01:58.807  INFO 11712 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-03 17:01:58.807  INFO 11712 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-03 17:01:58.892  INFO 11712 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-03 17:01:58.892  INFO 11712 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1306 ms
+2022-03-03 17:01:59.102  INFO 11712 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-03 17:01:59.168  INFO 11712 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-03-03 17:01:59.379  INFO 11712 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-03 17:01:59.470  INFO 11712 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-03 17:02:00.264  INFO 11712 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-03 17:02:00.279  INFO 11712 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2022-03-03 17:02:01.297  INFO 11712 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-03 17:02:01.305  INFO 11712 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-03 17:02:01.821  WARN 11712 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-03 17:02:02.328  INFO 11712 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7000 (http) with context path ''
+2022-03-03 17:02:02.341  INFO 11712 --- [main] c.r.B.BookingHotelApplication            : Started BookingHotelApplication in 5.196 seconds (JVM running for 5.562)
+2022-03-03 17:02:09.579  INFO 11712 --- [http-nio-7000-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-03 17:02:09.579  INFO 11712 --- [http-nio-7000-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-03 17:02:09.581  INFO 11712 --- [http-nio-7000-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-03-03 17:04:43.184  INFO 17712 --- [main] c.r.B.BookingHotelApplication            : Starting BookingHotelApplication using Java 1.8.0_311 on LAPTOP-FF56CRCN with PID 17712 (C:\Users\warre\Desktop\Revature\Projects\Project2\build\classes\java\main started by warre in C:\Users\warre\Desktop\Revature\Projects\Project2)
+2022-03-03 17:04:43.187 DEBUG 17712 --- [main] c.r.B.BookingHotelApplication            : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-03 17:04:43.187  INFO 17712 --- [main] c.r.B.BookingHotelApplication            : No active profile set, falling back to default profiles: default
+2022-03-03 17:04:43.785  INFO 17712 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-03 17:04:43.843  INFO 17712 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 3 JPA repository interfaces.
+2022-03-03 17:04:44.513  INFO 17712 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7000 (http)
+2022-03-03 17:04:44.524  INFO 17712 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-03 17:04:44.525  INFO 17712 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-03 17:04:44.613  INFO 17712 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-03 17:04:44.614  INFO 17712 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1382 ms
+2022-03-03 17:04:44.831  INFO 17712 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-03 17:04:44.894  INFO 17712 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-03-03 17:04:45.086  INFO 17712 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-03 17:04:45.182  INFO 17712 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-03 17:04:45.944  INFO 17712 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-03 17:04:45.962  INFO 17712 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2022-03-03 17:04:46.954  INFO 17712 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-03 17:04:46.962  INFO 17712 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-03 17:04:47.489  WARN 17712 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-03 17:04:47.959  INFO 17712 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7000 (http) with context path ''
+2022-03-03 17:04:47.967  INFO 17712 --- [main] c.r.B.BookingHotelApplication            : Started BookingHotelApplication in 5.175 seconds (JVM running for 5.506)
+2022-03-03 17:04:57.565  INFO 17712 --- [http-nio-7000-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-03 17:04:57.565  INFO 17712 --- [http-nio-7000-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-03 17:04:57.567  INFO 17712 --- [http-nio-7000-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-03-03 17:06:16.221  INFO 8284 --- [main] c.r.B.BookingHotelApplication            : Starting BookingHotelApplication using Java 1.8.0_311 on LAPTOP-FF56CRCN with PID 8284 (C:\Users\warre\Desktop\Revature\Projects\Project2\build\classes\java\main started by warre in C:\Users\warre\Desktop\Revature\Projects\Project2)
+2022-03-03 17:06:16.223 DEBUG 8284 --- [main] c.r.B.BookingHotelApplication            : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-03 17:06:16.224  INFO 8284 --- [main] c.r.B.BookingHotelApplication            : No active profile set, falling back to default profiles: default
+2022-03-03 17:06:16.817  INFO 8284 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-03 17:06:16.871  INFO 8284 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 3 JPA repository interfaces.
+2022-03-03 17:06:17.563  INFO 8284 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7000 (http)
+2022-03-03 17:06:17.576  INFO 8284 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-03 17:06:17.576  INFO 8284 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-03 17:06:17.671  INFO 8284 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-03 17:06:17.672  INFO 8284 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1400 ms
+2022-03-03 17:06:17.895  INFO 8284 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-03 17:06:17.962  INFO 8284 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-03-03 17:06:18.166  INFO 8284 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-03 17:06:18.274  INFO 8284 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-03 17:06:19.054  INFO 8284 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-03 17:06:19.072  INFO 8284 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2022-03-03 17:06:20.094  INFO 8284 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-03 17:06:20.105  INFO 8284 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-03 17:06:20.699  WARN 8284 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-03 17:06:21.220  INFO 8284 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7000 (http) with context path ''
+2022-03-03 17:06:21.231  INFO 8284 --- [main] c.r.B.BookingHotelApplication            : Started BookingHotelApplication in 5.418 seconds (JVM running for 5.77)
+2022-03-03 17:06:26.980  INFO 8284 --- [http-nio-7000-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-03 17:06:26.981  INFO 8284 --- [http-nio-7000-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-03 17:06:26.982  INFO 8284 --- [http-nio-7000-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-03-03 17:09:00.469  INFO 13152 --- [main] c.r.B.BookingHotelApplication            : Starting BookingHotelApplication using Java 1.8.0_311 on LAPTOP-FF56CRCN with PID 13152 (C:\Users\warre\Desktop\Revature\Projects\Project2\build\classes\java\main started by warre in C:\Users\warre\Desktop\Revature\Projects\Project2)
+2022-03-03 17:09:00.472 DEBUG 13152 --- [main] c.r.B.BookingHotelApplication            : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-03 17:09:00.472  INFO 13152 --- [main] c.r.B.BookingHotelApplication            : No active profile set, falling back to default profiles: default
+2022-03-03 17:09:01.053  INFO 13152 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-03 17:09:01.107  INFO 13152 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 3 JPA repository interfaces.
+2022-03-03 17:09:01.739  INFO 13152 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7000 (http)
+2022-03-03 17:09:01.751  INFO 13152 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-03 17:09:01.752  INFO 13152 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-03 17:09:01.839  INFO 13152 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-03 17:09:01.839  INFO 13152 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1324 ms
+2022-03-03 17:09:02.032  INFO 13152 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-03 17:09:02.085  INFO 13152 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-03-03 17:09:02.256  INFO 13152 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-03 17:09:02.350  INFO 13152 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-03 17:09:03.111  INFO 13152 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-03 17:09:03.128  INFO 13152 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2022-03-03 17:09:04.112  INFO 13152 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-03 17:09:04.119  INFO 13152 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-03 17:09:04.649  WARN 13152 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-03 17:09:05.122  INFO 13152 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7000 (http) with context path ''
+2022-03-03 17:09:05.132  INFO 13152 --- [main] c.r.B.BookingHotelApplication            : Started BookingHotelApplication in 5.077 seconds (JVM running for 5.44)
+2022-03-03 17:09:09.997  INFO 13152 --- [http-nio-7000-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-03 17:09:09.998  INFO 13152 --- [http-nio-7000-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-03 17:09:09.998  INFO 13152 --- [http-nio-7000-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-03-03 17:13:24.075  INFO 15060 --- [main] c.r.B.BookingHotelApplication            : Starting BookingHotelApplication using Java 1.8.0_311 on LAPTOP-FF56CRCN with PID 15060 (C:\Users\warre\Desktop\Revature\Projects\Project2\build\classes\java\main started by warre in C:\Users\warre\Desktop\Revature\Projects\Project2)
+2022-03-03 17:13:24.077 DEBUG 15060 --- [main] c.r.B.BookingHotelApplication            : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-03 17:13:24.077  INFO 15060 --- [main] c.r.B.BookingHotelApplication            : No active profile set, falling back to default profiles: default
+2022-03-03 17:13:24.656  INFO 15060 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-03 17:13:24.721  INFO 15060 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 3 JPA repository interfaces.
+2022-03-03 17:13:25.443  INFO 15060 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7000 (http)
+2022-03-03 17:13:25.454  INFO 15060 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-03 17:13:25.454  INFO 15060 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-03 17:13:25.548  INFO 15060 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-03 17:13:25.548  INFO 15060 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1425 ms
+2022-03-03 17:13:25.778  INFO 15060 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-03 17:13:25.841  INFO 15060 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-03-03 17:13:26.072  INFO 15060 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-03 17:13:26.181  INFO 15060 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-03 17:13:27.011  INFO 15060 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-03 17:13:27.030  INFO 15060 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2022-03-03 17:13:28.207  INFO 15060 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-03 17:13:28.220  INFO 15060 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-03 17:13:28.957  WARN 15060 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-03 17:13:29.520  INFO 15060 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7000 (http) with context path ''
+2022-03-03 17:13:29.530  INFO 15060 --- [main] c.r.B.BookingHotelApplication            : Started BookingHotelApplication in 5.886 seconds (JVM running for 6.26)
+2022-03-03 17:13:33.413  INFO 15060 --- [http-nio-7000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-03 17:13:33.414  INFO 15060 --- [http-nio-7000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-03 17:13:33.416  INFO 15060 --- [http-nio-7000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-03-03 17:16:50.284  INFO 14456 --- [main] c.r.B.BookingHotelApplication            : Starting BookingHotelApplication using Java 1.8.0_311 on LAPTOP-FF56CRCN with PID 14456 (C:\Users\warre\Desktop\Revature\Projects\Project2\build\classes\java\main started by warre in C:\Users\warre\Desktop\Revature\Projects\Project2)
+2022-03-03 17:16:50.286 DEBUG 14456 --- [main] c.r.B.BookingHotelApplication            : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-03 17:16:50.286  INFO 14456 --- [main] c.r.B.BookingHotelApplication            : No active profile set, falling back to default profiles: default
+2022-03-03 17:16:50.865  INFO 14456 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-03 17:16:50.924  INFO 14456 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 3 JPA repository interfaces.
+2022-03-03 17:16:51.566  INFO 14456 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7000 (http)
+2022-03-03 17:16:51.576  INFO 14456 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-03 17:16:51.577  INFO 14456 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-03 17:16:51.661  INFO 14456 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-03 17:16:51.662  INFO 14456 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1322 ms
+2022-03-03 17:16:51.887  INFO 14456 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-03 17:16:51.951  INFO 14456 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-03-03 17:16:52.175  INFO 14456 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-03 17:16:52.278  INFO 14456 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-03 17:16:53.089  INFO 14456 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-03 17:16:53.110  INFO 14456 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2022-03-03 17:16:54.183  INFO 14456 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-03 17:16:54.191  INFO 14456 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-03 17:16:54.792  WARN 14456 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-03 17:16:55.417  INFO 14456 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7000 (http) with context path ''
+2022-03-03 17:16:55.426  INFO 14456 --- [main] c.r.B.BookingHotelApplication            : Started BookingHotelApplication in 5.575 seconds (JVM running for 5.955)
+2022-03-03 17:17:15.701  INFO 14456 --- [http-nio-7000-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-03 17:17:15.702  INFO 14456 --- [http-nio-7000-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-03 17:17:15.702  INFO 14456 --- [http-nio-7000-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-03-03 17:18:38.552  INFO 13864 --- [main] c.r.B.BookingHotelApplication            : Starting BookingHotelApplication using Java 1.8.0_311 on LAPTOP-FF56CRCN with PID 13864 (C:\Users\warre\Desktop\Revature\Projects\Project2\build\classes\java\main started by warre in C:\Users\warre\Desktop\Revature\Projects\Project2)
+2022-03-03 17:18:38.554 DEBUG 13864 --- [main] c.r.B.BookingHotelApplication            : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-03 17:18:38.554  INFO 13864 --- [main] c.r.B.BookingHotelApplication            : No active profile set, falling back to default profiles: default
+2022-03-03 17:18:39.149  INFO 13864 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-03 17:18:39.210  INFO 13864 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 3 JPA repository interfaces.
+2022-03-03 17:18:40.007  INFO 13864 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7000 (http)
+2022-03-03 17:18:40.024  INFO 13864 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-03 17:18:40.024  INFO 13864 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-03 17:18:40.126  INFO 13864 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-03 17:18:40.127  INFO 13864 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1529 ms
+2022-03-03 17:18:40.343  INFO 13864 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-03 17:18:40.407  INFO 13864 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-03-03 17:18:40.605  INFO 13864 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-03 17:18:40.699  INFO 13864 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-03 17:18:41.523  INFO 13864 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-03 17:18:41.542  INFO 13864 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2022-03-03 17:18:42.713  INFO 13864 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-03 17:18:42.726  INFO 13864 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-03 17:18:43.307  WARN 13864 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-03 17:18:43.848  INFO 13864 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7000 (http) with context path ''
+2022-03-03 17:18:43.857  INFO 13864 --- [main] c.r.B.BookingHotelApplication            : Started BookingHotelApplication in 5.683 seconds (JVM running for 6.047)
+2022-03-03 17:18:49.096  INFO 13864 --- [http-nio-7000-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-03 17:18:49.097  INFO 13864 --- [http-nio-7000-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-03 17:18:49.098  INFO 13864 --- [http-nio-7000-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-03-03 17:20:02.564  INFO 14892 --- [main] c.r.B.BookingHotelApplication            : Starting BookingHotelApplication using Java 1.8.0_311 on LAPTOP-FF56CRCN with PID 14892 (C:\Users\warre\Desktop\Revature\Projects\Project2\build\classes\java\main started by warre in C:\Users\warre\Desktop\Revature\Projects\Project2)
+2022-03-03 17:20:02.571 DEBUG 14892 --- [main] c.r.B.BookingHotelApplication            : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-03-03 17:20:02.571  INFO 14892 --- [main] c.r.B.BookingHotelApplication            : No active profile set, falling back to default profiles: default
+2022-03-03 17:20:03.145  INFO 14892 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-03 17:20:03.201  INFO 14892 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 3 JPA repository interfaces.
+2022-03-03 17:20:03.827  INFO 14892 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7000 (http)
+2022-03-03 17:20:03.837  INFO 14892 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-03 17:20:03.837  INFO 14892 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-03 17:20:03.920  INFO 14892 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-03 17:20:03.920  INFO 14892 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1303 ms
+2022-03-03 17:20:04.137  INFO 14892 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-03 17:20:04.196  INFO 14892 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-03-03 17:20:04.373  INFO 14892 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-03 17:20:04.477  INFO 14892 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-03 17:20:05.323  INFO 14892 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-03 17:20:05.346  INFO 14892 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2022-03-03 17:20:06.500  INFO 14892 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-03 17:20:06.509  INFO 14892 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-03 17:20:07.083  WARN 14892 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-03 17:20:07.627  INFO 14892 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7000 (http) with context path ''
+2022-03-03 17:20:07.637  INFO 14892 --- [main] c.r.B.BookingHotelApplication            : Started BookingHotelApplication in 5.495 seconds (JVM running for 5.903)
+2022-03-03 17:20:15.519  INFO 14892 --- [http-nio-7000-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-03 17:20:15.520  INFO 14892 --- [http-nio-7000-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-03 17:20:15.521  INFO 14892 --- [http-nio-7000-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-03-03 17:22:16.626  INFO 5124 --- [main] c.r.B.BookingHotelApplication            : Starting BookingHotelApplication using Java 1.8.0_311 on LAPTOP-FF56CRCN with PID 5124 (C:\Users\warre\Desktop\Revature\Projects\Project2\build\classes\java\main started by warre in C:\Users\warre\Desktop\Revature\Projects\Project2)
+2022-03-03 17:22:16.630  INFO 5124 --- [main] c.r.B.BookingHotelApplication            : No active profile set, falling back to default profiles: default
+2022-03-03 17:22:17.198  INFO 5124 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-03 17:22:17.254  INFO 5124 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 3 JPA repository interfaces.
+2022-03-03 17:22:17.839  INFO 5124 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7000 (http)
+2022-03-03 17:22:17.849  INFO 5124 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-03 17:22:17.849  INFO 5124 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-03 17:22:17.923  INFO 5124 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-03 17:22:17.924  INFO 5124 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1238 ms
+2022-03-03 17:22:18.125  INFO 5124 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-03 17:22:18.193  INFO 5124 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-03-03 17:22:18.393  INFO 5124 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-03 17:22:18.490  INFO 5124 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-03 17:22:19.246  INFO 5124 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-03 17:22:19.262  INFO 5124 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2022-03-03 17:22:20.238  INFO 5124 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-03 17:22:20.246  INFO 5124 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-03 17:22:20.781  WARN 5124 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-03 17:22:21.254  INFO 5124 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7000 (http) with context path ''
+2022-03-03 17:22:21.263  INFO 5124 --- [main] c.r.B.BookingHotelApplication            : Started BookingHotelApplication in 4.991 seconds (JVM running for 5.308)
+2022-03-03 17:22:32.097  INFO 5124 --- [http-nio-7000-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-03 17:22:32.098  INFO 5124 --- [http-nio-7000-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-03 17:22:32.098  INFO 5124 --- [http-nio-7000-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-03-03 17:24:55.321  INFO 18256 --- [main] c.r.B.BookingHotelApplication            : Starting BookingHotelApplication using Java 1.8.0_311 on LAPTOP-FF56CRCN with PID 18256 (C:\Users\warre\Desktop\Revature\Projects\Project2\build\classes\java\main started by warre in C:\Users\warre\Desktop\Revature\Projects\Project2)
+2022-03-03 17:24:55.325  INFO 18256 --- [main] c.r.B.BookingHotelApplication            : No active profile set, falling back to default profiles: default
+2022-03-03 17:24:55.894  INFO 18256 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-03 17:24:55.948  INFO 18256 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 3 JPA repository interfaces.
+2022-03-03 17:24:56.604  INFO 18256 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7000 (http)
+2022-03-03 17:24:56.613  INFO 18256 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-03 17:24:56.614  INFO 18256 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-03 17:24:56.688  INFO 18256 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-03 17:24:56.688  INFO 18256 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1319 ms
+2022-03-03 17:24:56.919  INFO 18256 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-03 17:24:56.980  INFO 18256 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-03-03 17:24:57.193  INFO 18256 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-03 17:24:57.293  INFO 18256 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-03 17:24:58.041  INFO 18256 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-03 17:24:58.055  INFO 18256 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2022-03-03 17:24:59.042  INFO 18256 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-03 17:24:59.050  INFO 18256 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-03 17:24:59.646  WARN 18256 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-03 17:25:00.219  INFO 18256 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7000 (http) with context path ''
+2022-03-03 17:25:00.229  INFO 18256 --- [main] c.r.B.BookingHotelApplication            : Started BookingHotelApplication in 5.274 seconds (JVM running for 5.63)
+2022-03-03 17:25:23.653  INFO 18256 --- [http-nio-7000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-03 17:25:23.653  INFO 18256 --- [http-nio-7000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-03 17:25:23.654  INFO 18256 --- [http-nio-7000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-03-03 17:34:14.631  INFO 8380 --- [main] c.r.B.BookingHotelApplication            : Starting BookingHotelApplication using Java 1.8.0_311 on LAPTOP-FF56CRCN with PID 8380 (C:\Users\warre\Desktop\Revature\Projects\Project2\build\classes\java\main started by warre in C:\Users\warre\Desktop\Revature\Projects\Project2)
+2022-03-03 17:34:14.633  INFO 8380 --- [main] c.r.B.BookingHotelApplication            : No active profile set, falling back to default profiles: default
+2022-03-03 17:34:15.234  INFO 8380 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-03 17:34:15.297  INFO 8380 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 3 JPA repository interfaces.
+2022-03-03 17:34:15.968  INFO 8380 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7000 (http)
+2022-03-03 17:34:15.983  INFO 8380 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-03 17:34:15.983  INFO 8380 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-03 17:34:16.080  INFO 8380 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-03 17:34:16.080  INFO 8380 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1404 ms
+2022-03-03 17:34:16.304  INFO 8380 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-03 17:34:16.377  INFO 8380 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-03-03 17:34:16.575  INFO 8380 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-03 17:34:16.662  INFO 8380 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-03 17:34:17.466  INFO 8380 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-03 17:34:17.482  INFO 8380 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2022-03-03 17:34:18.500  INFO 8380 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-03 17:34:18.508  INFO 8380 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-03 17:34:19.022  WARN 8380 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-03 17:34:19.507  INFO 8380 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7000 (http) with context path ''
+2022-03-03 17:34:19.516  INFO 8380 --- [main] c.r.B.BookingHotelApplication            : Started BookingHotelApplication in 5.247 seconds (JVM running for 5.59)
+2022-03-03 17:34:27.942  INFO 8380 --- [http-nio-7000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-03 17:34:27.943  INFO 8380 --- [http-nio-7000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-03 17:34:27.944  INFO 8380 --- [http-nio-7000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-03-03 17:36:47.195  INFO 10528 --- [main] c.r.B.BookingHotelApplication            : Starting BookingHotelApplication using Java 1.8.0_311 on LAPTOP-FF56CRCN with PID 10528 (C:\Users\warre\Desktop\Revature\Projects\Project2\build\classes\java\main started by warre in C:\Users\warre\Desktop\Revature\Projects\Project2)
+2022-03-03 17:36:47.197  INFO 10528 --- [main] c.r.B.BookingHotelApplication            : No active profile set, falling back to default profiles: default
+2022-03-03 17:36:47.784  INFO 10528 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-03 17:36:47.843  INFO 10528 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 3 JPA repository interfaces.
+2022-03-03 17:36:48.510  INFO 10528 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7000 (http)
+2022-03-03 17:36:48.522  INFO 10528 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-03 17:36:48.522  INFO 10528 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-03 17:36:48.616  INFO 10528 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-03 17:36:48.616  INFO 10528 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1376 ms
+2022-03-03 17:36:48.849  INFO 10528 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-03 17:36:48.925  INFO 10528 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-03-03 17:36:49.131  INFO 10528 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-03 17:36:49.229  INFO 10528 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-03 17:36:49.985  INFO 10528 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-03 17:36:50.001  INFO 10528 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2022-03-03 17:36:51.002  INFO 10528 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-03 17:36:51.010  INFO 10528 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-03 17:36:51.590  WARN 10528 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-03 17:36:52.167  INFO 10528 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7000 (http) with context path ''
+2022-03-03 17:36:52.181  INFO 10528 --- [main] c.r.B.BookingHotelApplication            : Started BookingHotelApplication in 5.37 seconds (JVM running for 5.724)
+2022-03-03 17:36:56.537  INFO 10528 --- [http-nio-7000-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-03 17:36:56.537  INFO 10528 --- [http-nio-7000-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-03 17:36:56.539  INFO 10528 --- [http-nio-7000-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-03-03 17:41:41.955  INFO 9420 --- [main] c.r.B.BookingHotelApplication            : Starting BookingHotelApplication using Java 1.8.0_311 on LAPTOP-FF56CRCN with PID 9420 (C:\Users\warre\Desktop\Revature\Projects\Project2\build\classes\java\main started by warre in C:\Users\warre\Desktop\Revature\Projects\Project2)
+2022-03-03 17:41:41.958  INFO 9420 --- [main] c.r.B.BookingHotelApplication            : No active profile set, falling back to default profiles: default
+2022-03-03 17:41:42.542  INFO 9420 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-03 17:41:42.603  INFO 9420 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 3 JPA repository interfaces.
+2022-03-03 17:41:43.322  INFO 9420 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7000 (http)
+2022-03-03 17:41:43.335  INFO 9420 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-03 17:41:43.335  INFO 9420 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-03 17:41:43.445  INFO 9420 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-03 17:41:43.446  INFO 9420 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1445 ms
+2022-03-03 17:41:43.701  INFO 9420 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-03 17:41:43.770  INFO 9420 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-03-03 17:41:43.960  INFO 9420 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-03 17:41:44.053  INFO 9420 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-03 17:41:44.831  INFO 9420 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-03 17:41:44.854  INFO 9420 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2022-03-03 17:41:45.944  INFO 9420 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-03 17:41:45.952  INFO 9420 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-03 17:41:46.524  WARN 9420 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-03 17:41:47.033  INFO 9420 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7000 (http) with context path ''
+2022-03-03 17:41:47.043  INFO 9420 --- [main] c.r.B.BookingHotelApplication            : Started BookingHotelApplication in 5.494 seconds (JVM running for 5.831)
+2022-03-03 17:41:50.216  INFO 9420 --- [http-nio-7000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-03 17:41:50.216  INFO 9420 --- [http-nio-7000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-03 17:41:50.218  INFO 9420 --- [http-nio-7000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-03-03 17:42:23.570  INFO 11244 --- [main] c.r.B.BookingHotelApplication            : Starting BookingHotelApplication using Java 1.8.0_311 on LAPTOP-FF56CRCN with PID 11244 (C:\Users\warre\Desktop\Revature\Projects\Project2\build\classes\java\main started by warre in C:\Users\warre\Desktop\Revature\Projects\Project2)
+2022-03-03 17:42:23.572  INFO 11244 --- [main] c.r.B.BookingHotelApplication            : No active profile set, falling back to default profiles: default
+2022-03-03 17:42:24.152  INFO 11244 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-03 17:42:24.209  INFO 11244 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 3 JPA repository interfaces.
+2022-03-03 17:42:24.867  INFO 11244 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7000 (http)
+2022-03-03 17:42:24.881  INFO 11244 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-03 17:42:24.881  INFO 11244 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-03 17:42:24.979  INFO 11244 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-03 17:42:24.979  INFO 11244 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1363 ms
+2022-03-03 17:42:25.205  INFO 11244 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-03 17:42:25.266  INFO 11244 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-03-03 17:42:25.506  INFO 11244 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-03 17:42:25.604  INFO 11244 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-03 17:42:26.436  INFO 11244 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-03 17:42:26.454  INFO 11244 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2022-03-03 17:42:27.654  INFO 11244 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-03 17:42:27.666  INFO 11244 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-03 17:42:28.249  WARN 11244 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-03 17:42:28.802  INFO 11244 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7000 (http) with context path ''
+2022-03-03 17:42:28.811  INFO 11244 --- [main] c.r.B.BookingHotelApplication            : Started BookingHotelApplication in 5.602 seconds (JVM running for 6.002)
+2022-03-03 17:42:32.304  INFO 11244 --- [http-nio-7000-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-03 17:42:32.305  INFO 11244 --- [http-nio-7000-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-03 17:42:32.306  INFO 11244 --- [http-nio-7000-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-03-03 17:53:09.122  INFO 8056 --- [main] c.r.B.BookingHotelApplication            : Starting BookingHotelApplication using Java 1.8.0_311 on LAPTOP-FF56CRCN with PID 8056 (C:\Users\warre\Desktop\Revature\Projects\Project2\build\classes\java\main started by warre in C:\Users\warre\Desktop\Revature\Projects\Project2)
+2022-03-03 17:53:09.124  INFO 8056 --- [main] c.r.B.BookingHotelApplication            : No active profile set, falling back to default profiles: default
+2022-03-03 17:53:09.699  INFO 8056 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-03 17:53:09.760  INFO 8056 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 3 JPA repository interfaces.
+2022-03-03 17:53:10.503  INFO 8056 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7000 (http)
+2022-03-03 17:53:10.514  INFO 8056 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-03 17:53:10.515  INFO 8056 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-03 17:53:10.607  INFO 8056 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-03 17:53:10.608  INFO 8056 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1438 ms
+2022-03-03 17:53:10.848  INFO 8056 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-03 17:53:10.935  INFO 8056 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-03-03 17:53:11.124  INFO 8056 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-03 17:53:11.216  INFO 8056 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-03 17:53:12.302  INFO 8056 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-03 17:53:12.322  INFO 8056 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2022-03-03 17:53:13.705  INFO 8056 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-03 17:53:13.717  INFO 8056 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-03 17:53:14.356  WARN 8056 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-03 17:53:14.879  INFO 8056 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7000 (http) with context path ''
+2022-03-03 17:53:14.889  INFO 8056 --- [main] c.r.B.BookingHotelApplication            : Started BookingHotelApplication in 6.137 seconds (JVM running for 6.521)
+2022-03-03 17:53:18.990  INFO 8056 --- [http-nio-7000-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-03 17:53:18.991  INFO 8056 --- [http-nio-7000-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-03 17:53:18.993  INFO 8056 --- [http-nio-7000-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-03-03 17:55:55.931  INFO 17696 --- [main] c.r.B.BookingHotelApplication            : Starting BookingHotelApplication using Java 1.8.0_311 on LAPTOP-FF56CRCN with PID 17696 (C:\Users\warre\Desktop\Revature\Projects\Project2\build\classes\java\main started by warre in C:\Users\warre\Desktop\Revature\Projects\Project2)
+2022-03-03 17:55:55.934  INFO 17696 --- [main] c.r.B.BookingHotelApplication            : No active profile set, falling back to default profiles: default
+2022-03-03 17:55:56.497  INFO 17696 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-03 17:55:56.550  INFO 17696 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 3 JPA repository interfaces.
+2022-03-03 17:55:57.273  INFO 17696 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7000 (http)
+2022-03-03 17:55:57.284  INFO 17696 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-03 17:55:57.285  INFO 17696 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-03 17:55:57.380  INFO 17696 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-03 17:55:57.381  INFO 17696 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1408 ms
+2022-03-03 17:55:57.608  INFO 17696 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-03 17:55:57.670  INFO 17696 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-03-03 17:55:57.885  INFO 17696 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-03 17:55:57.980  INFO 17696 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-03 17:55:58.747  INFO 17696 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-03 17:55:58.764  INFO 17696 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2022-03-03 17:55:59.781  INFO 17696 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-03 17:55:59.788  INFO 17696 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-03 17:56:00.362  WARN 17696 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-03 17:56:00.920  INFO 17696 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7000 (http) with context path ''
+2022-03-03 17:56:00.930  INFO 17696 --- [main] c.r.B.BookingHotelApplication            : Started BookingHotelApplication in 5.365 seconds (JVM running for 5.736)
+2022-03-03 17:56:41.551  INFO 11340 --- [main] c.r.B.BookingHotelApplication            : Starting BookingHotelApplication using Java 1.8.0_311 on LAPTOP-FF56CRCN with PID 11340 (C:\Users\warre\Desktop\Revature\Projects\Project2\build\classes\java\main started by warre in C:\Users\warre\Desktop\Revature\Projects\Project2)
+2022-03-03 17:56:41.553  INFO 11340 --- [main] c.r.B.BookingHotelApplication            : No active profile set, falling back to default profiles: default
+2022-03-03 17:56:42.113  INFO 11340 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-03 17:56:42.170  INFO 11340 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 3 JPA repository interfaces.
+2022-03-03 17:56:42.785  INFO 11340 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7000 (http)
+2022-03-03 17:56:42.796  INFO 11340 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-03 17:56:42.797  INFO 11340 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-03 17:56:42.884  INFO 11340 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-03 17:56:42.884  INFO 11340 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1285 ms
+2022-03-03 17:56:43.081  INFO 11340 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-03 17:56:43.155  INFO 11340 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-03-03 17:56:43.373  INFO 11340 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-03 17:56:43.468  INFO 11340 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-03 17:56:44.218  INFO 11340 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-03 17:56:44.236  INFO 11340 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL82Dialect
+2022-03-03 17:56:45.214  INFO 11340 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-03 17:56:45.222  INFO 11340 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-03 17:56:45.774  WARN 11340 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-03 17:56:46.272  INFO 11340 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7000 (http) with context path ''
+2022-03-03 17:56:46.282  INFO 11340 --- [main] c.r.B.BookingHotelApplication            : Started BookingHotelApplication in 5.088 seconds (JVM running for 5.447)
+2022-03-03 17:56:49.664  INFO 11340 --- [http-nio-7000-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-03 17:56:49.664  INFO 11340 --- [http-nio-7000-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-03 17:56:49.665  INFO 11340 --- [http-nio-7000-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-03-03 17:56:51.250  INFO 11340 --- [http-nio-7000-exec-2] com.revature.Aspect.LoggerAspect         : New User Registered
+2022-03-03 17:56:51.330  WARN 11340 --- [http-nio-7000-exec-2] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23505
+2022-03-03 17:56:51.330 ERROR 11340 --- [http-nio-7000-exec-2] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"
+  Detail: Key (email)=(no.reply.schmotel@gmail.com) already exists.
+2022-03-03 17:56:51.376 ERROR 11340 --- [http-nio-7000-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [uk_6dotkott2kjsp8vw4d0m25fb7]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement] with root cause
+
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"
+  Detail: Key (email)=(no.reply.schmotel@gmail.com) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2674) ~[postgresql-42.3.1.jar:42.3.1]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2364) ~[postgresql-42.3.1.jar:42.3.1]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:354) ~[postgresql-42.3.1.jar:42.3.1]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:484) ~[postgresql-42.3.1.jar:42.3.1]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:404) ~[postgresql-42.3.1.jar:42.3.1]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:162) ~[postgresql-42.3.1.jar:42.3.1]
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:130) ~[postgresql-42.3.1.jar:42.3.1]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197) ~[hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at org.hibernate.dialect.identity.GetGeneratedKeysDelegate.executeAndExtract(GetGeneratedKeysDelegate.java:58) ~[hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:43) ~[hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3279) ~[hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3885) ~[hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:84) ~[hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:645) ~[hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:282) ~[hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:263) ~[hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:317) ~[hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:330) ~[hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:287) ~[hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:193) ~[hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:123) ~[hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:185) ~[hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:128) ~[hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:55) ~[hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107) ~[hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:760) ~[hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:746) ~[hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_311]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_311]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_311]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_311]
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:362) ~[spring-orm-5.3.15.jar:5.3.15]
+	at com.sun.proxy.$Proxy99.persist(Unknown Source) ~[na:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_311]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_311]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_311]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_311]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:311) ~[spring-orm-5.3.15.jar:5.3.15]
+	at com.sun.proxy.$Proxy99.persist(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:630) ~[spring-data-jpa-2.6.1.jar:2.6.1]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_311]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_311]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_311]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_311]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289) ~[spring-data-commons-2.6.1.jar:2.6.1]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137) ~[spring-data-commons-2.6.1.jar:2.6.1]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121) ~[spring-data-commons-2.6.1.jar:2.6.1]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:529) ~[spring-data-commons-2.6.1.jar:2.6.1]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285) ~[spring-data-commons-2.6.1.jar:2.6.1]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:639) ~[spring-data-commons-2.6.1.jar:2.6.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.15.jar:5.3.15]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:163) ~[spring-data-commons-2.6.1.jar:2.6.1]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:138) ~[spring-data-commons-2.6.1.jar:2.6.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.15.jar:5.3.15]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:80) ~[spring-data-commons-2.6.1.jar:2.6.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.15.jar:5.3.15]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.15.jar:5.3.15]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.15.jar:5.3.15]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.15.jar:5.3.15]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.15.jar:5.3.15]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.15.jar:5.3.15]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.15.jar:5.3.15]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174) ~[spring-data-jpa-2.6.1.jar:2.6.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.15.jar:5.3.15]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.15.jar:5.3.15]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.15.jar:5.3.15]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.15.jar:5.3.15]
+	at com.sun.proxy.$Proxy105.save(Unknown Source) ~[na:na]
+	at com.revature.BookingHotel.Services.UserService.registerUser(UserService.java:34) ~[main/:na]
+	at com.revature.BookingHotel.Services.UserService$$FastClassBySpringCGLIB$$bcfaaf1e.invoke(<generated>) ~[main/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.15.jar:5.3.15]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783) ~[spring-aop-5.3.15.jar:5.3.15]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.15.jar:5.3.15]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.15.jar:5.3.15]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.15.jar:5.3.15]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.15.jar:5.3.15]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.15.jar:5.3.15]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.15.jar:5.3.15]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.15.jar:5.3.15]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698) ~[spring-aop-5.3.15.jar:5.3.15]
+	at com.revature.BookingHotel.Services.UserService$$EnhancerBySpringCGLIB$$6edff542.registerUser(<generated>) ~[main/:na]
+	at com.revature.BookingHotel.Controllers.UserController.registerUser(UserController.java:32) ~[main/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_311]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_311]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_311]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_311]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.56.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.15.jar:5.3.15]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.56.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.15.jar:5.3.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_311]
+
+2022-03-03 17:57:27.586  INFO 11340 --- [http-nio-7000-exec-4] com.revature.Aspect.LoggerAspect         : New User Registered
