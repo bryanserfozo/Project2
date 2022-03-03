@@ -1,9 +1,11 @@
 
-import { Subject, Observable } from 'rxjs';
+import { Subject, Observable, throwError } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
-import { lastValueFrom } from 'rxjs';
+import { catchError, lastValueFrom } from 'rxjs';
+import { IUser } from '../Interfaces/IUser';
 import { IPastBooking } from '../Interfaces/IPastBooking';
+import { IBooking } from '../Interfaces/IBooking';
 
 
 @Injectable({
@@ -11,7 +13,7 @@ import { IPastBooking } from '../Interfaces/IPastBooking';
 })
 export class BookingService {
   
-   constructor(private http: HttpClient) { }
+   
 
    pastBooking : IPastBooking[] = [];
 
@@ -86,7 +88,13 @@ export class BookingService {
     }*/
    
  }
-}
+
+ today = new Date();
+  dd = String(this.today.getDate()).padStart(2, '0');
+  mm = String(this.today.getMonth() + 1).padStart(2, '0'); //January is 0!
+  yyyy = this.today.getFullYear();
+
+  bookingDate:string  = this.yyyy + '-' + this.mm + '-' + this.dd;
 
 
   create(
@@ -118,6 +126,8 @@ export class BookingService {
         })
       );
   }
+
+  
 
   message:string = ""
 

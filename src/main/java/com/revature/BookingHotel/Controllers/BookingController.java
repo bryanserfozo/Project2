@@ -54,6 +54,8 @@ public class BookingController {
     @GetMapping("/all/")
     @ResponseBody
     public List<Booking> getAllBookingByUserId(@RequestHeader int id) {
+
+
         return bs.getAllBookingByUserId(id);
     }
 
