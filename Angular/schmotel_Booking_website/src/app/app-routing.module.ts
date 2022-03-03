@@ -6,9 +6,11 @@ import { MainComponent } from './main-page/main/main.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavComponent } from './components/nav/nav.component';
 import { BookingInfoComponent } from './components/booking-info/booking-info.component';
+import { ConfirmationComponent } from './components/confirmation/confirmation.component';
 
 import { RouterModule, Routes } from '@angular/router';
 import { RegisterComponent } from './components/register/register.component';
+import { BookingHistoryComponent } from './components/booking-history/booking-history.component';
 import { UserPageComponent } from './components/user-page/user-page.component';
 
 const routes: Routes = [
@@ -17,7 +19,10 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'booking', component: BookingInfoComponent },
-  { path: 'user', component: UserPageComponent }
+  { path: 'booking-history', component: BookingHistoryComponent },
+  { path: 'user', component: UserPageComponent },
+  { path: 'confirm', component: ConfirmationComponent }
+
 ];
 
 @NgModule({

@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { IBooking } from '../Interfaces/IBooking';
 import { IHotel } from '../Interfaces/IHotel';
+import { IPayInfo } from '../Interfaces/IPayInfo';
+import { ISearch } from '../Interfaces/ISearch';
 import { IUser } from '../Interfaces/IUser';
 
 @Injectable({
@@ -14,6 +16,7 @@ export class DataService {
     hotelName: "",
     rating: "",
     price: "",
+    address: '',
     thumbnailUrl: ""
   }
 
@@ -25,18 +28,21 @@ export class DataService {
     this.bookingHotel.next(newHotel)
   }
 
-  private bookingInfo = new BehaviorSubject<IBooking>({
-      hotel: this.hotel,
-      checkIn: '',
-      checkOut: '',
-      numAdults: 0,
+  private searchInfo = new BehaviorSubject<ISearch>({
+    location: 'Miami',
+    checkIn: '2022-03-07',
+    checkOut: '2022-03-09',
+    numAdults: 1,
+    pageNumber: 1,
+    searchOrder: 0
     }
   )
 
-  currentBooking = this.bookingInfo.asObservable();
+  currentSearch = this.searchInfo.asObservable();
 
-  changeBooking(newBooking:IBooking){
-    this.bookingInfo.next(newBooking)
+  changeSearch(newSearch:ISearch){
+    this.searchInfo.next(newSearch)
+    // console.log(newSearch)
   }
 
   private loggedIn =new BehaviorSubject<IUser>({
@@ -46,7 +52,7 @@ export class DataService {
     firstName: '',
     lastName: '',
     password: '',
-    phoneNumber: '1234567891',
+    phoneNumber: '',
   })
 
     currentUser = this.loggedIn.asObservable();
@@ -60,6 +66,21 @@ export class DataService {
     changeSignedIn(value:boolean){
       this.signedIn.next(value)
     }
+
+    private payInfo = new BehaviorSubject<IPayInfo>({
+      paymentId : 0,
+      userId : 0,
+      firstName : "",
+      lastName: "",
+      cardNumber: 0
+    })
+
+    currentPayInfo = this.payInfo.asObservable();
+
+    changePayInfo(pi:IPayInfo){
+      this.payInfo.next(pi)
+    }
+
 
 
 

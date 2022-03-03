@@ -81,17 +81,40 @@ async login(username:string)
   
 }
 
+ updateUser(
+  id: number,
+  email: string,
+  firstName: string,
+  lastName: string,
+  username: string,
+  password: string,
+  phoneNumber: string) {
+  console.log("update method called")
+  console.log(id, email, username, firstName, lastName, password, phoneNumber)
+  this.http.put<IUser>('http://localhost:7000/user/', JSON.stringify({
+  id,
+  email,
+  firstName,
+  lastName,
+  username,
+  password,
+  phoneNumber
+  }),
+  { headers: { 'Content-Type': 'application/json' } }
+    )
+    .pipe(
+      catchError((e) => {
+        return throwError(e);
+      })
+    )
+  .subscribe(data => {
+    console.log("the result is " + data)
+  })
+}
 
 
 
-  // login(email:string,password:string):Observable<IUser>{
-  //   return this.http.post<IUser>("http//localhost:7000/login",JSON.stringify({email,password}),
-  //  {headers:{'Content-Type': 'application/json'}} 
-  //  )
-  //   .pipe (catchError((e)=>{
-  //     return throwError(e);
-  //   }));
-  // }
+  
   constructor(private http: HttpClient) {}
 
 

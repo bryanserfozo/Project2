@@ -24,15 +24,18 @@ export class SearchServiceService {
     location: string,
     checkInDate: string,
     checkOutDate: string,
-    numAdults: number
+    numAdults: number,
+    pageNumber: number,
+    searchOrder: number
   ) {
+    // console.log(location, checkInDate, checkOutDate, numAdults, pageNumber, searchOrder)
     this.hotels = [];
     let headers = new HttpHeaders()
       .set('Content-Type', 'application/json')
       .set('x-rapidapi-host', 'hotels4.p.rapidapi.com')
       .set(
         'x-rapidapi-key',
-        '44b3c64519mshaa86b6304abe377p19c896jsne726492bbb98'
+        'a132cca1e0msh97690e3e1a0ff81p1ad29cjsna8d5bb4c3b82'
       );
     let destUrl =
       'https://hotels4.p.rapidapi.com/locations/v2/search?query=' +
@@ -42,20 +45,35 @@ export class SearchServiceService {
       this.http.get(destUrl, { headers: headers })
     ).then((response) => JSON.parse(JSON.stringify(response)));
     let destId = destination.suggestions[0].entities[0].destinationId;
+    let order: string = 'BEST_SELLER';
+
+    if (searchOrder == 0) {
+      order = 'BEST_SELLER';
+    } else if (searchOrder == 1) {
+      order = 'PRICE';
+    } else if (searchOrder == 2) {
+      order = 'PRICE_HIGHEST_FIRST';
+    } else if (searchOrder == 3) {
+      order = 'GUEST_RATING';
+    }
+
     let propUrl =
       'https://hotels4.p.rapidapi.com/properties/list?destinationId=' +
       destId +
-      '&pageNumber=1&pageSize=25&checkIn=' +
+      '&pageNumber=' +
+      pageNumber +
+      '&pageSize=25&checkIn=' +
       checkInDate +
       '&checkOut=' +
       checkOutDate +
       '&adults1=' +
       numAdults +
-      '&sortOrder=PRICE&locale=en_US&currency=USD';
+      '&sortOrder=' +
+      order +
+      '&locale=en_US&currency=USD';
     let propertieslist = await lastValueFrom(
       this.http.get(propUrl, { headers: headers })
     ).then((response) => JSON.parse(JSON.stringify(response)));
-    console.log('Process Hotel Info');
     for (
       let i = 0;
       i < propertieslist.data.body.searchResults.results.length;
@@ -81,6 +99,7 @@ export class SearchServiceService {
           hotelName: '',
           rating: '',
           price: '',
+          address: '',
           thumbnailUrl: '',
         };
       } catch {
@@ -100,7 +119,7 @@ export class SearchServiceService {
       .set('x-rapidapi-host', 'hotels4.p.rapidapi.com')
       .set(
         'x-rapidapi-key',
-        '44b3c64519mshaa86b6304abe377p19c896jsne726492bbb98'
+        'a132cca1e0msh97690e3e1a0ff81p1ad29cjsna8d5bb4c3b82'
       );
     let infoUrl =
       'https://hotels4.p.rapidapi.com/properties/get-details?id=' +
@@ -121,7 +140,7 @@ export class SearchServiceService {
     this.entry.description = '\n';
     for (
       let i = 0;
-      i < hotelInfo.data.body.overview.overviewSections.length;
+      i < hotelInfo.data.body.overview.overviewSections.length - 1;
       i++
     ) {
       for (

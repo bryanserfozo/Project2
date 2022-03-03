@@ -84,6 +84,43 @@
               [(ngModel)]="password"
             />
           </div>
+          <hr />
+          <div class="row">
+            <label for="exampleCardNumInput"></label>
+            <input
+              class="u-full-width"
+              type="number"
+              placeholder="Card Number"
+              name="cardnum"
+              id="exampleCardNumInput"
+              required
+              [(ngModel)]="cardNumber"
+            />
+          </div>
+          <div class="row">
+            <label for="exampleCardFirstInput"></label>
+            <input
+              class="u-full-width"
+              type="text"
+              placeholder="Card First Name"
+              name="cardFirstName"
+              id="exampleCardFirstInput"
+              required
+              [(ngModel)]="cardFirstName"
+            />
+          </div>
+          <div class="row">
+            <label for="exampleCardLastInput"></label>
+            <input
+              class="u-full-width"
+              type="text"
+              placeholder="Card Last Name"
+              name="cardLastName"
+              id="exampleCardLastInput"
+              required
+              [(ngModel)]="cardLastName"
+            />
+          </div>
         </form>
         <div class="row">
           <input

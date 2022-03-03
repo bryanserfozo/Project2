@@ -25,11 +25,19 @@
 .about:hover {
   border-bottom: 2px #1eaedb solid;
 }
-
-.my-account {
+.booking-history {
   position: absolute;
   bottom: 22px;
   right: 340px;
+}
+
+.booking-history:hover {
+  border-bottom: 2px #1eaedb solid;
+}
+.my-account {
+  position: absolute;
+  bottom: 22px;
+  right: 440px;
 }
 .my-account:hover {
   border-bottom: 2px #1eaedb solid;
