@@ -6,13 +6,13 @@
         <div class="four columns">
           <label for="search-city-input"> Where to?</label>
           <input
-            
             type="text"
             placeholder="e.g. North Korea"
             id="search-city-input"
             class="u-full-width search-city-input"
-            name = "location"
-            required [(ngModel)] = "location"
+            name="location"
+            required
+            [(ngModel)]="location"
           />
         </div>
 
@@ -43,48 +43,32 @@
         </div>
 
         <div class="three columns guest-qty-input">
-          <div class="four columns left-button">
-            <i
-              (click)="setNumGuest('minus')"
-              class="fa-solid fa-angle-left"
-            ></i>
-          </div>
-          <div class="four columns">
-            <label for="numGuests">
-              <i class="fa-solid fa-user-group"></i>
-              <!-- <div class="numGuests">{{ numGuests }}</div> -->
+          <!-- <div class="four columns left-button"> -->
+          <i (click)="setNumGuest('minus')" class="fa-solid fa-angle-left"></i>
+          <!-- </div> -->
+          <!-- <div class="four columns"> -->
 
-              <input
-                type="number"
-                id="num-guests"
-                class="num-guests"
-                name="numAdults"
-                value="{{ numAdults }}"
-                required
-                [(ngModel)]="numAdults"
-                
-              />
-            </label>
-          </div>
-          <div class="four columns right-button">
-            <i
-              (click)="setNumGuest('plus')"
-              class="fa-solid fa-angle-right"
-            ></i>
-          </div>
+          <input
+            type="number"
+            id="num-guests"
+            class="num-guests"
+            name="numAdults"
+            value="{{ numAdults }}"
+            required
+            [(ngModel)]="numAdults"
+          />
+          <!-- </div>
+          <div class="four columns right-button"> -->
+          <i (click)="setNumGuest('plus')" class="fa-solid fa-angle-right"></i>
+          <!-- </div> -->
         </div>
       </div>
-    
-    <div class="search-btn-div">
-      <button
-        
-        class="button-primary search-btn"
-        id="seatch-btn"
-        type="submit"
-      >
-        search
-      </button>
-    </div>
-  </form>
+
+      <div class="search-btn-div">
+        <button class="button-primary search-btn" id="seatch-btn" type="submit">
+          search
+        </button>
+      </div>
+    </form>
   </div>
 </section>

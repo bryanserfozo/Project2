@@ -11,33 +11,26 @@
   border: 1px lightgray solid;
   border-radius: 5px;
 }
-.num-guests {
-  width: 30px;
-}
 
 .guest-qty-input {
   display: flex;
+
   justify-content: center;
   align-items: center;
+  height: 100px;
+  margin-top: 0;
+  margin-bottom: 25px;
+  padding-bottom: 5px;
 }
-.guest-qty-input input {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1px;
-  margin-top: 5px;
-  height: 40px;
-}
+
 .left-button,
 .right-button {
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
-  margin-top: 20px;
+  align-items: center; */
+  /* margin-top: 20px; */
 }
-.fa-user-group {
-  margin-bottom: 0;
-}
+
 .fa-angle-left,
 .fa-angle-right {
   font-size: 25px;
@@ -49,6 +42,7 @@
   color: white;
   border-radius: 50px;
   background-color: black;
+
   opacity: 0.5;
 }
 
@@ -62,19 +56,20 @@
 }
 
 .num-guests {
-  background-color: rgb(255, 255, 255);
-  border: 1px lightgray solid;
-  border-radius: 5px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px light gray solid;
-
   height: 40px;
-  width: 30px;
+  width: 35px;
   margin-top: 5px;
   margin-bottom: 10px;
 }
+
+/* .guest-input-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+} */
 
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,

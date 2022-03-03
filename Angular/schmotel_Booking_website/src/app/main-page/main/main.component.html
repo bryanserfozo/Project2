@@ -11,7 +11,6 @@
     </div>
   </section>
 
-
   <!-- hotel search section -->
   <app-search (notify)="onNotifyClicked($event)"></app-search>
   <!-- flight results section -->
@@ -19,4 +18,3 @@
   <app-results *ngFor="let hotel of hotels" [result]="hotel"></app-results>
   <app-page-number (changePage)="onPageChange($event)"></app-page-number>
 </div>
-
