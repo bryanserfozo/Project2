@@ -24,9 +24,12 @@ export class ConfirmationComponent implements OnInit {
   };
 
   search:ISearch = {
+    location: '',
     checkIn: '',
     checkOut: '',
     numAdults: 0,
+    pageNumber: 1,
+    searchOrder: 0
   }
 
   user: IUser = {

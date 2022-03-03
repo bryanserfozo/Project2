@@ -1,5 +1,8 @@
 export interface ISearch {
+    location:string,
     checkIn: string,
     checkOut: string,
-    numAdults: number
+    numAdults: number,
+    pageNumber: number,
+    searchOrder: number
   }

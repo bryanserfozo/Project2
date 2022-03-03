@@ -36,7 +36,6 @@ export class NavComponent implements OnInit {
 
 
   async ngOnInit(): Promise<void> {
-    console.log("Initialized")
     this.dataService.currentSignedIn.subscribe(value=>this.signedIn = value)
     
   }
