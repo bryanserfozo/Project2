@@ -21,7 +21,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'booking', component: BookingInfoComponent },
   { path: 'user', component: UserPageComponent },
-  { path: 'about', component: AboutComponent}
+  { path: 'about', component: AboutComponent},
   { path: 'booking-history', component: BookingHistoryComponent },
   { path: 'user', component: UserPageComponent },
   { path: 'confirm', component: ConfirmationComponent }
