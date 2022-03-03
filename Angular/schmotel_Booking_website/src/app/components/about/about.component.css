@@ -1,0 +1,16 @@
+.img {
+    background-image: url("../Imagetest/aboutus.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    margin-top: 0;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text {
+    font-size: 50px;
+  }
