@@ -1,0 +1,27 @@
+<section class="section">
+  <div class="three columns guest-qty-input">
+    <div class="four columns left-button">
+      <i (click)="setPageNum('minus')" class="fa-solid fa-angle-left"></i>
+    </div>
+    <div class="four columns">
+      <label for="num-pages">
+        <i class="fa-solid fa-book-open"></i>
+        <!-- <div class="numGuests">{{ numGuests }}</div> -->
+
+        <input
+          type="number"
+          id="num-pages"
+          class="num-pages"
+          name="numAdults"
+          value="{{ pageNumber }}"
+          required
+          [(ngModel)]="pageNumber"
+          min="1"
+        />
+      </label>
+    </div>
+    <div class="four columns right-button">
+      <i (click)="setPageNum('plus')" class="fa-solid fa-angle-right"></i>
+    </div>
+  </div>
+</section>

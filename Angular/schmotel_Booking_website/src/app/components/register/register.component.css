@@ -1,0 +1,52 @@
+.register-card {
+  color: rgb(107, 104, 104);
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.1)
+  );
+  height: 500px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  z-index: 2;
+  /* the bigger the number the more forward */
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+}
+
+.img-container {
+  background-image: url("../images/register-accout.jpg");
+  border-radius: 10px;
+
+  background-position: -210px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  margin-top: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-title-div {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px 50px 20px 10px;
+  margin: 0;
+}
+
+.account-submit {
+  position: absolute;
+  left: 25px;
+  bottom: -15px;
+}
+.forgotPass {
+  position: absolute;
+  right: 62px;
+}

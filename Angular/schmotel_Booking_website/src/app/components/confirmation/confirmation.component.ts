@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { IBooking } from 'src/app/Interfaces/IBooking';
 import { IHotel } from 'src/app/Interfaces/IHotel';
 import { IPayInfo } from 'src/app/Interfaces/IPayInfo';
 import { ISearch } from 'src/app/Interfaces/ISearch';
 import { IUser } from 'src/app/Interfaces/IUser';
+import { BookingService } from 'src/app/services/booking.service';
 import { DataService } from 'src/app/services/data.service';
 
 @Component({
@@ -68,8 +70,20 @@ export class ConfirmationComponent implements OnInit {
     return duration/(24*60*60*1000)
   }
 
+  onSubmit(){
+    console.log(this.booking)
+    this.bookingService.create(0, this.booking.user,this.booking.hotel,this.booking.checkIn,this.booking.checkOut,this.booking.numNights)
+    .subscribe((data)=>{
+      console.log(data)
+    })
+    console.log("ready for email")
+    this.bookingService.sendEmail(this.user.email, this.hotel.hotelName, this.hotel.address, this.search.checkIn, this.search.checkOut,
+      this.search.numAdults, this.booking.numNights, this.hotel.price, this.totalCost, this.user.firstName + " " + this.user.lastName,
+      this.payInfo.cardNumber)
+      this.router.navigateByUrl('/home')
+  }
 
-  constructor(private dataService:DataService) { }
+  constructor(private dataService:DataService, private bookingService:BookingService, private router:Router) { }
 
   async ngOnInit(){
     await this.dataService.currentHotel.subscribe(hotel => this.hotel = hotel)

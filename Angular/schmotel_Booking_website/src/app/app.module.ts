@@ -23,8 +23,9 @@ import { ConfirmationComponent } from './components/confirmation/confirmation.co
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BookingTableComponent } from './components/booking-table/booking-table.component';
 
-@NgModule({
+import { PageNumberComponent } from './components/page-number/page-number.component';
 
+@NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
@@ -33,6 +34,7 @@ import { BookingTableComponent } from './components/booking-table/booking-table.
     RegisterComponent,
     SearchFilterComponent,
     NavComponent,
+    PageNumberComponent,
     ResultsComponent,
     BookingInfoComponent,
     BookingHistoryComponent,
@@ -41,9 +43,18 @@ import { BookingTableComponent } from './components/booking-table/booking-table.
     BookingTableComponent,
   ],
 
-  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule, MatTableModule, MatPaginatorModule, MatSortModule, BrowserAnimationsModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,
+    HttpClientModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+  ],
 
-  providers: [ UserServiceService, BookingService],
+
+  providers: [UserServiceService, BookingService],
 
   bootstrap: [AppComponent],
 })
