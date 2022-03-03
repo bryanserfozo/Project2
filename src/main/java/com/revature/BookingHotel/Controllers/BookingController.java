@@ -47,7 +47,7 @@ public class BookingController {
         long numNights = DAYS.between(checkIn, checkOut);
 
         bk.setNumNights(numNights);
-        es.sendBookingEmail(bk);
+//        es.sendBookingEmail(bk);
         return bs.createBooking(bk);
     }
 
