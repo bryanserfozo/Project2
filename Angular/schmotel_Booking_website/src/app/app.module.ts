@@ -36,16 +36,14 @@ import { PageNumberComponent } from './components/page-number/page-number.compon
     NavComponent,
 
     ResultsComponent,
-      BookingInfoComponent,
-      AboutComponent
-  ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
+    BookingInfoComponent,
     BookingInfoComponent,
     BookingHistoryComponent,
     BookingTableComponent,
     UserPageComponent,
     ConfirmationComponent,
-
+    AboutComponent,
+    PageNumberComponent
   ],
 
   imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule, MatTableModule, MatPaginatorModule, MatSortModule],
