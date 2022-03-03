@@ -1,3 +1,4 @@
+
 import { Injectable } from '@angular/core';
 import { IUser } from '../Interfaces/IUser';
 import { IBooking } from '../Interfaces/IBooking';
@@ -5,10 +6,12 @@ import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, lastValueFrom } from 'rxjs';
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class BookingService {
+
 
   today = new Date();
   dd = String(this.today.getDate()).padStart(2, '0');
@@ -92,3 +95,4 @@ export class BookingService {
 
   constructor(private http:HttpClient) { }
 }
+
