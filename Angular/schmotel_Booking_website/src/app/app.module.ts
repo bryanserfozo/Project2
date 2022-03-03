@@ -15,8 +15,17 @@ import { UserPageComponent } from './components/user-page/user-page.component';
 import { UserServiceService } from './services/user-service.service';
 import { BookingInfoComponent } from './components/booking-info/booking-info.component';
 import { AboutComponent } from './components/about/about.component';
+import { BookingHistoryComponent } from './components/booking-history/booking-history.component';
+import { BookingTableComponent } from './components/booking-table/booking-table.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { BookingService } from './services/booking.service';
+import { ConfirmationComponent } from './components/confirmation/confirmation.component';
+import { PageNumberComponent } from './components/page-number/page-number.component';
 
 @NgModule({
+
   declarations: [
     AppComponent,
     LoginComponent,
@@ -25,15 +34,23 @@ import { AboutComponent } from './components/about/about.component';
     RegisterComponent,
     SearchFilterComponent,
     NavComponent,
-    UserPageComponent,
 
     ResultsComponent,
       BookingInfoComponent,
       AboutComponent
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
+    BookingInfoComponent,
+    BookingHistoryComponent,
+    BookingTableComponent,
+    UserPageComponent,
+    ConfirmationComponent,
 
-  providers: [ UserServiceService],
+  ],
+
+  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule, MatTableModule, MatPaginatorModule, MatSortModule],
+
+  providers: [ UserServiceService, BookingService],
 
   bootstrap: [AppComponent],
 })

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { async } from '@angular/core/testing';
 import { Router } from '@angular/router';
 import { DataService } from 'src/app/services/data.service';
+import { PayInfoService } from 'src/app/services/pay-info.service';
 import { UserServiceService } from 'src/app/services/user-service.service';
 
 @Component({
@@ -21,6 +22,8 @@ export class LoginComponent implements OnInit {
     if(this.password==this.userService.loginUser.password){
       console.log("correct username and password") 
       this.dataService.changeUser(this.userService.loginUser)
+      this.paymentService.getPayInfo(this.userService.loginUser.id)
+      this.dataService.changePayInfo(this.paymentService.payInfo)
       this.dataService.changeSignedIn(true)
       this.router.navigate(['home']);
     }else{
@@ -33,7 +36,7 @@ export class LoginComponent implements OnInit {
   this.router.navigate(['register']);
 }
 
-  constructor(private router:Router,private userService:UserServiceService, private dataService: DataService) {}
+  constructor(private router:Router,private userService:UserServiceService, private dataService: DataService, private paymentService:PayInfoService) {}
 
   ngOnInit(): void {
   }

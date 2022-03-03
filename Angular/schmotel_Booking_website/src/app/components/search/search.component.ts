@@ -8,6 +8,7 @@ import { IHotel } from 'src/app/Interfaces/IHotel';
 import { MainComponent } from 'src/app/main-page/main/main.component';
 import { IBooking } from 'src/app/Interfaces/IBooking';
 import { DataService } from 'src/app/services/data.service';
+import { ISearch } from 'src/app/Interfaces/ISearch';
 
 @Component({
   selector: 'app-search',
@@ -92,17 +93,20 @@ export class SearchComponent implements OnInit {
 
   hotel: IHotel = {
     id: 0,
+    address:'',
     hotelName: '',
     rating: '',
     price: '',
     thumbnailUrl: '',
   };
 
-  booking: IBooking = {
-    hotel: this.hotel,
+  search: ISearch = {
+    location: '',
     checkIn: '',
     checkOut: '',
-    numAdults: 0,
+    numAdults: 1,
+    pageNumber: 1,
+    searchOrder: 0
   }
 
   
@@ -110,7 +114,7 @@ export class SearchComponent implements OnInit {
   location: string = '';
   checkInDate: string = '';
   checkOutDate: string = '';
-  numAdults: number = 0;
+  numAdults: number = 1;
 
 
   error: boolean = false;
@@ -124,27 +128,48 @@ export class SearchComponent implements OnInit {
       this.checkOutDate,
       this.numAdults
     );
+    
+    this.search.location = this.location;
+    this.search.checkIn = this.checkInDate;
+    this.search.checkOut = this.checkOutDate;
+    this.search.numAdults = this.numAdults;
+    this.search.pageNumber = 1;
+    this.search.searchOrder = 0;
 
-    this.booking.checkIn = this.checkInDate;
-    this.booking.checkOut = this.checkOutDate;
-    this.booking.numAdults = this.numAdults;
-
-    this.dataService.changeBooking(this.booking);
-    console.log(this.dataService.currentBooking)
+    this.dataService.changeSearch(this.search);
+    console.log(this.dataService.currentSearch)
 
     await this.searchService.getHotels(
       this.location,
       this.checkInDate,
       this.checkOutDate,
-      this.numAdults
+      this.numAdults,
+      this.search.pageNumber,
+      this.search.searchOrder
     );
     this.hotels = this.searchService.hotels;
     console.log(this.searchService.hotels);
     this.notify.emit(this.hotels);
   }
 
-  ngOnInit(): void {
- 
+  async ngOnInit(){
+
+    
+
+    console.log("home initialized")
+    this.dataService.currentSearch.subscribe(search=>this.search = search)
+    await this.searchService.getHotels(
+      this.search.location,
+      this.search.checkIn,
+      this.search.checkOut,
+      this.search.numAdults,
+      this.search.pageNumber,
+      this.search.searchOrder
+    );
+    // console.log(this.search)
+    console.log(this.searchService.hotels)
+    this.hotels = this.searchService.hotels;
+    this.notify.emit(this.hotels);
   }
 
 
@@ -167,7 +192,12 @@ export class SearchComponent implements OnInit {
   // plus/minus number of guests
   public setNumGuest(type: string): void {
     console.log('clicked ');
-    type === 'plus' ? this.numAdults++ : this.numAdults--;
+    if (this.numAdults > 1){
+      type === 'plus' ? this.numAdults++ : this.numAdults--;
+    } else{
+      type === 'plus' ? this.numAdults++ : console.log("no negatives");
+    }
+    
   }
 
   // lstdestinations: Destination[] = [];

@@ -49,5 +49,19 @@ public class EmailService {
 
     }
 
+    public void sendAnyEmail(String email, String msg) {
+
+        SimpleMailMessage message = new SimpleMailMessage();
+
+        message.setFrom("no.reply.schmotel@gmail.com");
+        message.setTo(email);
+        message.setText(msg);
+        message.setSubject("Schmotel Booking Confirmation");
+
+        mailSender.send(message);
+        System.out.println("Sent the cool message");
+
+    }
+
 }
 
