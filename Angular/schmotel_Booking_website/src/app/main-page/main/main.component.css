@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
 }
+body {
+  color: rgb(107, 104, 104);
+}
 
 .hero-image-section {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),

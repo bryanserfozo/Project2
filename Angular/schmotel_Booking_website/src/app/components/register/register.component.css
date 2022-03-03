@@ -5,14 +5,13 @@
     rgba(255, 255, 255, 0.6),
     rgba(255, 255, 255, 0.1)
   );
-  height: 500px;
+  height: 600px;
   margin-top: 50px;
   margin-bottom: 100px;
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
   backdrop-filter: blur(10px);
   z-index: 2;
-  /* the bigger the number the more forward */
   box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
 }
 
@@ -20,12 +19,11 @@
   background-image: url("../images/register-accout.jpg");
   border-radius: 10px;
 
-  background-position: -210px;
+  background-position: -350px;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 500px;
+  height: 600px;
   margin-top: 0;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,12 +39,43 @@
   margin: 0;
 }
 
+#firstnameInput:focus,
+#lastnameInput:focus,
+#exampleEmailInput:focus,
+#phoneNumber:focus,
+#usernameInput:focus,
+#password:focus,
+#exampleCardNumInput:focus,
+#exampleCardFirstInput:focus,
+#exampleCardLastInput:focus {
+  border: 1.5px #1eaedb solid;
+}
+
 .account-submit {
   position: absolute;
   left: 25px;
   bottom: -15px;
 }
 .forgotPass {
+  font-size: 13px;
   position: absolute;
   right: 62px;
+  bottom: 10px;
+}
+
+hr {
+  padding: 0;
+  margin: 20px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }
