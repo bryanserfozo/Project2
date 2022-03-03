@@ -40,9 +40,4 @@ public class PayInfoController {
         pis.updatePayInfo(pi);
     }
 
-    @DeleteMapping("/")
-    @ResponseBody
-    public void deleteUser(@RequestBody PayInfo pi) {
-        pis.deletePayInfo(pi);
-    }
 }
