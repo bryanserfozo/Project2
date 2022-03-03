@@ -1,0 +1,22 @@
+.booking-info {
+  border: 1px solid black;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 20px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.img-container {
+  position: absolute;
+  left: 20px;
+}
+
+.booking-btn {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}

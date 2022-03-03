@@ -7,25 +7,24 @@ import { ISearch } from '../Interfaces/ISearch';
 import { IUser } from '../Interfaces/IUser';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DataService {
-
-  private hotel:IHotel = {
+  private hotel: IHotel = {
     id: 0,
-    hotelName: "",
-    rating: "",
-    price: "",
+    hotelName: '',
+    rating: '',
+    price: '',
     address: '',
-    thumbnailUrl: ""
-  }
+    thumbnailUrl: '',
+  };
 
-  private bookingHotel = new BehaviorSubject<IHotel>(this.hotel)
+  private bookingHotel = new BehaviorSubject<IHotel>(this.hotel);
 
   currentHotel = this.bookingHotel.asObservable();
 
-  changeHotel(newHotel:IHotel){
-    this.bookingHotel.next(newHotel)
+  changeHotel(newHotel: IHotel) {
+    this.bookingHotel.next(newHotel);
   }
 
   private searchInfo = new BehaviorSubject<ISearch>({
@@ -34,18 +33,17 @@ export class DataService {
     checkOut: '2022-03-09',
     numAdults: 1,
     pageNumber: 1,
-    searchOrder: 0
-    }
-  )
+    searchOrder: 0,
+  });
 
   currentSearch = this.searchInfo.asObservable();
 
-  changeSearch(newSearch:ISearch){
-    this.searchInfo.next(newSearch)
+  changeSearch(newSearch: ISearch) {
+    this.searchInfo.next(newSearch);
     // console.log(newSearch)
   }
 
-  private loggedIn =new BehaviorSubject<IUser>({
+  private loggedIn = new BehaviorSubject<IUser>({
     id: 0,
     email: '',
     username: '',
@@ -53,36 +51,33 @@ export class DataService {
     lastName: '',
     password: '',
     phoneNumber: '',
-  })
+  });
 
-    currentUser = this.loggedIn.asObservable();
+  currentUser = this.loggedIn.asObservable();
 
-    changeUser(user:IUser){
-      this.loggedIn.next(user)
-    }
-    
-    private signedIn = new BehaviorSubject<boolean>(false)
-    currentSignedIn = this.signedIn.asObservable();
-    changeSignedIn(value:boolean){
-      this.signedIn.next(value)
-    }
+  changeUser(user: IUser) {
+    this.loggedIn.next(user);
+  }
 
-    private payInfo = new BehaviorSubject<IPayInfo>({
-      paymentId : 0,
-      userId : 0,
-      firstName : "",
-      lastName: "",
-      cardNumber: 0
-    })
+  private signedIn = new BehaviorSubject<boolean>(false);
+  currentSignedIn = this.signedIn.asObservable();
+  changeSignedIn(value: boolean) {
+    this.signedIn.next(value);
+  }
 
-    currentPayInfo = this.payInfo.asObservable();
+  private payInfo = new BehaviorSubject<IPayInfo>({
+    paymentId: 0,
+    userId: 0,
+    firstName: '',
+    lastName: '',
+    cardNumber: 0,
+  });
 
-    changePayInfo(pi:IPayInfo){
-      this.payInfo.next(pi)
-    }
+  currentPayInfo = this.payInfo.asObservable();
 
+  changePayInfo(pi: IPayInfo) {
+    this.payInfo.next(pi);
+  }
 
-
-
-  constructor() { }
+  constructor() {}
 }

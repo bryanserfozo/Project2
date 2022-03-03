@@ -5,6 +5,13 @@
   height: 200px;
 }
 
+.search-city-input:focus,
+.check-in-date:focus,
+.check-out-date:focus,
+.num-guests:focus {
+  border: 1.5px #1eaedb solid;
+}
+
 .check-in-date,
 .check-out-date {
   padding: 8px 10px;
@@ -59,8 +66,9 @@
   display: flex;
   height: 40px;
   width: 35px;
-  margin-top: 5px;
-  margin-bottom: 10px;
+  margin: 5px 20px 10px 20px;
+  /* margin-top: 5px;
+  margin-bottom: 10px; */
 }
 
 /* .guest-input-div {
