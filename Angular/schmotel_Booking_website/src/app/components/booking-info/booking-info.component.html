@@ -10,20 +10,21 @@
 
       <h5>Price: {{ hotel.price }}</h5>
     </div>
-
-    <div class="row">
-      <h5>Check In: {{ searchInfo.checkIn }}</h5>
+    <div class="check-in-container">
+      <div class="row">
+        <h5>Check In: {{ searchInfo.checkIn }}</h5>
+      </div>
+      <div class="row">
+        <h5>Check Out: {{ searchInfo.checkOut }}</h5>
+      </div>
+      <div class="row">
+        <h5>Number of Adults: {{ searchInfo.numAdults }}</h5>
+      </div>
+      <div class="row">
+        <h5>Address : {{ hotel.address }}</h5>
+      </div>
     </div>
-    <div class="row">
-      <h5>Check Out: {{ searchInfo.checkOut }}</h5>
-    </div>
-    <div class="row">
-      <h5>Number of Adults: {{ searchInfo.numAdults }}</h5>
-    </div>
-    <div class="row">
-      <h5>Address : {{ hotel.address }}</h5>
-    </div>
-
+    <hr />
     <div class="row description-container">
       <p style="white-space: pre-wrap">Description : {{ hotel.description }}</p>
     </div>
