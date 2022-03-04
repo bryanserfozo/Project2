@@ -1,44 +1,95 @@
-<head>
-    <title>User Profile</title>
-</head>
-    <h3>Account Information</h3>
-    <div class = "container">
+<div class="container" >
+    <section class="center">
+      <div class="row">
+        <div class="six columns">
+            <div class="main-title-div">
+   
         <form id="updateInfo" >
 
+            <h5>Account Details</h5>
+
+            <div class="row">
+                <div class="u-full-width">
             <label for="first">First Name: {{user.firstName}}</label><br>
-            <input class ="u-full-width" type="text" id="accinfo" name="firstname" placeholder= {{user.firstName}} [hidden]="!hideform" [(ngModel)] = "updateFirstName"><br>
+            <input class ="u-full-width" type="text" id="accinfo" name="firstname" placeholder= {{user.firstName}} [hidden]="!hideform" [(ngModel)] = "updateFirstName">
+                </div>
+            </div>
 
+            <div class="row">
+                <div class="u-full-width">
             <label for="last">Last Name: {{user.lastName}}</label><br>
-            <input class ="u-full-width" type="text" id="accinfo" name="lastname" placeholder= {{user.lastName}} [hidden]="!hideform" [(ngModel)] = "updateLastName"><br>
+            <input class ="u-full-width" type="text" id="accinfo" name="lastname" placeholder= {{user.lastName}} [hidden]="!hideform" [(ngModel)] = "updateLastName">
+                </div>
+            </div>
 
+            <div class="row">
+                <div class="u-full-width">
             <label for="email">Email: {{user.email}}</label><br>
-            <input class ="u-full-width" type="text" id="accinfo" name="email" placeholder= {{user.email}} [hidden]="!hideform" [(ngModel)] = "updateEmail"><br>
+            <input class ="u-full-width" type="text" id="accinfo" name="email" placeholder= {{user.email}} [hidden]="!hideform" [(ngModel)] = "updateEmail">
+                </div>
+            </div>
 
+            <div class="row">
+                <div class="u-full-width">
             <label for="username">Username: {{user.username}}</label><br>
-            <input class ="u-full-width" type="text" id="accinfo" name="username" placeholder= {{user.username}} [hidden]="!hideform" [(ngModel)] = "updateUsername"><br>
+            <input class ="u-full-width" type="text" id="accinfo" name="username" placeholder= {{user.username}} [hidden]="!hideform" [(ngModel)] = "updateUsername">
+                </div>
+            </div>
 
+            <div class="row">
+                <div class="u-full-width">
             <label for="password">Password: {{user.password}}</label><br>
-            <input class ="u-full-width" type="text" id="accinfo" name="password" placeholder= {{user.password}} [hidden]="!hideform" [(ngModel)] = "updatePassword"><br>
+            <input class ="u-full-width" type="text" id="accinfo" name="password" placeholder= {{user.password}} [hidden]="!hideform" [(ngModel)] = "updatePassword">
+                </div>
+            </div>
 
+            <div class="row">
+                <div class="u-full-width">
             <label for="phonenumber">Phone Number: {{user.phoneNumber}}</label><br>
-            <input class ="u-full-width" type="text" id="accinfo" name="phonenumber" placeholder= {{user.phoneNumber}} [hidden]="!hideform" [(ngModel)] = "updatePhoneNumber"><br>
+            <input class ="u-full-width" type="text" id="accinfo" name="phonenumber" placeholder= {{user.phoneNumber}} [hidden]="!hideform" [(ngModel)] = "updatePhoneNumber">
+                </div>
+            </div>
 
-            <button class="button" id="update" (click) = "show()">Update</button> &ensp; <button class="button" type = "submit" id = "save" (click) = "updateUser()">Save Changes</button>
-        </form><br>
 
-    </div>
-    <div class = "container">
-        <form id="updateInfo" >
+            <button class="button" id="update" (click) = "show()">Update</button> &ensp;  <button class="button" type = "submit" id = "save" (click) = "updateUser()">Save Changes</button>
+        </form>
 
+        
+
+    <!-- </div> -->
+    <!-- <div class = "container"> -->
+        <hr>
+                
+        <button type="button" (click)="showCardDetailsForm()" >Show card details</button>
+
+        <form [hidden]="!hideCardForm" >
+
+            <div class="row"  >
+                <div class="u-full-width">
             <label for="first">Card Number: {{payInfo.cardNumber}}</label><br>
-            <input class ="u-full-width" type="number" id="accinfo" name="cardnum" placeholder= "" [hidden]="!hide" [(ngModel)] = "updateCardNumber"><br>
+            <input class ="u-full-width" type="number" id="accinfo" name="cardnum" placeholder= "" [hidden]="!hide" [(ngModel)] = "updateCardNumber">
+                </div>
+            </div>
 
+            <div class="row">
+                <div class="u-full-width">
             <label for="first">Card First Name: {{payInfo.firstName}}</label><br>
-            <input class ="u-full-width" type="text" id="accinfo" name="cardfirstname" placeholder= "" [hidden]="!hide" [(ngModel)] = "updateCardFirstName"><br>
+            <input class ="u-full-width" type="text" id="accinfo" name="cardfirstname" placeholder= "" [hidden]="!hide" [(ngModel)] = "updateCardFirstName">
+                </div>
+            </div>
 
+            <div class="row">
+                <div class="u-full-width">
             <label for="last">Card Last Name: {{payInfo.lastName}}</label><br>
-            <input class ="u-full-width" type="text" id="accinfo" name="cardlastname" placeholder= "" [hidden]="!hide" [(ngModel)] = "updateCardLastName"><br>
+            <input class ="u-full-width" type="text" id="accinfo" name="cardlastname" placeholder= "" [hidden]="!hide" [(ngModel)] = "updateCardLastName">
+                </div>
+            </div>
 
             <button class="button" id="update" (click) = "showHidePaycardForm()">Update</button> &ensp; <button class="button" type = "submit" id = "save" (click) = "updateCard()">Save Card</button>
-        </form><br>
+        
+        </form>
+    <!-- </div> -->
     </div>
+    
+      </div>
+      
