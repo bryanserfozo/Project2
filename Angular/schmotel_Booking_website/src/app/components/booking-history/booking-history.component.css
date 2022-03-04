@@ -1,0 +1,13 @@
+.booking-card {
+  color: rgb(107, 104, 104);
+  background: rgba(255, 255, 255, 0.1);
+  margin-top: 50px;
+  margin-bottom: 100px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+  height: 800px;
+}
+.booking-card h5 {
+  padding: 20px 50px;
+}
