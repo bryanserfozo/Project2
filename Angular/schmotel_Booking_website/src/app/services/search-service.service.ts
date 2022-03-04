@@ -35,7 +35,7 @@ export class SearchServiceService {
       .set('x-rapidapi-host', 'hotels4.p.rapidapi.com')
       .set(
         'x-rapidapi-key',
-        '2b88efc797mshb66a1e4bde6e42fp1f3b38jsn4944a85ab8f8'
+        '05bad5ad8amsh297b2128abe6564p1f4d5ejsn62026adf44ee'
       );
     let destUrl =
       'https://hotels4.p.rapidapi.com/locations/v2/search?query=' +
@@ -43,7 +43,8 @@ export class SearchServiceService {
       '&locale=en_US&currency=USD';
     let destination = await lastValueFrom(
       this.http.get(destUrl, { headers: headers })
-    ).then((response) => JSON.parse(JSON.stringify(response)));
+    ).then((response) => JSON.parse(JSON.stringify(response)))
+    .catch((error)=> console.log(error));
     let destId = destination.suggestions[0].entities[0].destinationId;
     let order: string = 'BEST_SELLER';
 
@@ -73,7 +74,8 @@ export class SearchServiceService {
       '&locale=en_US&currency=USD';
     let propertieslist = await lastValueFrom(
       this.http.get(propUrl, { headers: headers })
-    ).then((response) => JSON.parse(JSON.stringify(response)));
+    ).then((response) => JSON.parse(JSON.stringify(response)))
+    .catch((error)=> console.log(error));
     for (
       let i = 0;
       i < propertieslist.data.body.searchResults.results.length;
@@ -119,7 +121,7 @@ export class SearchServiceService {
       .set('x-rapidapi-host', 'hotels4.p.rapidapi.com')
       .set(
         'x-rapidapi-key',
-        '2b88efc797mshb66a1e4bde6e42fp1f3b38jsn4944a85ab8f8'
+        '05bad5ad8amsh297b2128abe6564p1f4d5ejsn62026adf44ee'
       );
     let infoUrl =
       'https://hotels4.p.rapidapi.com/properties/get-details?id=' +
@@ -134,7 +136,8 @@ export class SearchServiceService {
 
     let hotelInfo = await lastValueFrom(
       this.http.get(infoUrl, { headers: headers })
-    ).then((response) => JSON.parse(JSON.stringify(response)));
+    ).then((response) => JSON.parse(JSON.stringify(response)))
+    .catch((error)=> console.log(error));
     this.entry.address =
       hotelInfo.data.body.propertyDescription.address.fullAddress;
     this.entry.description = '\n';

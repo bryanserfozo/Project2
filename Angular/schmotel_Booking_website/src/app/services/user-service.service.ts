@@ -40,7 +40,9 @@ export class UserServiceService {
           password,
           phoneNumber,
         }),
-        { headers: { 'Content-Type': 'application/json' } }
+        { headers: { 'Content-Type': 'application/json' ,
+        'http-equiv': 'Content-Security-Policy',
+        'content': 'upgrade-insecure-requests'} }
       )
       .pipe(
         catchError((e) => {
@@ -66,11 +68,14 @@ async login(username:string)
   let headers = new HttpHeaders()
     .set('Content-Type', 'application/json')
     .set('username', username)
+    .set('http-equiv','Content-Security-Policy')
+    .set('content', 'upgrade-insecure-requests')
     
   let loginUrl="http://35.226.38.161:7000/user/" 
   let loginInfo = await lastValueFrom(
     this.http.get(loginUrl, { headers: headers })
-  ).then((response) => JSON.parse(JSON.stringify(response)));
+  ).then((response) => JSON.parse(JSON.stringify(response)))
+  .catch((error)=> console.log(error));
   this.loginUser.id=loginInfo.id
   this.loginUser.email=loginInfo.email
   this.loginUser.username=loginInfo.username
@@ -100,7 +105,9 @@ async login(username:string)
   password,
   phoneNumber
   }),
-  { headers: { 'Content-Type': 'application/json' } }
+  { headers: { 'Content-Type': 'application/json' ,
+  'http-equiv': 'Content-Security-Policy',
+  'content': 'upgrade-insecure-requests'} }
     )
     .pipe(
       catchError((e) => {

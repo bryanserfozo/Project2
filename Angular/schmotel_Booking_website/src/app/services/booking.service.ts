@@ -45,6 +45,8 @@ export class BookingService {
    let headers = new HttpHeaders()
      .set('Content-Type', 'application/json')
      .set('id', user_id.toString())
+     .set('http-equiv','Content-Security-Policy')
+     .set('content', 'upgrade-insecure-requests')
      
    let url="http://35.226.38.161:7000/booking/all/";
 
@@ -119,7 +121,9 @@ export class BookingService {
           checkOutDate,
           numNights
         }),
-        { headers: { 'Content-Type': 'application/json' } }
+        { headers: { 'Content-Type': 'application/json' ,
+        'http-equiv': 'Content-Security-Policy',
+        'content': 'upgrade-insecure-requests'} }
       )
       .pipe(
         catchError((e) => {
@@ -159,7 +163,9 @@ export class BookingService {
     // console.log(email, this.message)
     return this.http.post<IEmailObject>('http://35.226.38.161:7000/email/',
         JSON.stringify(this.emailDraft),
-        { headers: { 'Content-Type': 'application/json' } }
+        { headers: { 'Content-Type': 'application/json',
+                      'http-equiv': 'Content-Security-Policy',
+                      'content': 'upgrade-insecure-requests'} }
       )
       .pipe(
         catchError((e) => {
