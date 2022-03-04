@@ -87,9 +87,9 @@ export class ConfirmationComponent implements OnInit {
   constructor(private dataService:DataService, private bookingService:BookingService, private router:Router) { }
 
   async ngOnInit(){
+    await this.dataService.currentUser.subscribe(user => this.user = user)
     await this.dataService.currentHotel.subscribe(hotel => this.hotel = hotel)
     await this.dataService.currentSearch.subscribe(search => this.search = search)
-    await this.dataService.currentUser.subscribe(user => this.user = user)
     await this.dataService.currentPayInfo.subscribe(payInfo => this.payInfo = payInfo)
     this.booking.hotel = this.hotel.id;
     this.booking.user = this.user;
@@ -98,6 +98,7 @@ export class ConfirmationComponent implements OnInit {
     this.booking.numNights = this.calcNumNights(this.search.checkIn, this.search.checkOut)
     var price = Number(this.hotel.price.replace(/[^0-9.-]+/g,""));
     this.totalCost = "$" + (price * this.booking.numNights);
+    
   }
 
 }

@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { IBooking } from 'src/app/Interfaces/IBooking';
 import { IHotel } from 'src/app/Interfaces/IHotel';
 import { ISearch } from 'src/app/Interfaces/ISearch';
+import { IUser } from 'src/app/Interfaces/IUser';
 import { DataService } from 'src/app/services/data.service';
 import { SearchServiceService } from 'src/app/services/search-service.service';
 
@@ -32,8 +33,24 @@ export class BookingInfoComponent implements OnInit {
     searchOrder: 0
   }
 
-  navigateConfirm(){
-    this.router.navigate(['confirm'])
+  user:IUser = {
+    id : 0,
+    firstName : '',
+    lastName : '',
+    username : '',
+    email : '',
+    password : '',
+    phoneNumber : ''
+  }
+
+  async navigateConfirm(){
+    await this.data.currentUser.subscribe(user => this.user = user)
+    if (this.user.firstName == ''){
+      this.router.navigate(['login'])
+    } else {
+      this.router.navigate(['confirm'])
+    }
+    
   }
 
   constructor(private data:DataService, private searchService:SearchServiceService, private router:Router) { }
