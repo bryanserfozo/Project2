@@ -46,7 +46,7 @@ export class BookingService {
      .set('Content-Type', 'application/json')
      .set('id', user_id.toString())
      
-   let url="http://localhost:7000/booking/all/";
+   let url="http://35.226.38.161:7000/booking/all/";
 
    let bookingInfo = (
      this.http.get<IPastBooking[]>(url, { headers: headers })
@@ -109,7 +109,7 @@ export class BookingService {
     console.log(this.bookingDate)
     return this.http
       .post<IBooking>(
-        'http://localhost:7000/booking/',
+        'http://35.226.38.161:7000/booking/',
         JSON.stringify({
           bookingId,
           user,
@@ -157,7 +157,7 @@ export class BookingService {
     
     console.log(JSON.stringify(this.emailDraft))
     // console.log(email, this.message)
-    return this.http.post<IEmailObject>('http://localhost:7000/email/',
+    return this.http.post<IEmailObject>('http://35.226.38.161:7000/email/',
         JSON.stringify(this.emailDraft),
         { headers: { 'Content-Type': 'application/json' } }
       )
