@@ -1,3 +1,3 @@
 FROM openjdk:11
-COPY app/build/libs/app.jar schmotel.jar
-CMD ["java", "-jar", "schmotel.jar"]
+COPY build/libs/app.jar demo.jar
+CMD ["java", "-jar", "demo.jar"]
