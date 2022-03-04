@@ -1,0 +1,41 @@
+.details-card {
+  color: rgb(107, 104, 104);
+  background: rgba(255, 255, 255, 0.1);
+  margin-top: 50px;
+  margin-bottom: 100px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+  position: relative;
+  padding: 50px 100px 150px 100px;
+  font-size: 20px;
+}
+
+.details-card h5 {
+  display: inline-block;
+  margin: 5px;
+  padding-bottom: 2px;
+  font-weight: bold;
+}
+
+.submit {
+  position: absolute;
+  right: 100px;
+  bottom: 50px;
+}
+
+.total {
+  color: rgb(221, 76, 76);
+  font-size: 30px;
+  font-style: italic;
+}
+
+.fa-calendar-check {
+  font-size: 100px;
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  right: 50px;
+  top: 50px;
+  color: #1eaedb;
+}
