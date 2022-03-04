@@ -30,7 +30,7 @@ export class UserServiceService {
   ): Observable<IUser> {
     return this.http
       .post<IUser>(
-        'http://localhost:7000/user/',
+        'http://35.226.38.161:7000/user/',
         JSON.stringify({
           id,
           email,
@@ -67,7 +67,7 @@ async login(username:string)
     .set('Content-Type', 'application/json')
     .set('username', username)
     
-  let loginUrl="http://localhost:7000/user/" 
+  let loginUrl="http://35.226.38.161:7000/user/" 
   let loginInfo = await lastValueFrom(
     this.http.get(loginUrl, { headers: headers })
   ).then((response) => JSON.parse(JSON.stringify(response)));
@@ -91,7 +91,7 @@ async login(username:string)
   phoneNumber: string) {
   console.log("update method called")
   console.log(id, email, username, firstName, lastName, password, phoneNumber)
-  this.http.put<IUser>('http://localhost:7000/user/', JSON.stringify({
+  this.http.put<IUser>('http://35.226.38.161:7000/user/', JSON.stringify({
   id,
   email,
   firstName,
