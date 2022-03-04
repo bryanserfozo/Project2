@@ -5,7 +5,7 @@
       <div class="main-title-div">
         <h3>Create An Account</h3>
 
-        <form (ngSubmit)="onSubmit()">
+        <form >
           <div class="row">
             <div class="six columns">
               <label for="exampleEmailInput"></label>
@@ -133,6 +133,7 @@
         </form>
         <div class="row">
           <input
+            (click) = "onSubmit()"
             class="button-primary account-submit"
             type="submit"
             value="Submit"

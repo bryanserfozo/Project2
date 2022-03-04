@@ -1,97 +1,117 @@
-.search-section {
-    border-bottom: gray solid 1px;
-    padding: 20px;
-    position: relative;
-    height: 200px;
-  }
+/* .search-section {
+  border-bottom: gray solid 1px;
+  padding: 20px;
+  position: relative;
+  height: 200px;
+} */
 
-  .section{
-      margin-left: auto;
-      margin-right: auto;
-  }
-  
-  .check-in-date,
-  .check-out-date {
-    padding: 8px 10px;
-    border: 1px lightgray solid;
-    border-radius: 5px;
-  }
-  .num-pages {
-    width: 30px;
-  }
-  
-  .guest-qty-input {
-      
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .guest-qty-input input {
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1px;
-    margin-top: 5px;
-    height: 40px;
-  }
-  .left-button,
-  .right-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-  }
-  .fa-user-group {
-    margin-bottom: 0;
-  }
-  .fa-angle-left,
-  .fa-angle-right {
-    font-size: 25px;
-    padding: 5px 10px;
-  }
-  
-  .fa-angle-left:hover,
-  .fa-angle-right:hover {
-    color: white;
-    border-radius: 50px;
-    background-color: black;
-    opacity: 0.5;
-  }
-  
-  .search-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    right: 20px;
-    top: 120px;
-  }
-  
-  .num-pages {
-    background-color: rgb(255, 255, 255);
-    border: 1px lightgray solid;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px light gray solid;
-  
-    height: 40px;
-    width: 30px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-  }
-  
-  /* Chrome, Safari, Edge, Opera */
-  input::-webkit-outer-spin-button,
-  input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-  
-  /* Firefox */
-  input[type="number"] {
-    -moz-appearance: textfield;
-  }
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .check-in-date,
+.check-out-date {
+  padding: 8px 10px;
+  border: 1px lightgray solid;
+  border-radius: 5px;
+} */
+/* .num-pages {
+  width: 30px;
+} */
+
+.guest-qty-input {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+.guest-qty-input input {
+  /* margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1px;
+  margin-top: 5px;
+  height: 40px; */
+}
+
+.input-container {
+  position: relative;
+}
+
+.fa-book-open {
+  font-size: 20px;
+  position: absolute;
+  top: 35px;
+  left: 5px;
+  z-index: 2;
+}
+.left-button,
+.right-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.fa-user-group {
+  margin-bottom: 0;
+}
+.fa-angle-left,
+.fa-angle-right {
+  font-size: 50px;
+  padding: 5px 20px;
+}
+
+.fa-angle-left:hover,
+.fa-angle-right:hover {
+  color: white;
+  border-radius: 50px;
+  background-color: black;
+  opacity: 0.5;
+}
+
+/* .search-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 20px;
+  top: 120px;
+} */
+
+.num-pages {
+  background-color: transparent;
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  border-style: none;
+  font-size: 30px;
+  height: 40px;
+  width: 63px;
+  padding-left: 30px;
+  padding-right: 1px;
+  position: absolute;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  top: 20px;
+}
+
+.num-pages:focus {
+  border-style: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}

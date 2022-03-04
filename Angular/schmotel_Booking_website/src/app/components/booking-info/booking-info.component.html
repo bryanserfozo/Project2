@@ -1,34 +1,39 @@
 <div class="container">
   <div class="row booking-info">
-    <div class="five columns img-container">
+    <div class="img-container">
       <img src="{{ hotel.thumbnailUrl }}" />
     </div>
-    <div class="six columns">
-      <h5>Name: {{ hotel.hotelName }}</h5>
+    <div class="name-container">
+      <h6>Hotel Name:</h6>
+      {{ hotel.hotelName }}
+      <br />
+      <h6>Rating:</h6>
+      {{ hotel.rating }}
+      <br />
+      <h6>Price:</h6>
+      {{ hotel.price }}
+      <br />
+      <h6>Check In:</h6>
+      {{ searchInfo.checkIn }}
+      <br />
+      <h6>Check Out:</h6>
+      {{ searchInfo.checkOut }}
+      <br />
+      <h6>Number of Adults:</h6>
+      {{ searchInfo.numAdults }}
+      <br />
+      <h6>Address:</h6>
+      <br />
+      {{ hotel.address }}
+    </div>
 
-      <h5>Rating: {{ hotel.rating }}</h5>
-
-      <h5>Price: {{ hotel.price }}</h5>
+    <div class="description-container">
+      <h6>Description:</h6>
+      <p style="white-space: pre-wrap">
+        {{ hotel.description }}
+      </p>
     </div>
-    <div class="check-in-container">
-      <div class="row">
-        <h5>Check In: {{ searchInfo.checkIn }}</h5>
-      </div>
-      <div class="row">
-        <h5>Check Out: {{ searchInfo.checkOut }}</h5>
-      </div>
-      <div class="row">
-        <h5>Number of Adults: {{ searchInfo.numAdults }}</h5>
-      </div>
-      <div class="row">
-        <h5>Address : {{ hotel.address }}</h5>
-      </div>
-    </div>
-    <hr />
-    <div class="row description-container">
-      <p style="white-space: pre-wrap">Description : {{ hotel.description }}</p>
-    </div>
-    <div class="row">
+    <div class="button-container">
       <input
         class="button-primary booking-btn"
         type="submit"
