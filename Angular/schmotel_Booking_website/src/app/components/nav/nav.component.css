@@ -20,7 +20,7 @@
 .about {
   position: absolute;
   bottom: 22px;
-  right: 240px;
+  right: 230px;
 }
 .about:hover {
   border-bottom: 2px #1eaedb solid;
@@ -28,7 +28,8 @@
 .booking-history {
   position: absolute;
   bottom: 22px;
-  right: 340px;
+  right: 310px;
+  white-space: nowrap;
 }
 
 .booking-history:hover {
@@ -37,7 +38,8 @@
 .my-account {
   position: absolute;
   bottom: 22px;
-  right: 440px;
+  right: 470px;
+  white-space: nowrap;
 }
 .my-account:hover {
   border-bottom: 2px #1eaedb solid;

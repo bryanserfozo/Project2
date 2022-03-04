@@ -1,10 +1,10 @@
 * {
   box-sizing: border-box;
+  color: rgb(107, 104, 104);
 }
 
 body {
-  color: rgb(107, 104, 104);
-  background-color: rgb(240, 235, 231);
+  background-color: rgb(231, 217, 206);
 }
 
 .hide {

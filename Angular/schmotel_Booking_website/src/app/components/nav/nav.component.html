@@ -1,4 +1,3 @@
-
 <!-- <div class="container">
   <div class="row"> -->
 <div class="nav-section">
@@ -9,7 +8,6 @@
       src="assets/SCHMOTELS.png"
       alt="logo"
     />
-
   </div>
   <ul class="navbar u-pull-right">
     <li class="item"><a class="about" routerLink="about">about</a></li>
@@ -20,10 +18,10 @@
     </li>
     <!-- if user is signed-in, display my account link -->
     <li *ngIf="!signedIn" class="item hide">
-      <a class="my-account" routerLink="user">account</a>
+      <a class="my-account" routerLink="user">my account</a>
     </li>
     <li *ngIf="signedIn" class="item">
-      <a class="my-account" routerLink="user">account</a>
+      <a class="my-account" routerLink="user">my account</a>
     </li>
     <!--  -->
     <li class="item">

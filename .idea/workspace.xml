@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="06492a36-25b2-4a16-9afe-ecf6c79ad078" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Angular/schmotel_Booking_website/src/app/components/booking-history/booking-history.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Angular/schmotel_Booking_website/src/app/components/booking-history/booking-history.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Angular/schmotel_Booking_website/src/app/components/booking-history/booking-history.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Angular/schmotel_Booking_website/src/app/components/booking-history/booking-history.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Angular/schmotel_Booking_website/src/app/components/booking-info/booking-info.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Angular/schmotel_Booking_website/src/app/components/booking-info/booking-info.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Angular/schmotel_Booking_website/src/app/components/booking-info/booking-info.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Angular/schmotel_Booking_website/src/app/components/booking-info/booking-info.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Angular/schmotel_Booking_website/src/app/components/page-number/page-number.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Angular/schmotel_Booking_website/src/app/components/page-number/page-number.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Angular/schmotel_Booking_website/src/app/components/page-number/page-number.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Angular/schmotel_Booking_website/src/app/components/page-number/page-number.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Angular/schmotel_Booking_website/src/app/components/search-filter/search-filter.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Angular/schmotel_Booking_website/src/app/components/search-filter/search-filter.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Angular/schmotel_Booking_website/src/app/components/search-filter/search-filter.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Angular/schmotel_Booking_website/src/app/components/search-filter/search-filter.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Angular/schmotel_Booking_website/src/app/components/search/search.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Angular/schmotel_Booking_website/src/app/components/search/search.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Angular/schmotel_Booking_website/src/app/components/search/search.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Angular/schmotel_Booking_website/src/app/components/search/search.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Angular/schmotel_Booking_website/src/app/services/search-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Angular/schmotel_Booking_website/src/app/services/search-service.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Angular/schmotel_Booking_website/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/Angular/schmotel_Booking_website/src/styles.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="25TxgmGLFJMeSRx9uYwwnORH0l7" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Backend" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.revature.BookingHotel.Models" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.BookingHotelApplication">
+    <configuration name="BookingHotelApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <envs>
+        <env name="DB_USER" value="postgres" />
+        <env name="DB_PASSWORD" value="220118" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="com.revature.BookingHotel.BookingHotelApplication" />
+      <module name="BookingHotel.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.revature.BookingHotel.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmailServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.revature.BookingHotel.EmailServiceTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="EmailServiceTest.sendAnyEmailSuccess" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.revature.BookingHotel.EmailServiceTest.sendAnyEmailSuccess&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="EmailServiceTest.sendConfirmationEmailSuccess" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.revature.BookingHotel.EmailServiceTest.sendConfirmationEmailSuccess&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Tests in 'com.revature.BookingHotel'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.revature.BookingHotel.*&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.BookingHotelApplication" />
+      <item itemvalue="Gradle.EmailServiceTest" />
+      <item itemvalue="Gradle.EmailServiceTest.sendAnyEmailSuccess" />
+      <item itemvalue="Gradle.EmailServiceTest.sendConfirmationEmailSuccess" />
+      <item itemvalue="Gradle.Tests in 'com.revature.BookingHotel'" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.Tests in 'com.revature.BookingHotel'" />
+        <item itemvalue="Application.BookingHotelApplication" />
+        <item itemvalue="Gradle.EmailServiceTest" />
+        <item itemvalue="Gradle.EmailServiceTest.sendAnyEmailSuccess" />
+        <item itemvalue="Gradle.EmailServiceTest.sendConfirmationEmailSuccess" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="06492a36-25b2-4a16-9afe-ecf6c79ad078" name="Changes" comment="" />
+      <created>1645564993135</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1645564993135</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/BookingHotel$Tests_in__com_revature_BookingHotel_.ic" NAME="Tests in 'com.revature.BookingHotel' Coverage Results" MODIFIED="1646411450772" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/BookingHotel$UserServiceTest.ic" NAME="UserServiceTest Coverage Results" MODIFIED="1646336806107" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>

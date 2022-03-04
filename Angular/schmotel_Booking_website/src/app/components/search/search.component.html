@@ -1,74 +1,72 @@
 <section class="search-section">
-  <div class="form-wrapper">
-    <!-- location input section -->
-    <form class="hotel-search-form" (ngSubmit)="onSubmit()">
-      <div class="row">
-        <div class="four columns">
-          <label for="search-city-input"> Where to?</label>
+  <!-- location input section -->
+  <form class="hotel-search-form" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="four columns">
+        <label for="search-city-input"> Where to?</label>
+        <input
+          type="text"
+          placeholder="e.g. Miami"
+          id="search-city-input"
+          class="u-full-width search-city-input"
+          name="location"
+          required
+          [(ngModel)]="location"
+        />
+      </div>
+
+      <!-- departing/arrival date calendar input section-->
+      <div class="five columns">
+        <div class="six columns">
+          <label for="check-in date">Check-in</label>
           <input
-            type="text"
-            placeholder="e.g. Miami"
-            id="search-city-input"
-            class="u-full-width search-city-input"
-            name="location"
+            type="date"
+            id="check-in-date"
+            class="u-full-width check-in-date"
+            name="checkIn"
             required
-            [(ngModel)]="location"
+            [(ngModel)]="checkInDate"
           />
         </div>
-
-        <!-- departing/arrival date calendar input section-->
-        <div class="five columns">
-          <div class="six columns">
-            <label for="check-in date">check-in</label>
-            <input
-              type="date"
-              id="check-in-date"
-              class="u-full-width check-in-date"
-              name="checkIn"
-              required
-              [(ngModel)]="checkInDate"
-            />
-          </div>
-          <div class="six columns">
-            <label for="num-passengers">check-out</label>
-            <input
-              type="date"
-              id="check-out-date"
-              class="u-full-width check-out-date"
-              name="checkOut"
-              required
-              [(ngModel)]="checkOutDate"
-            />
-          </div>
-        </div>
-
-        <div class="three columns guest-qty-input">
-          <!-- <div class="four columns left-button"> -->
-          <i (click)="setNumGuest('minus')" class="fa-solid fa-angle-left"></i>
-          <!-- </div> -->
-          <!-- <div class="four columns"> -->
-
+        <div class="six columns">
+          <label for="num-passengers">Check-out</label>
           <input
-            type="number"
-            id="num-guests"
-            class="num-guests"
-            name="numAdults"
-            value="{{ numAdults }}"
+            type="date"
+            id="check-out-date"
+            class="u-full-width check-out-date"
+            name="checkOut"
             required
-            [(ngModel)]="numAdults"
+            [(ngModel)]="checkOutDate"
           />
-          <!-- </div>
+        </div>
+      </div>
+
+      <div class="three columns guest-qty-input">
+        <!-- <div class="four columns left-button"> -->
+        <i (click)="setNumGuest('minus')" class="fa-solid fa-angle-left"></i>
+        <!-- </div> -->
+        <!-- <div class="four columns"> -->
+        <i class="fa-solid fa-user"></i>
+        <input
+          type="number"
+          id="num-guests"
+          class="num-guests"
+          name="numAdults"
+          value="{{ numAdults }}"
+          required
+          [(ngModel)]="numAdults"
+        />
+        <!-- </div>
           <div class="four columns right-button"> -->
-          <i (click)="setNumGuest('plus')" class="fa-solid fa-angle-right"></i>
-          <!-- </div> -->
-        </div>
+        <i (click)="setNumGuest('plus')" class="fa-solid fa-angle-right"></i>
+        <!-- </div> -->
       </div>
+    </div>
 
-      <div class="search-btn-div">
-        <button class="button-primary search-btn" id="seatch-btn" type="submit">
-          search
-        </button>
-      </div>
-    </form>
-  </div>
+    <div class="search-btn-div">
+      <button class="button-primary search-btn" id="seatch-btn" type="submit">
+        search
+      </button>
+    </div>
+  </form>
 </section>

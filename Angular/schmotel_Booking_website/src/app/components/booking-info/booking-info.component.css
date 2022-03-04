@@ -1,8 +1,12 @@
 .booking-info {
-  border: 1px solid black;
-  border-radius: 20px;
-  margin: 10px;
-  padding: 20px 50px;
+  color: rgb(107, 104, 104);
+  background: rgba(255, 255, 255, 0.1);
+  margin-top: 50px;
+  margin-bottom: 100px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+  height: 1000px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,10 +17,46 @@
 .img-container {
   position: absolute;
   left: 20px;
+  top: 20px;
+}
+
+.img-container img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 250px;
+  width: 350px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+.description-container {
+  position: absolute;
+
+  right: 28px;
+  top: 20px;
+  height: 200px;
+  width: 50%;
+}
+
+.name-container {
+  position: absolute;
+  left: 20px;
+  top: 280px;
+  width: 350px;
 }
 
 .booking-btn {
   position: absolute;
   right: 20px;
   bottom: 20px;
+}
+.description-container h6,
+.name-container h6 {
+  display: inline-block;
+  margin: 5px;
+  padding-bottom: 2px;
+  font-weight: bold;
 }

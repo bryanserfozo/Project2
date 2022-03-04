@@ -3,14 +3,50 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    padding-top: 80px;
     height: 200px;
-    margin-top: 0;
+    margin-top: 20px;
     margin-bottom: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 20px;
+
   }
 
-  .text {
-    font-size: 50px;
+
+
+  .register-card-user{
+    color: rgb(107, 104, 104);
+    background: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.1)
+    );
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    z-index: 2;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+  }
+  .img-container {
+    background-image: url("../Imagetest/aboutus.jpeg");
+    border-radius: 10px;
+  
+    background-position: -220px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+     margin-top: 0; 
+     display: flex; 
+    justify-content: center;
+    align-items: center;
+  }
+
+  .abouts{
+    font-family: 'georgia';
+    text-align: left;
   }

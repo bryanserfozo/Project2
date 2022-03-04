@@ -1,11 +1,18 @@
 <div class="filter-div">
   <div class="row">
     <i class="fa-solid fa-filter-list"></i>
-    <i class="fa-solid fa-star"></i>
-    <button class="filter-rating" (click) = "sortBestSellers()">Best Sellers</button>
-    <button class="filter-price" (click) = "sortPriceLowHigh()">Price Low to High</button>
-    <button class="filter-price" (click) = "sortPriceHighLow()">Price High to Low</button>
-    <button class="filter-price" (click) = "sortRating()">Guest Rating</button>
-    <i class="fa-solid fa-star"></i>
+
+    <button class="filter-best" (click)="sortBestSellers()">
+      <i class="fa-solid fa-fire"></i> Best Sellers
+    </button>
+    <button class="filter-rating" (click)="sortRating()">
+      <i class="fa-solid fa-star"></i> Guest Rating
+    </button>
+    <button class="filter-price" (click)="sortPriceLowHigh()">
+      <i class="fa-solid fa-arrow-down-short-wide"></i> Price Low to High
+    </button>
+    <button class="filter-price" (click)="sortPriceHighLow()">
+      <i class="fa-solid fa-arrow-down-wide-short"></i> Price High to Low
+    </button>
   </div>
 </div>

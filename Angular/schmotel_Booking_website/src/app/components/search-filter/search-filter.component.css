@@ -7,21 +7,59 @@
   transition-duration: 1s;
 }
 
-.filter-div button {
-  padding: 0 20px;
+/* .filter-div button {
+  border: whitesmoke;
+  padding: 0px 20px;
   margin: 0 10px;
   transition-duration: 1s;
+} */
+.filter-best {
+  border: whitesmoke;
+}
+.filter-best:hover {
+  color: whitesmoke;
+  background-color: rgb(235, 77, 77);
+}
+.filter-best:hover i {
+  color: whitesmoke;
+  background-color: rgb(235, 77, 77);
+}
+.filter-rating {
+  border: whitesmoke;
 }
 .filter-rating:hover {
-  color: whitesmoke;
-  background-color: rgb(118, 124, 126);
+  color: rgb(104, 99, 99);
+  background-color: rgb(221, 134, 233);
+}
+.filter-rating:hover i {
+  color: rgb(104, 99, 99);
+  background-color: rgb(221, 134, 233);
 }
 .filter-price:hover {
   color: whitesmoke;
-  background-color: rgb(118, 124, 126);
+  background-color: rgb(62, 179, 107);
+}
+.filter-price:hover i {
+  color: whitesmoke;
+  background-color: rgb(62, 179, 107);
 }
 .filter-div select {
   background-color: transparent;
   padding: 0 20px;
   margin: 0 10px;
 }
+
+button {
+  border: whitesmoke;
+  padding: 2px 20px;
+  margin: 0px 10px;
+  transition-duration: 1s;
+}
+
+button i {
+  font-size: 20px;
+  transition-duration: 1s;
+}
+/* button:hover i {
+  color: whitesmoke;
+} */
