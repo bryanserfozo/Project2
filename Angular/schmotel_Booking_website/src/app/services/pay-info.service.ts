@@ -17,7 +17,7 @@ export class PayInfoService {
     lastName : string,
     cardNumber : number
   ): Observable<IPayInfo> {
-    return this.http.post<IPayInfo>('http://localhost:7000/pay-info/',
+    return this.http.post<IPayInfo>('http://35.226.38.161:7000/pay-info/',
     JSON.stringify({
       paymentId,
       userId,
@@ -46,7 +46,7 @@ export class PayInfoService {
     let headers = new HttpHeaders()
     .set('Content-Type', 'application/json')
     .set('id', userIdParam)
-    let payUrl="http://localhost:7000/pay-info/" 
+    let payUrl="http://35.226.38.161:7000/pay-info/" 
     let paymentInfo = await lastValueFrom(
     this.http.get(payUrl, { headers: headers })
   ).then((response) => JSON.parse(JSON.stringify(response)));
@@ -64,7 +64,7 @@ export class PayInfoService {
     lastName:string,
     cardNumber:number
   ){
-    this.http.put<IUser>('http://localhost:7000/pay-info/', JSON.stringify({
+    this.http.put<IUser>('http://35.226.38.161:7000/pay-info/', JSON.stringify({
   paymentId,
   userId,
   firstName,
