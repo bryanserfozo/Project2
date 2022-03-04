@@ -18,13 +18,11 @@ import { ISearch } from 'src/app/Interfaces/ISearch';
 export class SearchComponent implements OnInit {
   @Output() notify = new EventEmitter<IHotel[]>();
 
-
   hotels: IHotel[] = [];
-
 
   hotel: IHotel = {
     id: 0,
-    address:'',
+    address: '',
     hotelName: '',
     rating: '',
     price: '',
@@ -37,16 +35,13 @@ export class SearchComponent implements OnInit {
     checkOut: '',
     numAdults: 1,
     pageNumber: 1,
-    searchOrder: 0
-  }
-
-  
+    searchOrder: 0,
+  };
 
   location: string = '';
   checkInDate: string = '';
   checkOutDate: string = '';
   numAdults: number = 1;
-
 
   error: boolean = false;
 
@@ -59,7 +54,7 @@ export class SearchComponent implements OnInit {
       this.checkOutDate,
       this.numAdults
     );
-    
+
     this.search.location = this.location;
     this.search.checkIn = this.checkInDate;
     this.search.checkOut = this.checkOutDate;
@@ -68,7 +63,7 @@ export class SearchComponent implements OnInit {
     this.search.searchOrder = 0;
 
     this.dataService.changeSearch(this.search);
-    console.log(this.dataService.currentSearch)
+    console.log(this.dataService.currentSearch);
 
     await this.searchService.getHotels(
       this.location,
@@ -83,12 +78,11 @@ export class SearchComponent implements OnInit {
     this.notify.emit(this.hotels);
   }
 
-  async ngOnInit(){
-
-    
-
-    console.log("home initialized")
-    this.dataService.currentSearch.subscribe(search=>this.search = search)
+  async ngOnInit() {
+    console.log('home initialized');
+    this.dataService.currentSearch.subscribe(
+      (search) => (this.search = search)
+    );
     await this.searchService.getHotels(
       this.search.location,
       this.search.checkIn,
@@ -98,37 +92,33 @@ export class SearchComponent implements OnInit {
       this.search.searchOrder
     );
     // console.log(this.search)
-    console.log(this.searchService.hotels)
+    console.log(this.searchService.hotels);
     this.hotels = this.searchService.hotels;
     this.notify.emit(this.hotels);
   }
 
+  //celiacodetestapicall
 
-//celiacodetestapicall
+  //   public callApi() {
+  //       console.log("the api has been called");
+  //       this.searchresultService.callApi().subscribe((data)=>{
+  //        console.log(data);
+  //        if (data.suggestions){
 
-//   public callApi() {
-//       console.log("the api has been called");
-//       this.searchresultService.callApi().subscribe((data)=>{
-//        console.log(data);
-//        if (data.suggestions){
-         
-//        }
-//         });
-//   }
+  //        }
+  //         });
+  //   }
 
-
-
- // searchFilter = false;
+  // searchFilter = false;
 
   // plus/minus number of guests
   public setNumGuest(type: string): void {
     console.log('clicked ');
-    if (this.numAdults > 1){
+    if (this.numAdults > 1) {
       type === 'plus' ? this.numAdults++ : this.numAdults--;
-    } else{
-      type === 'plus' ? this.numAdults++ : console.log("no negatives");
+    } else {
+      type === 'plus' ? this.numAdults++ : console.log('no negatives');
     }
-    
   }
 
   // lstdestinations: Destination[] = [];
@@ -139,9 +129,4 @@ export class SearchComponent implements OnInit {
     private dataService: DataService
   ) {}
   // searchreaultData = null;
-
-
-  
-  }
-
-  
+}

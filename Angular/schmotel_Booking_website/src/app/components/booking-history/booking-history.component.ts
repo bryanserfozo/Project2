@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { BookingTableComponent } from '../booking-table/booking-table.component';
+import { IPastBooking } from 'src/app/Interfaces/IPastBooking';
+import { BookingService } from 'src/app/services/booking.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'booking-history',
@@ -8,9 +10,13 @@ import { BookingTableComponent } from '../booking-table/booking-table.component'
 })
 export class BookingHistoryComponent implements OnInit {
 
-  constructor() { }
+  pastBookings:Observable<IPastBooking[]> = new Observable<IPastBooking[]>();
+
+  constructor(private bookingService: BookingService) { }
 
   ngOnInit(): void {
+    this.bookingService.getPastBooking(1);
+    this.pastBookings = this.bookingService.bookingSubject;
   }
 
 }

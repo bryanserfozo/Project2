@@ -1,15 +1,18 @@
-.return-result-div {
-  border-bottom: gray 1px solid;
-
-  padding: 10px;
+.hotel-results-section {
+  /* border-bottom: gray 1px solid; */
+  color: rgb(107, 104, 104);
+  border-radius: 10px;
+  background-color: white;
+  margin: 10px;
+  padding: 0px;
   position: relative;
-  height: 300px;
-  transition-duration: 1.2s;
+  height: 250px;
+  transition-duration: 0.5s;
 }
 
-.return-result-div:hover {
+.hotel-results-section:hover {
   color: whitesmoke;
-  background-color: rgb(150, 158, 161);
+  background-color: rgb(150, 150, 150);
   /* background-color: rgb(160, 198, 211); */
 }
 
@@ -25,43 +28,51 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 200px;
-  width: 300px;
+  height: 250px;
+  width: 350px;
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 0px;
+  left: 0px;
+  margin: 0;
+  padding: 0;
 }
-.return-result-name h5 {
-  display: flex;
-  border-bottom: 2px #1eaedb solid;
-  justify-content: center;
-  align-items: center;
+.return-result-name {
+  /* display: flex;
+  /* border-bottom: 2px #1eaedb solid; */
+  /* justify-content: start;
+  align-items: center; */
+  padding-bottom: 20px;
+  margin-bottom: 20px;
   position: absolute;
+  width: 450px;
   top: 20px;
-  right: 50px;
-}
-.return-result-rating h5 {
-  display: flex;
-
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 60px;
-  right: 50px;
+  /* right: 50px; */
+  left: 380px;
 }
 
-.return-result-price h5 {
+.return-result-price {
+  padding-bottom: 5px;
+  font-size: 45px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 20px;
+  right: 20px;
+}
+/* .return-result-price h5 {
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 100px;
-  right: 50px;
-}
+  top: 20px;
+  right: 20px;
+} */
 
 /* .room-details-table {
   display: flex;
@@ -71,12 +82,57 @@
   top: 100px;
   right: 50px;
 } */
-
-.book-btn-div {
+.fa-star {
+  color: rgb(255, 208, 0);
+}
+.price-description {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  top: 50px;
+  right: 23px;
+}
+.return-result-rating {
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
+  top: 100px;
+  right: 20px;
+}
+.book-btn-div {
   position: absolute;
-  bottom: 10px;
-  right: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 20px;
+  right: 20px;
+}
+
+.description-a {
+  position: absolute;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  bottom: 0px;
+  left: 380px;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.description-b {
+  position: absolute;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  bottom: 0px;
+  left: 580px;
+  padding-top: 20px;
+}
+
+.description-a ul,
+.description-b ul {
+  list-style: none;
 }

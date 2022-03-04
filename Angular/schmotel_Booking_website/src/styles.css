@@ -3,6 +3,7 @@
 }
 
 body {
+  color: rgb(107, 104, 104);
   background-color: rgb(240, 235, 231);
 }
 
@@ -19,3 +20,6 @@ body {
 .forgotPass {
   font-size: 0.8em;
 }
+
+/* html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */

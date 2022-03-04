@@ -30,8 +30,8 @@ public class BookingService {
     }
 
     //Get all bookings by user ID
-    public List<Booking> getAllBookingByUserId(User u) {
-        return bd.getAllBookingByUserId(u);
+    public List<Booking> getAllBookingByUserId(int id) {
+        return bd.getAllBookingByUserId(id);
     }
 
     //Get booking info by id
@@ -40,12 +40,8 @@ public class BookingService {
     }
 
     //Update booking
-    public void updateBooking(Booking bk) {
-        bd.save(bk);
+    public Booking updateBooking(Booking bk) {
+        return bd.save(bk);
     }
 
-    //Delete booking
-    public void deleteBooking(Booking bk) {
-        bd.delete(bk);
-    }
 }

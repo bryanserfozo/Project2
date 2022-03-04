@@ -1,26 +1,46 @@
-.img {
+.login-card {
+  color: rgb(107, 104, 104);
+  background: rgba(255, 255, 255, 0.1);
+  margin-top: 50px;
+  margin-bottom: 100px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+}
+
+.img-container {
   background-image: url("../images/suitcase.jpg");
+  border-radius: 10px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 500px;
   margin-top: 0;
-  margin-bottom: 50px;
+
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .main-title-div {
-  height: 500px;
-  margin-top: 0;
-  margin: 30px;
   display: flex;
-  flex-direction: column;
+
   align-items: center;
-  justify-content: space-evenly;
-  padding: 0 20%;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px 100px;
+  margin: 0;
 }
 
-.sign-in {
+.login-submit {
+  margin-top: 30px;
+}
+
+.forgotPass {
+  font-size: 15px;
+}
+
+#username:focus,
+#password:focus {
+  border: 1.5px #1eaedb solid;
 }

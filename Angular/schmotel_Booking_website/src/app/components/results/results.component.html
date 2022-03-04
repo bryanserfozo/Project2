@@ -1,27 +1,52 @@
-<section class="flight-results-section">
-  <div class="search-results-wrapper" id="search-reulsts-wrapper">
-    <!-- search results will dynamically be inserted here -->
-    <div class="return-result-div">
-      <div class="img-thumbnail">
-        <img
-          class="hotel-thumbnail"
-          src="{{ result.thumbnailUrl }}"
-          alt="img placeholder"
-        />
+<section class="hotel-results-section">
+  <!-- <div class="search-results-wrapper" id="search-reulsts-wrapper"> -->
+  <!-- search results will dynamically be inserted here -->
+  <!-- <div class="return-result-div"> -->
+  <div class="img-thumbnail">
+    <img
+      class="hotel-thumbnail"
+      src="{{ result.thumbnailUrl }}"
+      alt="img placeholder"
+    />
+  </div>
+  <div class="return-result-name">
+    <h5>{{ result.hotelName }}</h5>
+  </div>
+  <div class="return-result-price">
+    <h5>{{ result.price }}</h5>
+  </div>
+  <div class="price-description"><p>per night</p></div>
+  <div class="return-result-rating">
+    <h5><i class="fa-solid fa-star"></i> {{ result.rating }} / 10</h5>
+  </div>
+  <div class="row">
+    <div class="six columns">
+      <div class="description-a">
+        <ul>
+          <li><i class="fa-solid fa-baby"></i> Childrens Playroom</li>
+          <li><i class="fa-solid fa-desktop"></i> Office Center</li>
+          <li><i class="fa-solid fa-spa"></i> Spa/Wellness Center</li>
+          <li><i class="fa-solid fa-person-swimming"></i> Swimming Pool</li>
+        </ul>
       </div>
-      <div class="return-result-name">
-        <h5>{{ result.hotelName }}</h5>
-      </div>
-      <div class="return-result-rating">
-        <h5>Guest Rating: {{ result.rating }}/10</h5>
-      </div>
-      <div class="return-result-price">
-        <h5>Rate Per Night: {{ result.price }}</h5>
-      </div>
-
-      <div class="book-btn-div">
-        <button class="button-primary book-btn" (click) = "sendHotel(this.result)">book now</button>
+    </div>
+    <div class="six columns">
+      <div class="description-b">
+        <ul>
+          <li><i class="fa-solid fa-wifi"></i> Wifi</li>
+          <li><i class="fa-solid fa-paw"></i> Pet-Friendly</li>
+          <li><i class="fa-solid fa-mug-saucer"></i> Restaurant</li>
+          <li><i class="fa-solid fa-dumbbell"></i> Gym</li>
+        </ul>
       </div>
     </div>
   </div>
+
+  <div class="book-btn-div">
+    <button class="button-primary book-btn" (click)="sendHotel(this.result)">
+      book now
+    </button>
+  </div>
+  <!-- </div> -->
+  <!-- </div> -->
 </section>
