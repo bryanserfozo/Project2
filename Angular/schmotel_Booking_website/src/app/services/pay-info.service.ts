@@ -24,7 +24,9 @@ export class PayInfoService {
       firstName,
       lastName,
       cardNumber}),
-        { headers: { 'Content-Type': 'application/json' } }
+        { headers: { 'Content-Type': 'application/json' ,
+        'http-equiv': 'Content-Security-Policy',
+        'content': 'upgrade-insecure-requests'} }
       )
       .pipe(
         catchError((e) => {
@@ -49,7 +51,8 @@ export class PayInfoService {
     let payUrl="http://35.226.38.161:7000/pay-info/" 
     let paymentInfo = await lastValueFrom(
     this.http.get(payUrl, { headers: headers })
-  ).then((response) => JSON.parse(JSON.stringify(response)));
+  ).then((response) => JSON.parse(JSON.stringify(response)))
+  .catch((error)=>console.log(error));
   this.payInfo.paymentId = paymentInfo.paymentId
   this.payInfo.userId = paymentInfo.userId
   this.payInfo.firstName = paymentInfo.firstName
@@ -71,7 +74,9 @@ export class PayInfoService {
   lastName,
   cardNumber
   }),
-  { headers: { 'Content-Type': 'application/json' } }
+  { headers: { 'Content-Type': 'application/json' ,
+  'http-equiv': 'Content-Security-Policy',
+  'content': 'upgrade-insecure-requests'} }
     )
     .pipe(
       catchError((e) => {
