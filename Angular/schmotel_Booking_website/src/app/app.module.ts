@@ -42,8 +42,10 @@ import { PageNumberComponent } from './components/page-number/page-number.compon
     BookingHistoryComponent,
     UserPageComponent,
     ConfirmationComponent,
+    PageNumberComponent,
     AboutComponent,
     BookingTableComponent,
+
   ],
 
   imports: [

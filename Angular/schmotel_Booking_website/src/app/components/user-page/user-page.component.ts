@@ -18,6 +18,7 @@ export class UserPageComponent implements OnInit {
 
   hide:boolean = false;
   hideform: boolean = false;
+  hideCardForm: boolean= false;
 
   user: IUser = {
     id: 0,
@@ -56,6 +57,10 @@ export class UserPageComponent implements OnInit {
     this.hideform=!this.hideform;
   }
 
+  showCardDetailsForm():void{
+    this.hideCardForm=!this.hideCardForm;
+  }
+
   updateUser(): void{
     if(this.updateFirstName !== ""){
       this.user.firstName = this.updateFirstName;
@@ -88,6 +93,13 @@ export class UserPageComponent implements OnInit {
     alert("Updated Account Info");
     this.router.navigate(['user']);
   }
+
+//   showHide: boolean ;
+//     this.showHide = true;
+
+//  changeShowStatus(){
+//    this.showHide = !this.showHide;
+//  }
 
   updateCard(){
     if(this.updateCardNumber !== 0){
