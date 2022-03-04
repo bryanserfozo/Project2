@@ -1,13 +1,53 @@
-<h1>Hotel Name: {{hotel.hotelName}}</h1>
-<h1>Address: {{hotel.address}}</h1>
-<h1>Check In:{{search.checkIn}}</h1>
-<h1>Check Out:{{search.checkOut}}</h1>
-<h1>Number of Adults:{{search.numAdults}}</h1>
-<h1>Price:{{hotel.price}}</h1>
-<h1>Number of Nights: {{booking.numNights}}</h1>
-<h1>Total Cost: {{totalCost}}</h1>
-<h1>Name for Reservation: {{user.firstName}} {{user.lastName}}</h1>
-<h1>Phone Number: {{user.phoneNumber}} </h1>
-<h1>Card on File: {{payInfo.cardNumber}}</h1>
-<h1>Name on Card: {{payInfo.firstName}} {{payInfo.lastName}}</h1>
-<input class="button-primary" type="submit" (click)="onSubmit()" value="Confirm Booking" />
+<div class="container">
+  <div class="details-card">
+    <i class="fa-solid fa-calendar-check"></i>
+    <h3>Your Booking Details</h3>
+    <div class="address">
+      <h5>Hotel Name:</h5>
+      {{ hotel.hotelName }}
+      <br />
+      <h5>Address: {{ hotel.address }}</h5>
+    </div>
+    <hr />
+    <div class="check-n">
+      <h5>Check In:</h5>
+      {{ search.checkIn }}
+      <br />
+      <h5>Check Out:</h5>
+      {{ search.checkOut }}
+      <br />
+      <h5>Number of Adults:</h5>
+      {{ search.numAdults }}
+      <hr />
+      <div class="price">
+        <h5>Price:</h5>
+        {{ hotel.price }}
+        <h5>Number of Nights:</h5>
+        {{ booking.numNights }}
+      </div>
+    </div>
+    <div class="reservation">
+      <h5>Name for Reservation:</h5>
+      {{ user.firstName }} {{ user.lastName }}
+      <br />
+      <h5>Phone Number:</h5>
+      {{ user.phoneNumber }}
+      <br />
+      <h5>Card on File:</h5>
+      {{ payInfo.cardNumber }}
+      <br />
+      <h5>Name on Card:</h5>
+      {{ payInfo.firstName }} {{ payInfo.lastName }}
+    </div>
+
+    <hr />
+    <h5>Total Cost:</h5>
+    <span class="total">{{ totalCost }}</span>
+    <input
+      class="button-primary submit"
+      type="submit"
+      (click)="onSubmit()"
+      value="Confirm Booking"
+    />
+  </div>
+</div>
