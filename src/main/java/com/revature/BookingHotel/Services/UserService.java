@@ -1,10 +1,7 @@
 package com.revature.BookingHotel.Services;
 
-import com.revature.Aspect.LoggerAspect;
 import com.revature.BookingHotel.Daos.UserDao;
 import com.revature.BookingHotel.Models.User;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
