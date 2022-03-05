@@ -96,6 +96,15 @@ async login(username:string)
   phoneNumber: string) {
   console.log("update method called")
   console.log(id, email, username, firstName, lastName, password, phoneNumber)
+  console.log(JSON.stringify({
+    id,
+    email,
+    firstName,
+    lastName,
+    username,
+    password,
+    phoneNumber
+    }))
   this.http.put<IUser>('http://35.226.38.161:7000/user/', JSON.stringify({
   id,
   email,
@@ -105,9 +114,7 @@ async login(username:string)
   password,
   phoneNumber
   }),
-  { headers: { 'Content-Type': 'application/json' ,
-  'http-equiv': 'Content-Security-Policy',
-  'content': 'upgrade-insecure-requests'} }
+  { headers: { 'Content-Type': 'application/json'} }
     )
     .pipe(
       catchError((e) => {

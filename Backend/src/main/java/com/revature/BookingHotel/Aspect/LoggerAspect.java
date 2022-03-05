@@ -30,9 +30,10 @@ public class LoggerAspect {
         String methodName = pjp.getSignature().getName();
         String className = pjp.getTarget().getClass().toString();
         Object[] array = pjp.getArgs();
-        log.info("Method Invoked: [" + className + "]: " + methodName + "()" + " | Arguments: " + mapper.writeValueAsString(array));
+
+        log.info("Method Invoked: [" + className + "]: " + methodName + "()"); // + " | Arguments:" + mapper.writeValueAsString(array));
         Object object = pjp.proceed();
-        log.info("[" + className + "]: " + methodName + "()" + " | Response: " + mapper.writeValueAsString(object));
+        log.info("[" + className + "]: " + methodName + "()"); // + " | Response: " + mapper.writeValueAsString(object));
         return object;
     }
 }
