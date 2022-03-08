@@ -13,18 +13,11 @@ There must be some feature with Java Mail to send emails to your users
 The application must use some external API
 
 ## Users can
--Register
-·
-·
-·
-·
-·
-·
-·
--Login/Logout
--Update their information
--Use an external API
--Sort rooms by price
--Find rooms by location
--Make a reservation
--Receive email for reservation information
+-  Register
+-  Login/Logout
+-  Update their information
+-  Use an external API
+-  Sort rooms by price
+-  Find rooms by location
+-  Make a reservation
+-  Receive email for reservation information
